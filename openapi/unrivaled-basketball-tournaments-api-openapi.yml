@@ -1,0 +1,795 @@
+openapi: 3.0.0
+info:
+  title: Unrivaled Games Tournaments API
+  version: v8
+  description: Official real-time data API for the Unrivaled professional women's 3x3 basketball league, operated by Sportradar as the league's Official Data Provider. Feeds cover schedules, standings, rosters, real-time scores, play-by-play, injuries, transfers, and season statistics, in JSON or XML. Assembled by API Evangelist on 2026-07-21 from the per-endpoint OpenAPI definitions embedded in the 23 Unrivaled reference pages at https://developer.sportradar.com/basketball/reference/unrivaled-overview; operation content is preserved verbatim from the source definitions.
+  contact:
+    url: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+  x-provenance:
+    generated: '2026-07-21'
+    method: searched
+    source: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+servers:
+- url: https://api.sportradar.com/unrivaled/
+security:
+- sec0: []
+tags:
+- name: Tournaments
+paths:
+  /{access_level}/v8/{language_code}/tournaments/{season_year}/{season_type}/schedule.{format}:
+    get:
+      summary: Tournament List
+      description: '**Unrivaled Tournament List** provides a summarized list of all tournaments scheduled for the given season including tournament name, location, start date, and end date.'
+      operationId: get_{access_level}v8{language_code}seasons{season_year}{season_type}teams{team_id}statistics.{format}-1-2
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              examples:
+                Result:
+                  summary: Result
+                  value:
+                    league:
+                      id: 844ee10a-00c8-4dc1-9c17-52598de2ef47
+                      name: Unrivaled
+                      alias: UNRIVALED
+                    season:
+                      id: 04cb26c7-b1d2-4e19-8fe4-c0a30814aa5c
+                      year: 2025
+                      type: OOT
+                    tournaments:
+                    - id: 28d4af13-bfa1-4c95-9f1b-30af6fd5b7ee
+                      name: 2025 Unrivaled 1 on 1 Tournament
+                      location: Miami, FL, USA
+                      status: scheduled
+                      start_date: '2025-02-10'
+                      end_date: '2025-02-14'
+                      parent_id: 39dbbe86-83b9-4f7a-80e1-becc451cc7f2
+              schema:
+                type: object
+                properties:
+                  league:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: 844ee10a-00c8-4dc1-9c17-52598de2ef47
+                      name:
+                        type: string
+                        example: Unrivaled
+                      alias:
+                        type: string
+                        example: UNRIVALED
+                  season:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: 04cb26c7-b1d2-4e19-8fe4-c0a30814aa5c
+                      year:
+                        type: integer
+                        example: 2025
+                        default: 0
+                      type:
+                        type: string
+                        example: OOT
+                  tournaments:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: 28d4af13-bfa1-4c95-9f1b-30af6fd5b7ee
+                        name:
+                          type: string
+                          example: 2025 Unrivaled 1 on 1 Tournament
+                        location:
+                          type: string
+                          example: Miami, FL, USA
+                        status:
+                          type: string
+                          example: scheduled
+                        start_date:
+                          type: string
+                          example: '2025-02-10'
+                        end_date:
+                          type: string
+                          example: '2025-02-14'
+                        parent_id:
+                          type: string
+                          example: 39dbbe86-83b9-4f7a-80e1-becc451cc7f2
+      parameters:
+      - in: path
+        name: access_level
+        schema:
+          type: string
+          default: trial
+          enum:
+          - trial
+          - production
+        required: true
+        description: The access level of your API key<br><br>`trial`, `production`
+      - in: path
+        name: language_code
+        schema:
+          type: string
+          enum:
+          - en
+          default: en
+        required: true
+        description: 2-letter code for supported languages<br><br>`en` (English)
+      - in: path
+        name: season_year
+        schema:
+          type: string
+          default: '2025'
+          enum:
+          - '2025'
+          - '2026'
+        required: true
+        description: Season year in `YYYY` format
+      - in: path
+        name: season_type
+        schema:
+          type: string
+          enum:
+          - REG
+          - OOT
+          - PST
+          default: OOT
+        required: true
+        description: Type of season<br><br>`REG` (Regular Season), `OOT` (One-on-One Tournament), `PST` (Postseason)
+      - in: path
+        name: format
+        schema:
+          type: string
+          enum:
+          - json
+          - xml
+          default: json
+        required: true
+        description: Format returned<br><br>`json`, `xml`
+      tags:
+      - Tournaments
+  /{access_level}/v8/{language}/tournaments/{tournament_id}/schedule.{format}:
+    get:
+      description: '**Unrivaled Tournament Schedule** provides date, time, location, and other event details for every match-up taking place for a given tournament.'
+      operationId: get_{access_level}v8{language}tournaments{tournament_id}schedule.{format}
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              examples:
+                Result:
+                  summary: Result
+                  value:
+                    id: 28d4af13-bfa1-4c95-9f1b-30af6fd5b7ee
+                    name: 2025 Unrivaled 1 on 1 Tournament
+                    location: Miami, FL, USA
+                    status: inprogress
+                    parent_id: 39dbbe86-83b9-4f7a-80e1-becc451cc7f2
+                    league:
+                      id: 844ee10a-00c8-4dc1-9c17-52598de2ef47
+                      name: Unrivaled
+                      alias: UNRIVALED
+                    season:
+                      id: 04cb26c7-b1d2-4e19-8fe4-c0a30814aa5c
+                      year: 2025
+                      type: OOT
+                    rounds:
+                    - id: 20cab6ab-3819-4809-b6a2-998a9c1081a4
+                      sequence: 1
+                      name: Round 1
+                      games: []
+                      bracketed:
+                      - bracket:
+                          id: 7730fd52-6f91-4f45-ab92-96a26729591a
+                          name: Pod C
+                          location: Miami, FL, USA
+                          rank: 3
+                        games:
+                        - id: 506e7bd0-ec4e-49aa-b55c-bddd8ed41003
+                          status: cancelled
+                          title: First Round - Pod C - Game 2
+                          coverage: full
+                          scheduled: '2025-02-10T23:00:00+00:00'
+                          neutral_site: false
+                          track_on_court: true
+                          time_zones:
+                            venue: US/Eastern
+                          venue:
+                            id: 67e49419-cb04-4ce0-ab33-ae42af8d8634
+                            name: Sephora Arena
+                            capacity: 850
+                            address: 7321 NW 75th Street
+                            city: Medley
+                            state: FL
+                            zip: '33166'
+                            country: USA
+                            location:
+                              lat: '25.842035'
+                              lng: '-80.317192'
+                          home:
+                            name: Marina Mabrey
+                            alias: MM
+                            id: 2ab4e44e-f543-4507-b68b-4f8a48bbf702
+                            seed: 4
+                          away:
+                            name: Kate Martin
+                            alias: KM
+                            id: 5f70d32b-f1cd-4169-ad07-d8292bd89cbf
+                            seed: 5
+                      - bracket:
+                          id: 495083cf-0bdf-484a-8257-72ae8be1c7a2
+                          name: Pod B
+                          location: Miami, FL, USA
+                          rank: 4
+                        games:
+                        - id: 06dbbc3b-b5e2-444c-b70b-06465e267135
+                          status: closed
+                          title: First Round - Pod B - Game 1
+                          coverage: full
+                          scheduled: '2025-02-11T00:00:00+00:00'
+                          home_points: 12
+                          away_points: 6
+                          neutral_site: false
+                          track_on_court: true
+                          time_zones:
+                            venue: US/Eastern
+                          venue:
+                            id: 67e49419-cb04-4ce0-ab33-ae42af8d8634
+                            name: Sephora Arena
+                            capacity: 850
+                            address: 7321 NW 75th Street
+                            city: Medley
+                            state: FL
+                            zip: '33166'
+                            country: USA
+                            location:
+                              lat: '25.842035'
+                              lng: '-80.317192'
+                          broadcasts:
+                          - network: truTV
+                            type: TV
+                            locale: National
+                            channel: '246'
+                          home:
+                            name: Napheesa Collier
+                            alias: NC
+                            id: 88255955-f6e1-4d8b-bce2-99be5240775e
+                            seed: 1
+                          away:
+                            name: Katie Lou Samuelson
+                            alias: KLS
+                            id: f705bafc-f431-44ff-923a-512e7d8380f3
+                            seed: 8
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 28d4af13-bfa1-4c95-9f1b-30af6fd5b7ee
+                  name:
+                    type: string
+                    example: 2025 Unrivaled 1 on 1 Tournament
+                  location:
+                    type: string
+                    example: Miami, FL, USA
+                  status:
+                    type: string
+                    example: inprogress
+                  parent_id:
+                    type: string
+                    example: 39dbbe86-83b9-4f7a-80e1-becc451cc7f2
+                  league:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: 844ee10a-00c8-4dc1-9c17-52598de2ef47
+                      name:
+                        type: string
+                        example: Unrivaled
+                      alias:
+                        type: string
+                        example: UNRIVALED
+                  season:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: 04cb26c7-b1d2-4e19-8fe4-c0a30814aa5c
+                      year:
+                        type: integer
+                        example: 2025
+                        default: 0
+                      type:
+                        type: string
+                        example: OOT
+                  rounds:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: 20cab6ab-3819-4809-b6a2-998a9c1081a4
+                        sequence:
+                          type: integer
+                          example: 1
+                          default: 0
+                        name:
+                          type: string
+                          example: Round 1
+                        games:
+                          type: array
+                          items:
+                            type: object
+                            properties: {}
+                        bracketed:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              bracket:
+                                type: object
+                                properties:
+                                  id:
+                                    type: string
+                                    example: 7730fd52-6f91-4f45-ab92-96a26729591a
+                                  name:
+                                    type: string
+                                    example: Pod C
+                                  location:
+                                    type: string
+                                    example: Miami, FL, USA
+                                  rank:
+                                    type: integer
+                                    example: 3
+                                    default: 0
+                              games:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    id:
+                                      type: string
+                                      example: 506e7bd0-ec4e-49aa-b55c-bddd8ed41003
+                                    status:
+                                      type: string
+                                      example: cancelled
+                                    title:
+                                      type: string
+                                      example: First Round - Pod C - Game 2
+                                    coverage:
+                                      type: string
+                                      example: full
+                                    scheduled:
+                                      type: string
+                                      example: '2025-02-10T23:00:00+00:00'
+                                    neutral_site:
+                                      type: boolean
+                                      example: false
+                                      default: true
+                                    track_on_court:
+                                      type: boolean
+                                      example: true
+                                      default: true
+                                    time_zones:
+                                      type: object
+                                      properties:
+                                        venue:
+                                          type: string
+                                          example: US/Eastern
+                                    venue:
+                                      type: object
+                                      properties:
+                                        id:
+                                          type: string
+                                          example: 67e49419-cb04-4ce0-ab33-ae42af8d8634
+                                        name:
+                                          type: string
+                                          example: Sephora Arena
+                                        capacity:
+                                          type: integer
+                                          example: 850
+                                          default: 0
+                                        address:
+                                          type: string
+                                          example: 7321 NW 75th Street
+                                        city:
+                                          type: string
+                                          example: Medley
+                                        state:
+                                          type: string
+                                          example: FL
+                                        zip:
+                                          type: string
+                                          example: '33166'
+                                        country:
+                                          type: string
+                                          example: USA
+                                        location:
+                                          type: object
+                                          properties:
+                                            lat:
+                                              type: string
+                                              example: '25.842035'
+                                            lng:
+                                              type: string
+                                              example: '-80.317192'
+                                    home:
+                                      type: object
+                                      properties:
+                                        name:
+                                          type: string
+                                          example: Marina Mabrey
+                                        alias:
+                                          type: string
+                                          example: MM
+                                        id:
+                                          type: string
+                                          example: 2ab4e44e-f543-4507-b68b-4f8a48bbf702
+                                        seed:
+                                          type: integer
+                                          example: 4
+                                          default: 0
+                                    away:
+                                      type: object
+                                      properties:
+                                        name:
+                                          type: string
+                                          example: Kate Martin
+                                        alias:
+                                          type: string
+                                          example: KM
+                                        id:
+                                          type: string
+                                          example: 5f70d32b-f1cd-4169-ad07-d8292bd89cbf
+                                        seed:
+                                          type: integer
+                                          example: 5
+                                          default: 0
+      parameters:
+      - in: path
+        name: access_level
+        schema:
+          type: string
+          enum:
+          - trial
+          - production
+          default: trial
+        required: true
+        description: The access level of your API key<br><br>`trial`, `production`
+      - in: path
+        name: language
+        schema:
+          type: string
+          enum:
+          - en
+          default: en
+        required: true
+        description: 2-letter code for supported languages<br><br>`en` (English)
+      - in: path
+        name: tournament_id
+        schema:
+          type: string
+          default: 28d4af13-bfa1-4c95-9f1b-30af6fd5b7ee
+        required: true
+        description: Unique Id of a tournament, found in the <span style="text-decoration:underline">[Tournament List](https://developer.sportradar.com/basketball/reference/unrivaled-tournament-list)</span> endpoint<br><br>**Example:** `28d4af13-bfa1-4c95-9f1b-30af6fd5b7ee`
+      - in: path
+        name: format
+        schema:
+          type: string
+          enum:
+          - json
+          - xml
+          default: json
+        required: true
+        description: Format returned<br><br>`json`, `xml`
+      summary: Tournament Schedule
+      tags:
+      - Tournaments
+  /{access_level}/v8/{language_code}/tournaments/{tournament_id}/summary.{format}:
+    get:
+      summary: Tournament Summary
+      description: '**Unrivaled Tournament Summary** provides tournament information including location, status, start date, end date, set up, and participants.'
+      operationId: get_{access_level}v8{language_code}tournaments{tournament_id}teams{team_id}statistics.{format}-1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              examples:
+                Result:
+                  summary: Result
+                  value:
+                    id: 28d4af13-bfa1-4c95-9f1b-30af6fd5b7ee
+                    name: 2025 Unrivaled 1 on 1 Tournament
+                    location: Miami, FL, USA
+                    status: scheduled
+                    start_date: '2025-02-10'
+                    end_date: '2025-02-14'
+                    parent_id: 39dbbe86-83b9-4f7a-80e1-becc451cc7f2
+                    league:
+                      id: 844ee10a-00c8-4dc1-9c17-52598de2ef47
+                      name: Unrivaled
+                      alias: UNRIVALED
+                    season:
+                      id: 04cb26c7-b1d2-4e19-8fe4-c0a30814aa5c
+                      year: 2025
+                      type: OOT
+                    brackets:
+                    - id: 36bc262f-6529-46d0-891f-83ec841b98c3
+                      name: Pod A
+                      location: Miami, FL, USA
+                      rank: 1
+                      participants:
+                      - id: 187b3c8d-6dac-4599-a82e-cbb26361b3d4
+                        name: Jewell Loyd
+                        type: exhibition_team
+                        seed: 1
+                      - id: 828eb47b-7d5f-43a5-bd24-50a553ce86b0
+                        name: Azurá Stevens
+                        type: exhibition_team
+                        seed: 6
+                      - id: c749ce30-8dc9-4b09-af14-e90904b64b1e
+                        name: Natasha Cloud
+                        type: exhibition_team
+                        seed: 5
+                      - id: 04936db0-c019-47b1-ae9a-300268212711
+                        name: Rae Burrell
+                        type: exhibition_team
+                        seed: 4
+                      - id: c1ecd7cd-13eb-467f-9979-053b65001286
+                        name: Shakira Austin
+                        type: exhibition_team
+                        seed: 7
+                      - id: 2da44197-ab13-4b75-9470-c1595c1c08b3
+                        name: Chelsea Gray
+                        type: exhibition_team
+                        seed: 2
+                      - id: 72d4c667-924d-4f20-9ec0-24ea40aaa55a
+                        name: Alyssa Thomas
+                        type: exhibition_team
+                        seed: 3
+                    - id: 495083cf-0bdf-484a-8257-72ae8be1c7a2
+                      name: Pod B
+                      location: Miami, FL, USA
+                      rank: 4
+                      participants:
+                      - id: 88255955-f6e1-4d8b-bce2-99be5240775e
+                        name: Napheesa Collier
+                        type: exhibition_team
+                        seed: 1
+                      - id: 75b77616-19c9-463a-9a5c-44b50d3582ce
+                        name: Tiffany Hayes
+                        type: exhibition_team
+                        seed: 3
+                      - id: ecf4435c-8414-49c5-b68e-8a4f58dfb8d8
+                        name: Rickea Jackson
+                        type: exhibition_team
+                        seed: 5
+                      - id: 4df28e77-b0ee-4440-aa9f-9f934e61738d
+                        name: Lexie Hull
+                        type: exhibition_team
+                        seed: 7
+                      - id: 1dedf709-41cc-4fed-8eee-01367647993d
+                        name: Courtney Williams
+                        type: exhibition_team
+                        seed: 6
+                      - id: 9733425c-1132-48b5-b371-e325cf45f569
+                        name: Jackie Young
+                        type: exhibition_team
+                        seed: 4
+                      - id: f742d6ca-b724-40d0-bcd8-ad6c1deff885
+                        name: Rhyne Howard
+                        type: exhibition_team
+                        seed: 2
+                      - id: f705bafc-f431-44ff-923a-512e7d8380f3
+                        name: Katie Lou Samuelson
+                        type: exhibition_team
+                        seed: 8
+                    - id: 7730fd52-6f91-4f45-ab92-96a26729591a
+                      name: Pod C
+                      location: Miami, FL, USA
+                      rank: 3
+                      participants:
+                      - id: 243c3966-4298-4615-89a4-b06257d11219
+                        name: Breanna Stewart
+                        type: exhibition_team
+                        seed: 1
+                      - id: 2ab4e44e-f543-4507-b68b-4f8a48bbf702
+                        name: Marina Mabrey
+                        type: exhibition_team
+                        seed: 4
+                      - id: 405beda6-4682-4506-83c0-7f0909f08931
+                        name: Jordin Canada
+                        type: exhibition_team
+                        seed: 6
+                      - id: 7f58c9e5-e2e5-48bb-ab62-9c9819f07372
+                        name: Allisha Gray
+                        type: exhibition_team
+                        seed: 3
+                      - id: 0c7150a3-577b-40f3-b5e7-bd74c107993c
+                        name: Kahleah Copper
+                        type: exhibition_team
+                        seed: 2
+                      - id: 5f70d32b-f1cd-4169-ad07-d8292bd89cbf
+                        name: Kate Martin
+                        type: exhibition_team
+                        seed: 5
+                      - id: 7347fb5a-12db-4554-b1db-85d449395d72
+                        name: Aaliyah Edwards
+                        type: exhibition_team
+                        seed: 8
+                      - id: dafb6f71-6e29-4b06-958a-4149c1bba417
+                        name: Aliyah Boston
+                        type: exhibition_team
+                        seed: 7
+                    - id: bb94fa00-0ebb-45ff-ad3f-7ffc0596100c
+                      name: Pod D
+                      location: Miami, FL, USA
+                      rank: 3
+                      participants:
+                      - id: 70def231-bbfc-446d-b394-650f1959000e
+                        name: Dearica Hamby
+                        type: exhibition_team
+                        seed: 5
+                      - id: e6a6348f-8c9b-49fe-a332-157e1c483a25
+                        name: Arike Ogunbowale
+                        type: exhibition_team
+                        seed: 1
+                      - id: 531f9c45-b1fb-4713-8880-dc208f58ec12
+                        name: Skylar Diggins-Smith
+                        type: exhibition_team
+                        seed: 4
+                      - id: 52a5087b-2d1a-4b8f-9f49-190ccb3c8aac
+                        name: Kayla McBride
+                        type: exhibition_team
+                        seed: 2
+                      - id: 1b7ee316-17b2-4067-b190-c0fe629c546a
+                        name: Brittney Sykes
+                        type: exhibition_team
+                        seed: 6
+                      - id: 82c763e7-e402-44c8-933f-47ba5136a8a1
+                        name: Satou Sabally
+                        type: exhibition_team
+                        seed: 3
+                      - id: 3665628c-4b5b-490e-a869-a911e454c4ce
+                        name: DiJonai Carrington
+                        type: exhibition_team
+                        seed: 7
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 28d4af13-bfa1-4c95-9f1b-30af6fd5b7ee
+                  name:
+                    type: string
+                    example: 2025 Unrivaled 1 on 1 Tournament
+                  location:
+                    type: string
+                    example: Miami, FL, USA
+                  status:
+                    type: string
+                    example: scheduled
+                  start_date:
+                    type: string
+                    example: '2025-02-10'
+                  end_date:
+                    type: string
+                    example: '2025-02-14'
+                  parent_id:
+                    type: string
+                    example: 39dbbe86-83b9-4f7a-80e1-becc451cc7f2
+                  league:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: 844ee10a-00c8-4dc1-9c17-52598de2ef47
+                      name:
+                        type: string
+                        example: Unrivaled
+                      alias:
+                        type: string
+                        example: UNRIVALED
+                  season:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: 04cb26c7-b1d2-4e19-8fe4-c0a30814aa5c
+                      year:
+                        type: integer
+                        example: 2025
+                        default: 0
+                      type:
+                        type: string
+                        example: OOT
+                  brackets:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: 36bc262f-6529-46d0-891f-83ec841b98c3
+                        name:
+                          type: string
+                          example: Pod A
+                        location:
+                          type: string
+                          example: Miami, FL, USA
+                        rank:
+                          type: integer
+                          example: 1
+                          default: 0
+                        participants:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              id:
+                                type: string
+                                example: 187b3c8d-6dac-4599-a82e-cbb26361b3d4
+                              name:
+                                type: string
+                                example: Jewell Loyd
+                              type:
+                                type: string
+                                example: exhibition_team
+                              seed:
+                                type: integer
+                                example: 1
+                                default: 0
+      parameters:
+      - in: path
+        name: access_level
+        schema:
+          type: string
+          default: trial
+          enum:
+          - trial
+          - production
+        required: true
+        description: The access level of your API key<br><br>`trial`, `production`
+      - in: path
+        name: language_code
+        schema:
+          type: string
+          enum:
+          - en
+          default: en
+        required: true
+        description: 2-letter code for supported languages<br><br>`en` (English)
+      - in: path
+        name: tournament_id
+        schema:
+          type: string
+          default: 28d4af13-bfa1-4c95-9f1b-30af6fd5b7ee
+        required: true
+        description: Unique Id of a tournament, found in the <span style="text-decoration:underline">[Tournament List](https://developer.sportradar.com/basketball/reference/unrivaled-tournament-list)</span> endpoint<br><br>**Example:** `28d4af13-bfa1-4c95-9f1b-30af6fd5b7ee`
+      - in: path
+        name: format
+        schema:
+          type: string
+          enum:
+          - json
+          - xml
+          default: json
+        required: true
+        description: Format returned<br><br>`json`, `xml`
+      tags:
+      - Tournaments
+components:
+  securitySchemes:
+    sec0:
+      type: apiKey
+      in: header
+      name: x-api-key

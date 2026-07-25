@@ -1,0 +1,1468 @@
+openapi: 3.0.0
+info:
+  title: Unrivaled Games Series API
+  version: v8
+  description: Official real-time data API for the Unrivaled professional women's 3x3 basketball league, operated by Sportradar as the league's Official Data Provider. Feeds cover schedules, standings, rosters, real-time scores, play-by-play, injuries, transfers, and season statistics, in JSON or XML. Assembled by API Evangelist on 2026-07-21 from the per-endpoint OpenAPI definitions embedded in the 23 Unrivaled reference pages at https://developer.sportradar.com/basketball/reference/unrivaled-overview; operation content is preserved verbatim from the source definitions.
+  contact:
+    url: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+  x-provenance:
+    generated: '2026-07-21'
+    method: searched
+    source: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+servers:
+- url: https://api.sportradar.com/unrivaled/
+security:
+- sec0: []
+tags:
+- name: Series
+paths:
+  /{access_level}/v8/{language}/series/{season_year}/{season_type}/schedule.{format}:
+    get:
+      description: '**Unrivaled Series Schedule** provides schedule details for every match-up in a given series.'
+      operationId: get_{access_level}v8{language}series{season_year}{season_type}schedule.{format}
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              examples:
+                Result:
+                  summary: Result
+                  value:
+                    league:
+                      id: 844ee10a-00c8-4dc1-9c17-52598de2ef47
+                      name: Unrivaled
+                      alias: UNRIVALED
+                    season:
+                      id: 427b16f8-b851-4421-8a7c-c2732f60feff
+                      year: 2025
+                      type: PST
+                    series:
+                    - id: 57a01ec9-0b67-4cb6-ac49-b4aa774d6c80
+                      title: Semifinals - Laces vs Rose
+                      round: 1
+                      start_date: '2025-03-16'
+                      status: scheduled
+                      participants: []
+                      games: []
+                    - id: 6a42c5d0-7b59-4f4f-8628-5b26ba8c8239
+                      parent_id: a3eb1e59-5e9f-43a9-9fd5-a70f6bfa1a78
+                      title: Unrivaled Finals - Vinyl vs Rose
+                      round: 2
+                      start_date: '2025-03-17'
+                      status: scheduled
+                      participants: []
+                      games: []
+                    - id: cc261860-57b6-4b1c-9146-700f5efab4bf
+                      title: Semifinals - Vinyl vs Lunar Owls
+                      round: 1
+                      start_date: '2025-03-16'
+                      status: scheduled
+                      participants: []
+                      games: []
+              schema:
+                type: object
+                properties:
+                  league:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: 844ee10a-00c8-4dc1-9c17-52598de2ef47
+                      name:
+                        type: string
+                        example: Unrivaled
+                      alias:
+                        type: string
+                        example: UNRIVALED
+                  season:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: 427b16f8-b851-4421-8a7c-c2732f60feff
+                      year:
+                        type: integer
+                        example: 2025
+                        default: 0
+                      type:
+                        type: string
+                        example: PST
+                  series:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: 57a01ec9-0b67-4cb6-ac49-b4aa774d6c80
+                        title:
+                          type: string
+                          example: Semifinals - Laces vs Rose
+                        round:
+                          type: integer
+                          example: 1
+                          default: 0
+                        start_date:
+                          type: string
+                          example: '2025-03-16'
+                        status:
+                          type: string
+                          example: scheduled
+                        participants:
+                          type: array
+                          items:
+                            type: object
+                            properties: {}
+                        games:
+                          type: array
+                          items:
+                            type: object
+                            properties: {}
+      parameters:
+      - in: path
+        name: access_level
+        schema:
+          type: string
+          enum:
+          - trial
+          - production
+          default: trial
+        required: true
+        description: The access level of your API key<br><br>`trial`, `production`
+      - in: path
+        name: language
+        schema:
+          type: string
+          enum:
+          - en
+          default: en
+        required: true
+        description: 2-letter code for supported languages<br><br>`en` (English)
+      - in: path
+        name: season_year
+        schema:
+          type: string
+          enum:
+          - '2025'
+          - '2026'
+          default: '2025'
+        required: true
+        description: Season year in `YYYY` format
+      - in: path
+        name: season_type
+        schema:
+          type: string
+          enum:
+          - PRE
+          - REG
+          - OOT
+          - PST
+          default: PST
+        required: true
+        description: Type of season<br><br>`PRE` (Pre-season), `REG` (Regular Season), `OOT` (One-on-One Tournament), `PST` (Post-season)
+      - in: path
+        name: format
+        schema:
+          type: string
+          enum:
+          - json
+          - xml
+          default: json
+        required: true
+        description: Format returned<br><br>`json`, `xml`
+      summary: Series Schedule
+      tags:
+      - Series
+  /{access_level}/v8/{language}/series/{series_id}/teams/{team_id}/statistics.{format}:
+    get:
+      description: ''
+      operationId: get_{access_level}v8{language}series{series_id}teams{team_id}statistics.{format}
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              examples:
+                Result:
+                  summary: Result
+                  value:
+                    id: b438958f-7f9b-418a-9c12-8ec1f47a5e5b
+                    title: Semifinals - CON vs NYL
+                    status: closed
+                    season:
+                      id: ecc325e8-e6ff-4c8b-a256-6554290a6ef7
+                      year: 2023
+                      type: PST
+                    team:
+                      id: 08ed8274-e29f-4248-bc2e-83cc8ed18d75
+                      name: Liberty
+                      market: New York
+                      sr_id: sr:team:3446
+                    own_record:
+                      total:
+                        games_played: 4
+                        minutes: 800
+                        field_goals_made: 118
+                        field_goals_att: 277
+                        field_goals_pct: 0.426
+                        two_points_made: 81
+                        two_points_att: 176
+                        two_points_pct: 0.46
+                        three_points_made: 37
+                        three_points_att: 101
+                        three_points_pct: 0.366
+                        blocked_att: 20
+                        free_throws_made: 53
+                        free_throws_att: 60
+                        free_throws_pct: 0.883
+                        offensive_rebounds: 42
+                        defensive_rebounds: 102
+                        rebounds: 144
+                        assists: 78
+                        turnovers: 50
+                        assists_turnover_ratio: 1.56
+                        steals: 18
+                        blocks: 26
+                        personal_fouls: 49
+                        tech_fouls: 0
+                        points: 326
+                        fast_break_pts: 36
+                        flagrant_fouls: 0
+                        points_off_turnovers: 52
+                        second_chance_pts: 47
+                        ejections: 0
+                        foulouts: 0
+                        efficiency: 376
+                        points_in_paint: 138
+                        team_offensive_rebounds: 22
+                        team_defensive_rebounds: 7
+                        team_rebounds: 29
+                        team_turnovers: 4
+                        total_rebounds: 173
+                        total_turnovers: 54
+                        true_shooting_att: 303.4
+                        true_shooting_pct: 0.537
+                        field_goals_at_rim_made: 15
+                        field_goals_at_rim_att: 21
+                        field_goals_at_rim_pct: 0.714
+                        field_goals_at_midrange_made: 5
+                        field_goals_at_midrange_att: 8
+                        field_goals_at_midrange_pct: 0.625
+                        possessions: 315.4
+                        opponent_possessions: 316.68
+                        offensive_rating: 103.36
+                        defensive_rating: 101.05
+                        net_rating: 2.31
+                      average:
+                        fast_break_pts: 9
+                        points_off_turnovers: 13
+                        second_chance_pts: 11.75
+                        minutes: 200
+                        points: 81.5
+                        off_rebounds: 10.5
+                        def_rebounds: 25.5
+                        rebounds: 36
+                        assists: 19.5
+                        steals: 4.5
+                        blocks: 6.5
+                        turnovers: 12.5
+                        personal_fouls: 12.25
+                        flagrant_fouls: 0
+                        blocked_att: 5
+                        field_goals_made: 29.5
+                        field_goals_att: 69.25
+                        three_points_made: 9.25
+                        three_points_att: 25.25
+                        free_throws_made: 13.25
+                        free_throws_att: 15
+                        two_points_made: 20.25
+                        two_points_att: 44
+                        points_in_paint: 34.5
+                        efficiency: 94
+                        true_shooting_att: 75.85
+                    opponents:
+                      total:
+                        games_played: 4
+                        minutes: 800
+                        field_goals_made: 126
+                        field_goals_att: 284
+                        field_goals_pct: 0.444
+                        two_points_made: 93
+                        two_points_att: 196
+                        two_points_pct: 0.474
+                        three_points_made: 33
+                        three_points_att: 88
+                        three_points_pct: 0.375
+                        blocked_att: 26
+                        free_throws_made: 35
+                        free_throws_att: 47
+                        free_throws_pct: 0.745
+                        offensive_rebounds: 33
+                        defensive_rebounds: 96
+                        rebounds: 129
+                        assists: 88
+                        turnovers: 37
+                        assists_turnover_ratio: 2.38
+                        steals: 26
+                        blocks: 20
+                        personal_fouls: 67
+                        tech_fouls: 1
+                        points: 320
+                        fast_break_pts: 31
+                        flagrant_fouls: 0
+                        points_off_turnovers: 55
+                        second_chance_pts: 42
+                        ejections: 0
+                        foulouts: 0
+                        efficiency: 376
+                        points_in_paint: 148
+                        team_offensive_rebounds: 28
+                        team_defensive_rebounds: 6
+                        team_rebounds: 34
+                        team_turnovers: 8
+                        total_rebounds: 163
+                        total_turnovers: 45
+                        true_shooting_att: 304.68
+                        true_shooting_pct: 0.525
+                        field_goals_at_rim_made: 15
+                        field_goals_at_rim_att: 23
+                        field_goals_at_rim_pct: 0.652
+                        field_goals_at_midrange_made: 5
+                        field_goals_at_midrange_att: 10
+                        field_goals_at_midrange_pct: 0.5
+                        possessions: 316.68
+                        opponent_possessions: 315.4
+                        offensive_rating: 101.05
+                        defensive_rating: 103.36
+                        net_rating: -2.31
+                      average:
+                        fast_break_pts: 7.75
+                        points_off_turnovers: 13.75
+                        second_chance_pts: 10.5
+                        minutes: 200
+                        points: 80
+                        off_rebounds: 8.25
+                        def_rebounds: 24
+                        rebounds: 32.25
+                        assists: 22
+                        steals: 6.5
+                        blocks: 5
+                        turnovers: 9.25
+                        personal_fouls: 16.75
+                        flagrant_fouls: 0
+                        blocked_att: 6.5
+                        field_goals_made: 31.5
+                        field_goals_att: 71
+                        three_points_made: 8.25
+                        three_points_att: 22
+                        free_throws_made: 8.75
+                        free_throws_att: 11.75
+                        two_points_made: 23.25
+                        two_points_att: 49
+                        points_in_paint: 37
+                        efficiency: 94
+                        true_shooting_att: 76.17
+                    players:
+                    - id: 1359b409-f610-4d01-9867-58aca845b2da
+                      full_name: Nyara Sabally
+                      first_name: Nyara
+                      last_name: Sabally
+                      position: F
+                      primary_position: NA
+                      jersey_number: '8'
+                      sr_id: sr:player:1617902
+                      total:
+                        games_played: 1
+                        games_started: 0
+                        minutes: 1
+                        field_goals_made: 0
+                        field_goals_att: 0
+                        field_goals_pct: 0
+                        two_points_made: 0
+                        two_points_att: 0
+                        two_points_pct: 0
+                        three_points_made: 0
+                        three_points_att: 0
+                        three_points_pct: 0
+                        blocked_att: 0
+                        free_throws_made: 0
+                        free_throws_att: 0
+                        free_throws_pct: 0
+                        offensive_rebounds: 0
+                        defensive_rebounds: 0
+                        rebounds: 0
+                        assists: 0
+                        turnovers: 0
+                        assists_turnover_ratio: 0
+                        steals: 0
+                        blocks: 0
+                        personal_fouls: 0
+                        tech_fouls: 0
+                        points: 0
+                        flagrant_fouls: 0
+                        ejections: 0
+                        foulouts: 0
+                        tech_fouls_non_unsportsmanlike: 0
+                        true_shooting_att: 0
+                        true_shooting_pct: 0
+                        efficiency: 0
+                        field_goals_at_rim_made: 0
+                        field_goals_at_rim_att: 0
+                        field_goals_at_rim_pct: 0
+                        field_goals_at_midrange_made: 0
+                        field_goals_at_midrange_att: 0
+                        field_goals_at_midrange_pct: 0
+                        usage_pct: 0
+                      average:
+                        minutes: 1
+                        points: 0
+                        off_rebounds: 0
+                        def_rebounds: 0
+                        rebounds: 0
+                        assists: 0
+                        steals: 0
+                        blocks: 0
+                        turnovers: 0
+                        personal_fouls: 0
+                        flagrant_fouls: 0
+                        blocked_att: 0
+                        field_goals_made: 0
+                        field_goals_att: 0
+                        three_points_made: 0
+                        three_points_att: 0
+                        free_throws_made: 0
+                        free_throws_att: 0
+                        two_points_made: 0
+                        two_points_att: 0
+                        efficiency: 0
+                        true_shooting_att: 0
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: b438958f-7f9b-418a-9c12-8ec1f47a5e5b
+                  title:
+                    type: string
+                    example: Semifinals - CON vs NYL
+                  status:
+                    type: string
+                    example: closed
+                  season:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: ecc325e8-e6ff-4c8b-a256-6554290a6ef7
+                      year:
+                        type: integer
+                        example: 2023
+                        default: 0
+                      type:
+                        type: string
+                        example: PST
+                  team:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: 08ed8274-e29f-4248-bc2e-83cc8ed18d75
+                      name:
+                        type: string
+                        example: Liberty
+                      market:
+                        type: string
+                        example: New York
+                      sr_id:
+                        type: string
+                        example: sr:team:3446
+                  own_record:
+                    type: object
+                    properties:
+                      total:
+                        type: object
+                        properties:
+                          games_played:
+                            type: integer
+                            example: 4
+                            default: 0
+                          minutes:
+                            type: integer
+                            example: 800
+                            default: 0
+                          field_goals_made:
+                            type: integer
+                            example: 118
+                            default: 0
+                          field_goals_att:
+                            type: integer
+                            example: 277
+                            default: 0
+                          field_goals_pct:
+                            type: number
+                            example: 0.426
+                            default: 0
+                          two_points_made:
+                            type: integer
+                            example: 81
+                            default: 0
+                          two_points_att:
+                            type: integer
+                            example: 176
+                            default: 0
+                          two_points_pct:
+                            type: number
+                            example: 0.46
+                            default: 0
+                          three_points_made:
+                            type: integer
+                            example: 37
+                            default: 0
+                          three_points_att:
+                            type: integer
+                            example: 101
+                            default: 0
+                          three_points_pct:
+                            type: number
+                            example: 0.366
+                            default: 0
+                          blocked_att:
+                            type: integer
+                            example: 20
+                            default: 0
+                          free_throws_made:
+                            type: integer
+                            example: 53
+                            default: 0
+                          free_throws_att:
+                            type: integer
+                            example: 60
+                            default: 0
+                          free_throws_pct:
+                            type: number
+                            example: 0.883
+                            default: 0
+                          offensive_rebounds:
+                            type: integer
+                            example: 42
+                            default: 0
+                          defensive_rebounds:
+                            type: integer
+                            example: 102
+                            default: 0
+                          rebounds:
+                            type: integer
+                            example: 144
+                            default: 0
+                          assists:
+                            type: integer
+                            example: 78
+                            default: 0
+                          turnovers:
+                            type: integer
+                            example: 50
+                            default: 0
+                          assists_turnover_ratio:
+                            type: number
+                            example: 1.56
+                            default: 0
+                          steals:
+                            type: integer
+                            example: 18
+                            default: 0
+                          blocks:
+                            type: integer
+                            example: 26
+                            default: 0
+                          personal_fouls:
+                            type: integer
+                            example: 49
+                            default: 0
+                          tech_fouls:
+                            type: integer
+                            example: 0
+                            default: 0
+                          points:
+                            type: integer
+                            example: 326
+                            default: 0
+                          fast_break_pts:
+                            type: integer
+                            example: 36
+                            default: 0
+                          flagrant_fouls:
+                            type: integer
+                            example: 0
+                            default: 0
+                          points_off_turnovers:
+                            type: integer
+                            example: 52
+                            default: 0
+                          second_chance_pts:
+                            type: integer
+                            example: 47
+                            default: 0
+                          ejections:
+                            type: integer
+                            example: 0
+                            default: 0
+                          foulouts:
+                            type: integer
+                            example: 0
+                            default: 0
+                          efficiency:
+                            type: integer
+                            example: 376
+                            default: 0
+                          points_in_paint:
+                            type: integer
+                            example: 138
+                            default: 0
+                          team_offensive_rebounds:
+                            type: integer
+                            example: 22
+                            default: 0
+                          team_defensive_rebounds:
+                            type: integer
+                            example: 7
+                            default: 0
+                          team_rebounds:
+                            type: integer
+                            example: 29
+                            default: 0
+                          team_turnovers:
+                            type: integer
+                            example: 4
+                            default: 0
+                          total_rebounds:
+                            type: integer
+                            example: 173
+                            default: 0
+                          total_turnovers:
+                            type: integer
+                            example: 54
+                            default: 0
+                          true_shooting_att:
+                            type: number
+                            example: 303.4
+                            default: 0
+                          true_shooting_pct:
+                            type: number
+                            example: 0.537
+                            default: 0
+                          field_goals_at_rim_made:
+                            type: integer
+                            example: 15
+                            default: 0
+                          field_goals_at_rim_att:
+                            type: integer
+                            example: 21
+                            default: 0
+                          field_goals_at_rim_pct:
+                            type: number
+                            example: 0.714
+                            default: 0
+                          field_goals_at_midrange_made:
+                            type: integer
+                            example: 5
+                            default: 0
+                          field_goals_at_midrange_att:
+                            type: integer
+                            example: 8
+                            default: 0
+                          field_goals_at_midrange_pct:
+                            type: number
+                            example: 0.625
+                            default: 0
+                          possessions:
+                            type: number
+                            example: 315.4
+                            default: 0
+                          opponent_possessions:
+                            type: number
+                            example: 316.68
+                            default: 0
+                          offensive_rating:
+                            type: number
+                            example: 103.36
+                            default: 0
+                          defensive_rating:
+                            type: number
+                            example: 101.05
+                            default: 0
+                          net_rating:
+                            type: number
+                            example: 2.31
+                            default: 0
+                      average:
+                        type: object
+                        properties:
+                          fast_break_pts:
+                            type: integer
+                            example: 9
+                            default: 0
+                          points_off_turnovers:
+                            type: integer
+                            example: 13
+                            default: 0
+                          second_chance_pts:
+                            type: number
+                            example: 11.75
+                            default: 0
+                          minutes:
+                            type: integer
+                            example: 200
+                            default: 0
+                          points:
+                            type: number
+                            example: 81.5
+                            default: 0
+                          off_rebounds:
+                            type: number
+                            example: 10.5
+                            default: 0
+                          def_rebounds:
+                            type: number
+                            example: 25.5
+                            default: 0
+                          rebounds:
+                            type: integer
+                            example: 36
+                            default: 0
+                          assists:
+                            type: number
+                            example: 19.5
+                            default: 0
+                          steals:
+                            type: number
+                            example: 4.5
+                            default: 0
+                          blocks:
+                            type: number
+                            example: 6.5
+                            default: 0
+                          turnovers:
+                            type: number
+                            example: 12.5
+                            default: 0
+                          personal_fouls:
+                            type: number
+                            example: 12.25
+                            default: 0
+                          flagrant_fouls:
+                            type: integer
+                            example: 0
+                            default: 0
+                          blocked_att:
+                            type: integer
+                            example: 5
+                            default: 0
+                          field_goals_made:
+                            type: number
+                            example: 29.5
+                            default: 0
+                          field_goals_att:
+                            type: number
+                            example: 69.25
+                            default: 0
+                          three_points_made:
+                            type: number
+                            example: 9.25
+                            default: 0
+                          three_points_att:
+                            type: number
+                            example: 25.25
+                            default: 0
+                          free_throws_made:
+                            type: number
+                            example: 13.25
+                            default: 0
+                          free_throws_att:
+                            type: integer
+                            example: 15
+                            default: 0
+                          two_points_made:
+                            type: number
+                            example: 20.25
+                            default: 0
+                          two_points_att:
+                            type: integer
+                            example: 44
+                            default: 0
+                          points_in_paint:
+                            type: number
+                            example: 34.5
+                            default: 0
+                          efficiency:
+                            type: integer
+                            example: 94
+                            default: 0
+                          true_shooting_att:
+                            type: number
+                            example: 75.85
+                            default: 0
+                  opponents:
+                    type: object
+                    properties:
+                      total:
+                        type: object
+                        properties:
+                          games_played:
+                            type: integer
+                            example: 4
+                            default: 0
+                          minutes:
+                            type: integer
+                            example: 800
+                            default: 0
+                          field_goals_made:
+                            type: integer
+                            example: 126
+                            default: 0
+                          field_goals_att:
+                            type: integer
+                            example: 284
+                            default: 0
+                          field_goals_pct:
+                            type: number
+                            example: 0.444
+                            default: 0
+                          two_points_made:
+                            type: integer
+                            example: 93
+                            default: 0
+                          two_points_att:
+                            type: integer
+                            example: 196
+                            default: 0
+                          two_points_pct:
+                            type: number
+                            example: 0.474
+                            default: 0
+                          three_points_made:
+                            type: integer
+                            example: 33
+                            default: 0
+                          three_points_att:
+                            type: integer
+                            example: 88
+                            default: 0
+                          three_points_pct:
+                            type: number
+                            example: 0.375
+                            default: 0
+                          blocked_att:
+                            type: integer
+                            example: 26
+                            default: 0
+                          free_throws_made:
+                            type: integer
+                            example: 35
+                            default: 0
+                          free_throws_att:
+                            type: integer
+                            example: 47
+                            default: 0
+                          free_throws_pct:
+                            type: number
+                            example: 0.745
+                            default: 0
+                          offensive_rebounds:
+                            type: integer
+                            example: 33
+                            default: 0
+                          defensive_rebounds:
+                            type: integer
+                            example: 96
+                            default: 0
+                          rebounds:
+                            type: integer
+                            example: 129
+                            default: 0
+                          assists:
+                            type: integer
+                            example: 88
+                            default: 0
+                          turnovers:
+                            type: integer
+                            example: 37
+                            default: 0
+                          assists_turnover_ratio:
+                            type: number
+                            example: 2.38
+                            default: 0
+                          steals:
+                            type: integer
+                            example: 26
+                            default: 0
+                          blocks:
+                            type: integer
+                            example: 20
+                            default: 0
+                          personal_fouls:
+                            type: integer
+                            example: 67
+                            default: 0
+                          tech_fouls:
+                            type: integer
+                            example: 1
+                            default: 0
+                          points:
+                            type: integer
+                            example: 320
+                            default: 0
+                          fast_break_pts:
+                            type: integer
+                            example: 31
+                            default: 0
+                          flagrant_fouls:
+                            type: integer
+                            example: 0
+                            default: 0
+                          points_off_turnovers:
+                            type: integer
+                            example: 55
+                            default: 0
+                          second_chance_pts:
+                            type: integer
+                            example: 42
+                            default: 0
+                          ejections:
+                            type: integer
+                            example: 0
+                            default: 0
+                          foulouts:
+                            type: integer
+                            example: 0
+                            default: 0
+                          efficiency:
+                            type: integer
+                            example: 376
+                            default: 0
+                          points_in_paint:
+                            type: integer
+                            example: 148
+                            default: 0
+                          team_offensive_rebounds:
+                            type: integer
+                            example: 28
+                            default: 0
+                          team_defensive_rebounds:
+                            type: integer
+                            example: 6
+                            default: 0
+                          team_rebounds:
+                            type: integer
+                            example: 34
+                            default: 0
+                          team_turnovers:
+                            type: integer
+                            example: 8
+                            default: 0
+                          total_rebounds:
+                            type: integer
+                            example: 163
+                            default: 0
+                          total_turnovers:
+                            type: integer
+                            example: 45
+                            default: 0
+                          true_shooting_att:
+                            type: number
+                            example: 304.68
+                            default: 0
+                          true_shooting_pct:
+                            type: number
+                            example: 0.525
+                            default: 0
+                          field_goals_at_rim_made:
+                            type: integer
+                            example: 15
+                            default: 0
+                          field_goals_at_rim_att:
+                            type: integer
+                            example: 23
+                            default: 0
+                          field_goals_at_rim_pct:
+                            type: number
+                            example: 0.652
+                            default: 0
+                          field_goals_at_midrange_made:
+                            type: integer
+                            example: 5
+                            default: 0
+                          field_goals_at_midrange_att:
+                            type: integer
+                            example: 10
+                            default: 0
+                          field_goals_at_midrange_pct:
+                            type: number
+                            example: 0.5
+                            default: 0
+                          possessions:
+                            type: number
+                            example: 316.68
+                            default: 0
+                          opponent_possessions:
+                            type: number
+                            example: 315.4
+                            default: 0
+                          offensive_rating:
+                            type: number
+                            example: 101.05
+                            default: 0
+                          defensive_rating:
+                            type: number
+                            example: 103.36
+                            default: 0
+                          net_rating:
+                            type: number
+                            example: -2.31
+                            default: 0
+                      average:
+                        type: object
+                        properties:
+                          fast_break_pts:
+                            type: number
+                            example: 7.75
+                            default: 0
+                          points_off_turnovers:
+                            type: number
+                            example: 13.75
+                            default: 0
+                          second_chance_pts:
+                            type: number
+                            example: 10.5
+                            default: 0
+                          minutes:
+                            type: integer
+                            example: 200
+                            default: 0
+                          points:
+                            type: integer
+                            example: 80
+                            default: 0
+                          off_rebounds:
+                            type: number
+                            example: 8.25
+                            default: 0
+                          def_rebounds:
+                            type: integer
+                            example: 24
+                            default: 0
+                          rebounds:
+                            type: number
+                            example: 32.25
+                            default: 0
+                          assists:
+                            type: integer
+                            example: 22
+                            default: 0
+                          steals:
+                            type: number
+                            example: 6.5
+                            default: 0
+                          blocks:
+                            type: integer
+                            example: 5
+                            default: 0
+                          turnovers:
+                            type: number
+                            example: 9.25
+                            default: 0
+                          personal_fouls:
+                            type: number
+                            example: 16.75
+                            default: 0
+                          flagrant_fouls:
+                            type: integer
+                            example: 0
+                            default: 0
+                          blocked_att:
+                            type: number
+                            example: 6.5
+                            default: 0
+                          field_goals_made:
+                            type: number
+                            example: 31.5
+                            default: 0
+                          field_goals_att:
+                            type: integer
+                            example: 71
+                            default: 0
+                          three_points_made:
+                            type: number
+                            example: 8.25
+                            default: 0
+                          three_points_att:
+                            type: integer
+                            example: 22
+                            default: 0
+                          free_throws_made:
+                            type: number
+                            example: 8.75
+                            default: 0
+                          free_throws_att:
+                            type: number
+                            example: 11.75
+                            default: 0
+                          two_points_made:
+                            type: number
+                            example: 23.25
+                            default: 0
+                          two_points_att:
+                            type: integer
+                            example: 49
+                            default: 0
+                          points_in_paint:
+                            type: integer
+                            example: 37
+                            default: 0
+                          efficiency:
+                            type: integer
+                            example: 94
+                            default: 0
+                          true_shooting_att:
+                            type: number
+                            example: 76.17
+                            default: 0
+                  players:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: 1359b409-f610-4d01-9867-58aca845b2da
+                        full_name:
+                          type: string
+                          example: Nyara Sabally
+                        first_name:
+                          type: string
+                          example: Nyara
+                        last_name:
+                          type: string
+                          example: Sabally
+                        position:
+                          type: string
+                          example: F
+                        primary_position:
+                          type: string
+                          example: NA
+                        jersey_number:
+                          type: string
+                          example: '8'
+                        sr_id:
+                          type: string
+                          example: sr:player:1617902
+                        total:
+                          type: object
+                          properties:
+                            games_played:
+                              type: integer
+                              example: 1
+                              default: 0
+                            games_started:
+                              type: integer
+                              example: 0
+                              default: 0
+                            minutes:
+                              type: integer
+                              example: 1
+                              default: 0
+                            field_goals_made:
+                              type: integer
+                              example: 0
+                              default: 0
+                            field_goals_att:
+                              type: integer
+                              example: 0
+                              default: 0
+                            field_goals_pct:
+                              type: integer
+                              example: 0
+                              default: 0
+                            two_points_made:
+                              type: integer
+                              example: 0
+                              default: 0
+                            two_points_att:
+                              type: integer
+                              example: 0
+                              default: 0
+                            two_points_pct:
+                              type: integer
+                              example: 0
+                              default: 0
+                            three_points_made:
+                              type: integer
+                              example: 0
+                              default: 0
+                            three_points_att:
+                              type: integer
+                              example: 0
+                              default: 0
+                            three_points_pct:
+                              type: integer
+                              example: 0
+                              default: 0
+                            blocked_att:
+                              type: integer
+                              example: 0
+                              default: 0
+                            free_throws_made:
+                              type: integer
+                              example: 0
+                              default: 0
+                            free_throws_att:
+                              type: integer
+                              example: 0
+                              default: 0
+                            free_throws_pct:
+                              type: integer
+                              example: 0
+                              default: 0
+                            offensive_rebounds:
+                              type: integer
+                              example: 0
+                              default: 0
+                            defensive_rebounds:
+                              type: integer
+                              example: 0
+                              default: 0
+                            rebounds:
+                              type: integer
+                              example: 0
+                              default: 0
+                            assists:
+                              type: integer
+                              example: 0
+                              default: 0
+                            turnovers:
+                              type: integer
+                              example: 0
+                              default: 0
+                            assists_turnover_ratio:
+                              type: integer
+                              example: 0
+                              default: 0
+                            steals:
+                              type: integer
+                              example: 0
+                              default: 0
+                            blocks:
+                              type: integer
+                              example: 0
+                              default: 0
+                            personal_fouls:
+                              type: integer
+                              example: 0
+                              default: 0
+                            tech_fouls:
+                              type: integer
+                              example: 0
+                              default: 0
+                            points:
+                              type: integer
+                              example: 0
+                              default: 0
+                            flagrant_fouls:
+                              type: integer
+                              example: 0
+                              default: 0
+                            ejections:
+                              type: integer
+                              example: 0
+                              default: 0
+                            foulouts:
+                              type: integer
+                              example: 0
+                              default: 0
+                            tech_fouls_non_unsportsmanlike:
+                              type: integer
+                              example: 0
+                              default: 0
+                            true_shooting_att:
+                              type: integer
+                              example: 0
+                              default: 0
+                            true_shooting_pct:
+                              type: integer
+                              example: 0
+                              default: 0
+                            efficiency:
+                              type: integer
+                              example: 0
+                              default: 0
+                            field_goals_at_rim_made:
+                              type: integer
+                              example: 0
+                              default: 0
+                            field_goals_at_rim_att:
+                              type: integer
+                              example: 0
+                              default: 0
+                            field_goals_at_rim_pct:
+                              type: integer
+                              example: 0
+                              default: 0
+                            field_goals_at_midrange_made:
+                              type: integer
+                              example: 0
+                              default: 0
+                            field_goals_at_midrange_att:
+                              type: integer
+                              example: 0
+                              default: 0
+                            field_goals_at_midrange_pct:
+                              type: integer
+                              example: 0
+                              default: 0
+                            usage_pct:
+                              type: integer
+                              example: 0
+                              default: 0
+                        average:
+                          type: object
+                          properties:
+                            minutes:
+                              type: integer
+                              example: 1
+                              default: 0
+                            points:
+                              type: integer
+                              example: 0
+                              default: 0
+                            off_rebounds:
+                              type: integer
+                              example: 0
+                              default: 0
+                            def_rebounds:
+                              type: integer
+                              example: 0
+                              default: 0
+                            rebounds:
+                              type: integer
+                              example: 0
+                              default: 0
+                            assists:
+                              type: integer
+                              example: 0
+                              default: 0
+                            steals:
+                              type: integer
+                              example: 0
+                              default: 0
+                            blocks:
+                              type: integer
+                              example: 0
+                              default: 0
+                            turnovers:
+                              type: integer
+                              example: 0
+                              default: 0
+                            personal_fouls:
+                              type: integer
+                              example: 0
+                              default: 0
+                            flagrant_fouls:
+                              type: integer
+                              example: 0
+                              default: 0
+                            blocked_att:
+                              type: integer
+                              example: 0
+                              default: 0
+                            field_goals_made:
+                              type: integer
+                              example: 0
+                              default: 0
+                            field_goals_att:
+                              type: integer
+                              example: 0
+                              default: 0
+                            three_points_made:
+                              type: integer
+                              example: 0
+                              default: 0
+                            three_points_att:
+                              type: integer
+                              example: 0
+                              default: 0
+                            free_throws_made:
+                              type: integer
+                              example: 0
+                              default: 0
+                            free_throws_att:
+                              type: integer
+                              example: 0
+                              default: 0
+                            two_points_made:
+                              type: integer
+                              example: 0
+                              default: 0
+                            two_points_att:
+                              type: integer
+                              example: 0
+                              default: 0
+                            efficiency:
+                              type: integer
+                              example: 0
+                              default: 0
+                            true_shooting_att:
+                              type: integer
+                              example: 0
+                              default: 0
+      parameters:
+      - in: path
+        name: access_level
+        schema:
+          type: string
+          enum:
+          - trial
+          - production
+          default: trial
+        required: true
+        description: The access level of your API key<br><br>`trial`, `production`
+      - in: path
+        name: language
+        schema:
+          type: string
+          enum:
+          - en
+          default: en
+        required: true
+        description: 2-letter code for supported languages<br><br>`en` (English)
+      - in: path
+        name: series_id
+        schema:
+          type: string
+          default: 57a01ec9-0b67-4cb6-ac49-b4aa774d6c80
+        required: true
+        description: Unique Id of a series, found in the <span style="text-decoration:underline">[Series Schedule](https://developer.sportradar.com/basketball/reference/unrivaled-series-schedule)</span> endpoint<br><br>**Example:** `57a01ec9-0b67-4cb6-ac49-b4aa774d6c80`
+      - in: path
+        name: team_id
+        schema:
+          type: string
+          default: 67c22115-2385-458f-8632-a67a025fef55
+        required: true
+        description: Unique Id of a team, found in the <span style="text-decoration:underline">[Teams](https://developer.sportradar.com/basketball/reference/unrivaled-teams)</span> endpoint<br><br>**Example:** `b1da8619-1db7-4c21-99bb-4c7307e25026`<br><br>**Note:** This endpoint is designed for team_ids which exist in the current <span style="text-decoration:underline">[League Hierarchy](https://developer.sportradar.com/basketball/reference/unrivaled-league-hierarchy)</span> endpoint
+      - in: path
+        name: format
+        schema:
+          type: string
+          enum:
+          - json
+          - xml
+          default: json
+        required: true
+        description: Format returned<br><br>`json`, `xml`
+      tags:
+      - Series
+components:
+  securitySchemes:
+    sec0:
+      type: apiKey
+      in: header
+      name: x-api-key

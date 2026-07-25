@@ -1,0 +1,374 @@
+openapi: 3.0.0
+info:
+  title: Unrivaled Games Teams API
+  version: v8
+  description: Official real-time data API for the Unrivaled professional women's 3x3 basketball league, operated by Sportradar as the league's Official Data Provider. Feeds cover schedules, standings, rosters, real-time scores, play-by-play, injuries, transfers, and season statistics, in JSON or XML. Assembled by API Evangelist on 2026-07-21 from the per-endpoint OpenAPI definitions embedded in the 23 Unrivaled reference pages at https://developer.sportradar.com/basketball/reference/unrivaled-overview; operation content is preserved verbatim from the source definitions.
+  contact:
+    url: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+  x-provenance:
+    generated: '2026-07-21'
+    method: searched
+    source: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+servers:
+- url: https://api.sportradar.com/unrivaled/
+security:
+- sec0: []
+tags:
+- name: Teams
+paths:
+  /{access_level}/v8/{language}/teams/{team_id}/profile.{format}:
+    get:
+      description: '**Unrivaled Teams Profile** provides top-level team information and a full roster of active players.'
+      operationId: get_{access_level}v8{language}teams{team_id}profile.{format}
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              examples:
+                Result:
+                  summary: Result
+                  value:
+                    id: 67c22115-2385-458f-8632-a67a025fef55
+                    name: Lunar Owls
+                    alias: LNR
+                    founded: 2025
+                    championships_won: 1
+                    championship_seasons: '2025'
+                    venue:
+                      id: 67e49419-cb04-4ce0-ab33-ae42af8d8634
+                      name: Unrivaled Arena
+                      capacity: 850
+                      address: 7321 NW 75th Street
+                      city: Medley
+                      state: FL
+                      zip: '33166'
+                      country: USA
+                      location:
+                        lat: '25.842035'
+                        lng: '-80.317192'
+                    league:
+                      id: 844ee10a-00c8-4dc1-9c17-52598de2ef47
+                      name: Unrivaled
+                      alias: UNRIVALED
+                    conference:
+                      id: 56089804-dbb3-4621-96eb-ec520ab26988
+                      name: Unrivaled
+                      alias: UNRIVALED
+                    coaches:
+                    - id: ec258031-0e88-43dc-8abf-1c76c6ff9a4e
+                      full_name: DJ Sackmann
+                      first_name: DJ
+                      last_name: Sackmann
+                      position: Head Coach
+                    team_colors:
+                    - type: secondary
+                      hex_color: '#f4e087'
+                      rgb_color:
+                        red: 244
+                        green: 224
+                        blue: 135
+                    - type: primary
+                      hex_color: '#3f347d'
+                      rgb_color:
+                        red: 63
+                        green: 52
+                        blue: 125
+                    players:
+                    - id: f0fef47c-4e5f-4b81-8875-3f01f8a0ea1b
+                      status: ACT
+                      full_name: Allisha Gray
+                      first_name: Allisha
+                      last_name: Gray
+                      abbr_name: A.Gray
+                      height: 72
+                      weight: 167
+                      position: G
+                      primary_position: NA
+                      jersey_number: '15'
+                      college: South Carolina
+                      high_school: Washington County (GA)
+                      birth_place: Greenwood, SC, USA
+                      birthdate: '1995-01-12'
+                      updated: '2025-11-13T22:12:18+00:00'
+                      references:
+                      - source_id: d3261e48-3a71-413a-bb8e-83d6e829e726
+                        scope: NCAAW
+                        id_type: league_profile
+                      - source_id: 293b5925-fd31-4640-8ada-bf6451a2c488
+                        scope: WNBA
+                        id_type: league_profile
+                      - source_id: 3dc8048f-a56c-4de3-9a75-17025ba32d2b
+                        scope: basketball
+                        id_type: sport_profile
+                    - id: fd8d4b11-3d70-450a-b65c-016bec29cc9d
+                      status: ACT
+                      full_name: Napheesa Collier
+                      first_name: Napheesa
+                      last_name: Collier
+                      abbr_name: N.Collier
+                      height: 73
+                      weight: 180
+                      position: F
+                      primary_position: NA
+                      jersey_number: '24'
+                      college: UConn
+                      high_school: Incarnate Word Academy (MO)
+                      birth_place: Jefferson City, MO, USA
+                      birthdate: '1996-09-23'
+                      updated: '2025-11-13T22:12:21+00:00'
+                      references:
+                      - source_id: 8e281d64-a268-445f-9569-bc812d2730d5
+                        scope: basketball
+                        id_type: sport_profile
+                      - source_id: 21f994d2-1cc9-4d83-b278-abc3aaf4f63d
+                        scope: WNBA
+                        id_type: league_profile
+                      - source_id: f95a0950-d7e8-44bd-bbae-b2e85844f1e4
+                        scope: NCAAW
+                        id_type: league_profile
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 67c22115-2385-458f-8632-a67a025fef55
+                  name:
+                    type: string
+                    example: Lunar Owls
+                  alias:
+                    type: string
+                    example: LNR
+                  founded:
+                    type: integer
+                    example: 2025
+                    default: 0
+                  championships_won:
+                    type: integer
+                    example: 1
+                    default: 0
+                  championship_seasons:
+                    type: string
+                    example: '2025'
+                  venue:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: 67e49419-cb04-4ce0-ab33-ae42af8d8634
+                      name:
+                        type: string
+                        example: Unrivaled Arena
+                      capacity:
+                        type: integer
+                        example: 850
+                        default: 0
+                      address:
+                        type: string
+                        example: 7321 NW 75th Street
+                      city:
+                        type: string
+                        example: Medley
+                      state:
+                        type: string
+                        example: FL
+                      zip:
+                        type: string
+                        example: '33166'
+                      country:
+                        type: string
+                        example: USA
+                      location:
+                        type: object
+                        properties:
+                          lat:
+                            type: string
+                            example: '25.842035'
+                          lng:
+                            type: string
+                            example: '-80.317192'
+                  league:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: 844ee10a-00c8-4dc1-9c17-52598de2ef47
+                      name:
+                        type: string
+                        example: Unrivaled
+                      alias:
+                        type: string
+                        example: UNRIVALED
+                  conference:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: 56089804-dbb3-4621-96eb-ec520ab26988
+                      name:
+                        type: string
+                        example: Unrivaled
+                      alias:
+                        type: string
+                        example: UNRIVALED
+                  coaches:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: ec258031-0e88-43dc-8abf-1c76c6ff9a4e
+                        full_name:
+                          type: string
+                          example: DJ Sackmann
+                        first_name:
+                          type: string
+                          example: DJ
+                        last_name:
+                          type: string
+                          example: Sackmann
+                        position:
+                          type: string
+                          example: Head Coach
+                  team_colors:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        type:
+                          type: string
+                          example: secondary
+                        hex_color:
+                          type: string
+                          example: '#f4e087'
+                        rgb_color:
+                          type: object
+                          properties:
+                            red:
+                              type: integer
+                              example: 244
+                              default: 0
+                            green:
+                              type: integer
+                              example: 224
+                              default: 0
+                            blue:
+                              type: integer
+                              example: 135
+                              default: 0
+                  players:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: f0fef47c-4e5f-4b81-8875-3f01f8a0ea1b
+                        status:
+                          type: string
+                          example: ACT
+                        full_name:
+                          type: string
+                          example: Allisha Gray
+                        first_name:
+                          type: string
+                          example: Allisha
+                        last_name:
+                          type: string
+                          example: Gray
+                        abbr_name:
+                          type: string
+                          example: A.Gray
+                        height:
+                          type: integer
+                          example: 72
+                          default: 0
+                        weight:
+                          type: integer
+                          example: 167
+                          default: 0
+                        position:
+                          type: string
+                          example: G
+                        primary_position:
+                          type: string
+                          example: NA
+                        jersey_number:
+                          type: string
+                          example: '15'
+                        college:
+                          type: string
+                          example: South Carolina
+                        high_school:
+                          type: string
+                          example: Washington County (GA)
+                        birth_place:
+                          type: string
+                          example: Greenwood, SC, USA
+                        birthdate:
+                          type: string
+                          example: '1995-01-12'
+                        updated:
+                          type: string
+                          example: '2025-11-13T22:12:18+00:00'
+                        references:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              source_id:
+                                type: string
+                                example: d3261e48-3a71-413a-bb8e-83d6e829e726
+                              scope:
+                                type: string
+                                example: NCAAW
+                              id_type:
+                                type: string
+                                example: league_profile
+      parameters:
+      - in: path
+        name: access_level
+        schema:
+          type: string
+          enum:
+          - trial
+          - production
+          default: trial
+        required: true
+        description: The access level of your API key<br><br>`trial`, `production`
+      - in: path
+        name: language
+        schema:
+          type: string
+          enum:
+          - en
+          default: en
+        required: true
+        description: 2-letter code for supported languages<br><br>`en` (English)
+      - in: path
+        name: team_id
+        schema:
+          type: string
+          default: 67c22115-2385-458f-8632-a67a025fef55
+        required: true
+        description: Unique Id of a team, found in the <span style="text-decoration:underline">[Teams](https://developer.sportradar.com/basketball/reference/unrivaled-teams)</span> endpoint<br><br>**Example:** `67c22115-2385-458f-8632-a67a025fef55`<br><br>**Note:** This endpoint is designed for team_ids which exist in the current <span style="text-decoration:underline">[League Hierarchy](https://developer.sportradar.com/basketball/reference/unrivaled-league-hierarchy)</span> endpoint
+      - in: path
+        name: format
+        schema:
+          type: string
+          enum:
+          - json
+          - xml
+          default: json
+        required: true
+        description: Format returned<br><br>`json`, `xml`
+      summary: Team Profile
+      tags:
+      - Teams
+components:
+  securitySchemes:
+    sec0:
+      type: apiKey
+      in: header
+      name: x-api-key
