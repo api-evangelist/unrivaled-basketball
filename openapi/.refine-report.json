@@ -1,0 +1,26 @@
+{
+  "provider": "unrivaled-basketball",
+  "sources": [
+    "unrivaled-basketball-games-api-openapi.yml",
+    "unrivaled-basketball-league-api-openapi.yml",
+    "unrivaled-basketball-players-api-openapi.yml",
+    "unrivaled-basketball-seasons-api-openapi.yml",
+    "unrivaled-basketball-series-api-openapi.yml",
+    "unrivaled-basketball-teams-api-openapi.yml",
+    "unrivaled-basketball-tournaments-api-openapi.yml"
+  ],
+  "outputs": [
+    "unrivaled-basketball-games-api-openapi.yml",
+    "unrivaled-basketball-league-api-openapi.yml",
+    "unrivaled-basketball-players-api-openapi.yml",
+    "unrivaled-basketball-seasons-api-openapi.yml",
+    "unrivaled-basketball-series-api-openapi.yml",
+    "unrivaled-basketball-teams-api-openapi.yml",
+    "unrivaled-basketball-tournaments-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

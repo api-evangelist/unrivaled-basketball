@@ -1,27 +1,210 @@
 aid: unrivaled-basketball
 name: Unrivaled Basketball
-description: 'Unrivaled Basketball is a company surfaced as a portfolio company of bessemer-venture-partners
-  and added to the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is
-  a lead awaiting the enrichment pipeline.'
+description: >-
+  Unrivaled is a U.S. professional women's 3x3 basketball league co-founded by
+  Napheesa Collier and Breanna Stewart, playing a condensed winter season with
+  six clubs and a midseason 1-on-1 tournament. The league's official real-time
+  data API — the Unrivaled API v8 — is operated by Sportradar as the league's
+  Official Data Provider, delivering schedules, standings, rosters, live
+  scores, play-by-play (including the Elam Ending and weighted free throws),
+  injuries, transfers, and season statistics in JSON or XML.
 url: https://raw.githubusercontent.com/api-evangelist/unrivaled-basketball/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.unrivaled.basketball/images/icon-mask.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - bessemer-venture-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 17
+  pass: local-v1
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Consumer
-apis: []
+- Basketball
+- Sports
+- Womens Sports
+- Sports Data
+- Media
+- League
+apis:
+- aid: unrivaled-basketball:unrivaled-basketball-games-api
+  name: Unrivaled Basketball Games API
+  description: The Games API from Unrivaled Basketball — 5 operation(s) for games.
+  humanURL: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+  baseURL: https://api.sportradar.com/unrivaled
+  tags:
+  - Games
+  properties:
+  - type: OpenAPI
+    url: openapi/unrivaled-basketball-games-api-openapi.yml
+  - type: Documentation
+    url: https://developer.sportradar.com/basketball/docs/unrivaled-ig-overview
+  - type: APIReference
+    url: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+  - type: GettingStarted
+    url: https://developer.sportradar.com/basketball/docs/unrivaled-ig-api-basics
+- aid: unrivaled-basketball:unrivaled-basketball-league-api
+  name: Unrivaled Basketball League API
+  description: The League API from Unrivaled Basketball — 7 operation(s) for league.
+  humanURL: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+  baseURL: https://api.sportradar.com/unrivaled
+  tags:
+  - League
+  properties:
+  - type: OpenAPI
+    url: openapi/unrivaled-basketball-league-api-openapi.yml
+  - type: Documentation
+    url: https://developer.sportradar.com/basketball/docs/unrivaled-ig-overview
+  - type: APIReference
+    url: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+  - type: GettingStarted
+    url: https://developer.sportradar.com/basketball/docs/unrivaled-ig-api-basics
+- aid: unrivaled-basketball:unrivaled-basketball-players-api
+  name: Unrivaled Basketball Players API
+  description: The Players API from Unrivaled Basketball — 1 operation(s) for players.
+  humanURL: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+  baseURL: https://api.sportradar.com/unrivaled
+  tags:
+  - Players
+  properties:
+  - type: OpenAPI
+    url: openapi/unrivaled-basketball-players-api-openapi.yml
+  - type: Documentation
+    url: https://developer.sportradar.com/basketball/docs/unrivaled-ig-overview
+  - type: APIReference
+    url: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+  - type: GettingStarted
+    url: https://developer.sportradar.com/basketball/docs/unrivaled-ig-api-basics
+- aid: unrivaled-basketball:unrivaled-basketball-seasons-api
+  name: Unrivaled Basketball Seasons API
+  description: The Seasons API from Unrivaled Basketball — 4 operation(s) for seasons.
+  humanURL: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+  baseURL: https://api.sportradar.com/unrivaled
+  tags:
+  - Seasons
+  properties:
+  - type: OpenAPI
+    url: openapi/unrivaled-basketball-seasons-api-openapi.yml
+  - type: Documentation
+    url: https://developer.sportradar.com/basketball/docs/unrivaled-ig-overview
+  - type: APIReference
+    url: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+  - type: GettingStarted
+    url: https://developer.sportradar.com/basketball/docs/unrivaled-ig-api-basics
+- aid: unrivaled-basketball:unrivaled-basketball-series-api
+  name: Unrivaled Basketball Series API
+  description: The Series API from Unrivaled Basketball — 2 operation(s) for series.
+  humanURL: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+  baseURL: https://api.sportradar.com/unrivaled
+  tags:
+  - Series
+  properties:
+  - type: OpenAPI
+    url: openapi/unrivaled-basketball-series-api-openapi.yml
+  - type: Documentation
+    url: https://developer.sportradar.com/basketball/docs/unrivaled-ig-overview
+  - type: APIReference
+    url: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+  - type: GettingStarted
+    url: https://developer.sportradar.com/basketball/docs/unrivaled-ig-api-basics
+- aid: unrivaled-basketball:unrivaled-basketball-teams-api
+  name: Unrivaled Basketball Teams API
+  description: The Teams API from Unrivaled Basketball — 1 operation(s) for teams.
+  humanURL: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+  baseURL: https://api.sportradar.com/unrivaled
+  tags:
+  - Teams
+  properties:
+  - type: OpenAPI
+    url: openapi/unrivaled-basketball-teams-api-openapi.yml
+  - type: Documentation
+    url: https://developer.sportradar.com/basketball/docs/unrivaled-ig-overview
+  - type: APIReference
+    url: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+  - type: GettingStarted
+    url: https://developer.sportradar.com/basketball/docs/unrivaled-ig-api-basics
+- aid: unrivaled-basketball:unrivaled-basketball-tournaments-api
+  name: Unrivaled Basketball Tournaments API
+  description: The Tournaments API from Unrivaled Basketball — 3 operation(s) for tournaments.
+  humanURL: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+  baseURL: https://api.sportradar.com/unrivaled
+  tags:
+  - Tournaments
+  properties:
+  - type: OpenAPI
+    url: openapi/unrivaled-basketball-tournaments-api-openapi.yml
+  - type: Documentation
+    url: https://developer.sportradar.com/basketball/docs/unrivaled-ig-overview
+  - type: APIReference
+    url: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+  - type: GettingStarted
+    url: https://developer.sportradar.com/basketball/docs/unrivaled-ig-api-basics
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/unrivaled-basketball-domain-security.yml
+- type: Authentication
+  url: authentication/unrivaled-basketball-authentication.yml
 - type: Website
   url: https://www.unrivaled.basketball/
+- type: Blog
+  url: https://www.unrivaled.basketball/news
+- type: Support
+  url: https://www.unrivaled.basketball/contact-us
+- type: TermsOfService
+  url: https://www.unrivaled.basketball/legal/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.unrivaled.basketball/legal/privacy-policy
+- type: Documentation
+  url: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+- type: APIReference
+  url: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+- type: GettingStarted
+  url: https://developer.sportradar.com/basketball/docs/unrivaled-ig-api-basics
+- type: Postman
+  url: https://app.getpostman.com/run-collection/17203961-e11f651d-fb09-4326-a96b-71a4c41d655d?action=collection%2Ffork&collection-url=entityId%3D17203961-e11f651d-fb09-4326-a96b-71a4c41d655d%26entityType%3Dcollection%26workspaceId%3Da6193b92-ee53-4979-bbfe-7ffdc589c3fc
+- type: ChangeLog
+  url: changelog/unrivaled-basketball-changelog.yml
+- type: Lifecycle
+  url: lifecycle/unrivaled-basketball-lifecycle.yml
+- type: Conventions
+  url: conventions/unrivaled-basketball-conventions.yml
+- type: Conformance
+  url: conformance/unrivaled-basketball-conformance.yml
+- type: Sandbox
+  url: sandbox/unrivaled-basketball-sandbox.yml
+- type: DataModel
+  url: data-model/unrivaled-basketball-data-model.yml
+- type: Overlay
+  url: overlays/unrivaled-basketball-unrivaled-overlay.yaml
+- type: MCPServer
+  url: mcp/unrivaled-basketball-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: LLMsTxt
+  url: llms/unrivaled-basketball-llms.txt
+- type: WellKnown
+  url: well-known/unrivaled-basketball-well-known.yml

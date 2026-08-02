@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: openapi/unrivaled-basketball-openapi.yml
+docs: https://developer.sportradar.com/basketball/docs/unrivaled-ig-api-basics
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+notes: >-
+  Authentication is required for all Unrivaled API calls. The API is operated
+  by Sportradar as the league's Official Data Provider; HTTP requests are
+  made using the API authentication access established in a Sportradar
+  account. The key is sent in the `x-api-key` header, and the key's access
+  level (`trial` or `production`) is also encoded as the first path segment
+  of every request. Applications must support TLS 1.2 or above.
+schemes:
+- name: sec0
+  type: apiKey
+  in: header
+  parameter: x-api-key
+  access_levels:
+  - trial
+  - production
+  sources:
+  - openapi/unrivaled-basketball-openapi.yml

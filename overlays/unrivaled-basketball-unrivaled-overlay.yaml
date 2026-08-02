@@ -1,0 +1,152 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for the Unrivaled API
+  version: 1.0.0
+  x-provenance:
+    generated: '2026-07-21'
+    method: generated
+    source: openapi/unrivaled-basketball-openapi.yml
+extends: openapi/unrivaled-basketball-openapi.yml
+actions:
+- target: $.info
+  update:
+    x-apievangelist:
+      generated: '2026-07-21'
+      provider: unrivaled-basketball
+      note: API Evangelist enhancements over the assembled Sportradar Unrivaled v8 spec.
+- target: $.paths['/{access_level}/v8/{language_code}/league/{year}/{month}/{day}/changes.{format}'].get
+  update:
+    tags:
+    - General
+    description: '**Unrivaled Daily Change Log** — IDs and timestamps for teams, players, game statistics,
+      schedules, and standings modified on a given date.'
+- target: $.paths['/{access_level}/v8/{language_code}/league/{year}/{month}/{day}/daily_injuries.{format}'].get
+  update:
+    tags:
+    - General
+    description: '**Unrivaled Daily Injuries** — Details for all injuries updated on a given date.'
+- target: $.paths['/{access_level}/v8/{language_code}/games/{year}/{month}/{day}/schedule.{format}'].get
+  update:
+    tags:
+    - General
+    description: '**Unrivaled Daily Schedule** — Date, time, location, and other event details for every
+      game in the league-defined day.'
+- target: $.paths['/{access_level}/v8/{language}/league/{year}/{month}/{day}/transfers.{format}'].get
+  update:
+    tags:
+    - General
+    description: '**Unrivaled Daily Transfers** — Information for all transfers created during the league-defined
+      day.'
+- target: $.paths['/{access_level}/v8/{language_code}/games/{game_id}/boxscore.{format}'].get
+  update:
+    tags:
+    - General
+    description: '**Unrivaled Game Boxscore** — Top-level team scores by quarter with statistics for each
+      team''s leaders.'
+- target: $.paths['/{access_level}/v8/{language_code}/games/{game_id}/pbp.{format}'].get
+  update:
+    tags:
+    - General
+    description: '**Unrivaled Game Play-by-Play** — Detailed real-time information on every team possession
+      and game event.'
+- target: $.paths['/{access_level}/v8/{language_code}/games/{game_id}/summary.{format}'].get
+  update:
+    tags:
+    - General
+    description: '**Unrivaled Game Summary** — Top-level boxscore information plus detailed team and player
+      game stats.'
+- target: $.paths['/{access_level}/v8/{language}/league/injuries.{format}'].get
+  update:
+    tags:
+    - General
+    description: '**Unrivaled Injuries** — All active player injuries for each Unrivaled team.'
+- target: $.paths['/{access_level}/v8/{language_code}/league/hierarchy.{format}'].get
+  update:
+    tags:
+    - General
+    summary: League Hierarchy
+    description: '**Unrivaled League Hierarchy** — League and team identification and association information.'
+- target: $.paths['/{access_level}/v8/{language_code}/seasons/{season_year}/{season_type}/leaders.{format}'].get
+  update:
+    tags:
+    - General
+    summary: League Leaders
+    description: '**Unrivaled League Leaders** — Leader information for offensive and defensive categories
+      with full player seasonal statistics.'
+- target: $.paths['/{access_level}/v8/{language}/players/{player_id}/profile.{format}'].get
+  update:
+    tags:
+    - General
+    description: '**Unrivaled Player Profile** — Player biographical information and seasonal statistics.'
+- target: $.paths['/{access_level}/v8/{language_code}/seasons/{season_year}/{season_type}/rankings.{format}'].get
+  update:
+    tags:
+    - General
+    summary: Rankings
+    description: '**Unrivaled Rankings** — League ranking for each team.'
+- target: $.paths['/{access_level}/v8/{language_code}/games/{season_year}/{season_type}/schedule.{format}'].get
+  update:
+    tags:
+    - General
+    description: '**Unrivaled Schedule** — Date, time, location, and other event details for every match-up
+      in the full league season.'
+- target: $.paths['/{access_level}/v8/{language}/seasons/{season_year}/{season_type}/teams/{team_id}/statistics.{format}'].get
+  update:
+    tags:
+    - General
+    summary: Seasonal Statistics
+    description: '**Unrivaled Seasonal Statistics** — Complete team and player seasonal statistics for
+      a given season and season type.'
+- target: $.paths['/{access_level}/v8/{language}/league/seasons.{format}'].get
+  update:
+    tags:
+    - General
+    summary: Seasons
+    description: '**Unrivaled Seasons** — A list of all available seasons.'
+- target: $.paths['/{access_level}/v8/{language}/series/{season_year}/{season_type}/schedule.{format}'].get
+  update:
+    tags:
+    - General
+    description: '**Unrivaled Series Schedule** — Schedule details for every match-up in a given series.'
+- target: $.paths['/{access_level}/v8/{language}/series/{series_id}/teams/{team_id}/statistics.{format}'].get
+  update:
+    tags:
+    - General
+    summary: Series Statistics
+    description: '**Unrivaled Series Statistics** — Detailed team and player statistics for a given series.'
+- target: $.paths['/{access_level}/v8/{language}/seasons/{season_year}/{season_type}/standings.{format}'].get
+  update:
+    tags:
+    - General
+    summary: Standings
+    description: '**Unrivaled Standings** — Detailed team records across an assortment of categories.'
+- target: $.paths['/{access_level}/v8/{language}/teams/{team_id}/profile.{format}'].get
+  update:
+    tags:
+    - General
+    description: '**Unrivaled Team Profile** — Top-level team information and a full roster of active
+      players.'
+- target: $.paths['/{access_level}/v8/{language_code}/league/teams.{format}'].get
+  update:
+    tags:
+    - General
+    summary: Teams
+    description: '**Unrivaled Teams** — A complete list of active teams in the Unrivaled API database.'
+- target: $.paths['/{access_level}/v8/{language_code}/tournaments/{season_year}/{season_type}/schedule.{format}'].get
+  update:
+    tags:
+    - General
+    description: '**Unrivaled Tournament List** — Summarized list of all tournaments scheduled for the
+      given season.'
+- target: $.paths['/{access_level}/v8/{language}/tournaments/{tournament_id}/schedule.{format}'].get
+  update:
+    tags:
+    - General
+    description: '**Unrivaled Tournament Schedule** — Date, time, location, and other event details for
+      every match-up in a given tournament.'
+- target: $.paths['/{access_level}/v8/{language_code}/tournaments/{tournament_id}/summary.{format}'].get
+  update:
+    tags:
+    - General
+    description: '**Unrivaled Tournament Summary** — Tournament information including location, status,
+      dates, set up, and participants.'

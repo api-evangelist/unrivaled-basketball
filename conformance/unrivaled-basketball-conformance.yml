@@ -1,0 +1,42 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/unrivaled-basketball-openapi.yml
+provider_note: >-
+  Standards posture of the Unrivaled API (operated by Sportradar as the
+  league's Official Data Provider), derived from the assembled OpenAPI and the
+  Unrivaled API Basics guide / FAQs on 2026-07-21.
+standards:
+- id: tls-1.2-minimum
+  conforms: true
+  evidence: >-
+    API Basics: applications must support TLS 1.2 or above to accept data
+    from the API feeds.
+- id: iso-8601-dates
+  conforms: true
+  evidence: >-
+    FAQ: date values are presented in ISO 8601; timestamps are UTC,
+    date-only fields follow local league convention.
+- id: api-key-authentication
+  conforms: true
+  evidence: >-
+    OpenAPI securitySchemes declare apiKey in header `x-api-key`; access
+    level (trial/production) is encoded in the request path.
+- id: oauth2
+  conforms: false
+  evidence: No oauth2 security scheme in the OpenAPI; key-based auth only.
+- id: oidc
+  conforms: false
+  evidence: No openIdConnect scheme; no /.well-known/openid-configuration found.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: >-
+    Published per-endpoint OpenAPI definitions declare only 200 responses;
+    no application/problem+json error envelope is documented.
+- id: pagination
+  conforms: false
+  evidence: >-
+    API Basics: the Unrivaled API does not currently make use of pagination
+    for any endpoint; each return provides all available data.
+- id: json-api
+  conforms: false
+  evidence: Responses are league-specific JSON/XML shapes, not JSON:API documents.

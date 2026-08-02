@@ -1,0 +1,73 @@
+generated: '2026-07-21'
+method: searched
+source: https://developer.sportradar.com/basketball/docs/unrivaled-ig-api-basics
+provider_note: >-
+  Cross-cutting request/response semantics of the Unrivaled API, operated by
+  Sportradar as the league's Official Data Provider. Captured from the
+  Unrivaled API Basics integration guide and the per-endpoint OpenAPI
+  definitions on 2026-07-21.
+authentication:
+  style: api-key
+  detail: >-
+    Authentication is required for all API calls. The per-endpoint OpenAPI
+    definitions declare an apiKey security scheme sent in the `x-api-key`
+    header; the key's access level (`trial` or `production`) is also encoded
+    as the first path segment of every request.
+  artifact: authentication/unrivaled-basketball-authentication.yml
+transport:
+  protocol: https
+  tls_minimum: TLS 1.2
+  detail: Applications must support TLS 1.2 or above to accept data from the API feeds.
+formats:
+  response: [json, xml]
+  detail: >-
+    Data can be returned in either JSON or XML format, selected by the
+    `.{format}` suffix on every path (`json` or `xml`).
+languages:
+  supported: [en]
+  detail: English is currently the only supported language in the Unrivaled API.
+pagination:
+  style: none
+  detail: >-
+    The Unrivaled API does not currently make use of pagination for any
+    endpoint. Each return provides all data available.
+idempotency:
+  supported: false
+  detail: >-
+    Read-only GET feed API; no idempotency-key contract is published and none
+    is needed for its request surface.
+versioning:
+  style: uri-path
+  current: v8
+  artifact: lifecycle/unrivaled-basketball-lifecycle.yml
+caching:
+  style: ttl-per-feed
+  detail: >-
+    Each feed documents a TTL/cache window (e.g. Daily Schedule: 10 minutes on
+    days with active games, 4 hours on days without). The live TTL in seconds
+    is returned on every call in the `cache-control` response header (e.g.
+    `cache-control: public, must-revalidate, max-age=120`) and may shorten
+    while a game is live. Schedule info otherwise updates in real time.
+date_time:
+  standard: ISO 8601
+  detail: >-
+    Timestamp fields are UTC (e.g. `scheduled="2024-02-11T23:30:00+00:00"`);
+    date-only fields follow local league convention and are not UTC-adjusted
+    (e.g. `start_date="2024-08-16"`).
+change_tracking:
+  style: daily-change-log-feed
+  detail: >-
+    The Daily Change Log feed returns unique IDs and timestamps of teams,
+    players, game stats, schedules, standings, and rankings updated on a given
+    date, so consumers can pull only what changed.
+  artifact: changelog/unrivaled-basketball-changelog.yml
+error_envelope:
+  detail: >-
+    The published per-endpoint OpenAPI definitions declare only 200 responses;
+    no structured error envelope is documented for the Unrivaled API
+    (searched 2026-07-21).
+rate_limits:
+  detail: >-
+    No Unrivaled-specific rate-limit signaling is documented in the
+    integration guide; access is governed by the Sportradar account's trial or
+    production package.

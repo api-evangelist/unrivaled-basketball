@@ -1,0 +1,29 @@
+generated: '2026-07-21'
+method: generated
+skills:
+- file: unrivaled-basketball-track-live-game.md
+  name: Track a live Unrivaled game
+  api: openapi/unrivaled-basketball-openapi.yml
+  operations:
+  - get_access-level-v8-language-code-games-year-month-day-schedule-format
+  - get_{access_level}v8{language_code}league{year}{month}{day}injuries.{format}-1-1
+  - get_{access_level}v8{language_code}games{game_id}boxscore.{format}-1
+  - get_{access_level}v8{language_code}games{game_id}pbp.{format}-1
+- file: unrivaled-basketball-roster-and-player.md
+  name: Look up an Unrivaled roster and player profile
+  api: openapi/unrivaled-basketball-openapi.yml
+  operations:
+  - get_{access_level}v8{language_code}leagueinjuries.{format}-1
+  - get_{access_level}v8{language_code}seasons{season_year}{season_type}teams{team_id}statistics.{format}-1-1-1
+  - get_{access_level}v8{language}teams{team_id}profile.{format}
+  - get_{access_level}v8{language}players{player_id}profile.{format}
+- file: unrivaled-basketball-season-statistics.md
+  name: Pull Unrivaled season standings, leaders, and statistics
+  api: openapi/unrivaled-basketball-openapi.yml
+  operations:
+  - get_{access_level}v8{language}leagueseasons.{format}
+  - get_{access_level}v8{language}seasons{season_year}{season_type}standings.{format}
+  - get_{access_level}v8{language_code}seasons{season_year}{season_type}leaders.{format}-1
+  - get_{access_level}v8{language_code}leaguehierarchy.{format}-1
+  - get_{access_level}v8{language}seasons{season_year}{season_type}teams{team_id}statistics.{format}
+  - get_new-endpoint

@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: searched
+source: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+provider_note: >-
+  Test/trial surface of the Unrivaled API, operated by Sportradar as the
+  league's Official Data Provider.
+modes:
+  separation: access-level-path-segment
+  detail: >-
+    Every request encodes the API key's access level as the first path
+    segment: `trial` or `production`
+    (e.g. https://api.sportradar.com/unrivaled/trial/v8/en/league/hierarchy.json).
+    Trial keys exercise the same feeds as production keys.
+  values: [trial, production]
+interactive_sandbox:
+  detail: >-
+    The Unrivaled Endpoints reference section provides feed documentation and
+    an interactive sandbox (API explorer) for trying each feed with a key.
+  url: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+simulations:
+  available: false
+  detail: >-
+    Per the Unrivaled FAQ, simulations are not currently available for
+    Unrivaled; Sportradar recommends using the completed season as reference
+    sample data.
+  url: https://developer.sportradar.com/basketball/reference/unrivaled-faqs
+test_values: []
+notes: >-
+  No magic test identifiers, test cards, or fixture tooling apply — this is a
+  read-only sports-data API; trial access-level keys are the sandbox contract.

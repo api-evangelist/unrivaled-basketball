@@ -1,0 +1,32 @@
+generated: '2026-07-21'
+method: searched
+source: https://developer.sportradar.com/basketball/docs/unrivaled-ig-api-basics
+provider_note: >-
+  Lifecycle posture of the Unrivaled API, which is operated by Sportradar as
+  the league's Official Data Provider.
+versioning:
+  scheme: uri-path
+  current: v8
+  detail: >-
+    The current version of the Unrivaled API is v8; the version is passed as
+    the `{version}` path parameter in every request (e.g.
+    /trial/v8/en/league/hierarchy.json). The API launched at v8 on 2025-12-01
+    to align with Sportradar's other league-specific basketball APIs.
+  docs: https://developer.sportradar.com/basketball/docs/unrivaled-ig-api-basics
+change_log:
+  url: https://developer.sportradar.com/basketball/reference/unrivaled-change-log
+  artifact: changelog/unrivaled-basketball-changelog.yml
+  daily_change_log_feed: >-
+    The API itself exposes a Daily Change Log feed returning IDs and
+    timestamps of teams, players, game statistics, schedules, and standings
+    modified on a given date.
+deprecation:
+  policy_url: null
+  sunset_header: null
+  detail: >-
+    No Unrivaled-specific deprecation policy or RFC 8594 Sunset/Deprecation
+    header support is published; the API launched 2025-12-01 and only v8
+    exists. Not asserted beyond that (searched 2026-07-21).
+sla: null
+status_page: null
+deprecated_operations: []

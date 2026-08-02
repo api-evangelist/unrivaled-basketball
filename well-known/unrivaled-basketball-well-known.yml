@@ -1,0 +1,24 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.unrivaled.basketball/
+host: https://www.unrivaled.basketball
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+- path: /llms.txt
+  status: 404
+- path: /robots.txt
+  status: 404
+notes: >-
+  No /.well-known/ discovery surface is published on the Unrivaled Basketball
+  website. All probed paths returned HTTP 404 on 2026-07-21. The league's
+  official data API is operated by Sportradar (developer.sportradar.com),
+  which publishes its own discovery surface.

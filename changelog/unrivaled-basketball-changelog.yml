@@ -1,0 +1,38 @@
+generated: '2026-07-21'
+method: searched
+source: https://developer.sportradar.com/basketball/reference/unrivaled-change-log
+name: Unrivaled API Change Log
+provider_note: >-
+  The Unrivaled API is operated by Sportradar, the league's Official Data
+  Provider. This changelog is Sportradar's dated log of updates to the
+  Unrivaled v8 API and its documentation.
+scheme: dated-entries
+current_version: v8
+entries:
+- date: '2025-12-16'
+  title: Weighted Free Throw Value
+  feeds_affected: [Game Play-by-Play]
+  breaking: false
+  highlights:
+  - Free throw events now include a `weighted_value` data point signifying
+    whether an attempt is a `one point`, `two point`, or `three point` value,
+    supporting Unrivaled's single-attempt weighted free-throw system.
+- date: '2025-12-11'
+  title: Awarded Points
+  feeds_affected: [Game Play-by-Play]
+  breaking: false
+  highlights:
+  - Added support for awarded points. During 1v1 competitions a player is
+    awarded a point if fouled twice in a row before making an attempt;
+    these appear as an `awardedpoint` event type in Game Play-by-Play.
+- date: '2025-12-01'
+  title: API Release
+  breaking: false
+  highlights:
+  - Initial release of the Unrivaled Basketball API delivering official
+    real-time data for the league, built with the same structure as
+    Sportradar's NBA, WNBA, and NCAA Basketball APIs.
+  - Includes real-time play-by-play tailored to the 3-on-3 format,
+    schedules, results, standings, rosters with persistent player IDs
+    across leagues, detailed shot metadata, full team and player stats,
+    and coverage of the league's 1-on-1 tournament.

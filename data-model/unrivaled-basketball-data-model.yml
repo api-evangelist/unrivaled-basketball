@@ -1,0 +1,75 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/unrivaled-basketball-openapi.yml
+docs: https://developer.sportradar.com/basketball/docs/unrivaled-ig-id-handling
+provider_note: >-
+  Entity-relationship graph of the Unrivaled API (operated by Sportradar),
+  derived from the assembled OpenAPI path parameters and the documented feed
+  data points (League Hierarchy, Team Profile, Player Profile, game feeds).
+  All primary IDs are Sportradar GUIDs; player IDs are persistent across
+  Sportradar leagues.
+id_scheme: guid
+entities:
+- name: League
+  detail: Root entity returned by League Hierarchy; owns teams and seasons.
+- name: Season
+  detail: Addressed by season_year + season_type; carries schedule, standings, rankings, leaders, seasonal statistics.
+- name: Team
+  detail: id path param team_id; profile carries the active roster.
+- name: Player
+  detail: id path param player_id; profile carries biographical info and seasonal stats; IDs persist across leagues.
+- name: Game
+  detail: id path param game_id; boxscore, play-by-play (pbp), and summary feeds; includes home/away team attribution and on-court players.
+- name: Series
+  detail: id path param series_id; series schedule and per-team series statistics.
+- name: Tournament
+  detail: id path param tournament_id; tournament list, schedule, and summary (includes the midseason 1-on-1 tournament).
+- name: Injury
+  detail: Injuries and Daily Injuries feeds; attributed to players on teams.
+- name: Transfer
+  detail: Daily Transfers feed; player movement records.
+relationships:
+- from: League
+  to: Team
+  type: has_many
+  via: league/hierarchy.{format}
+- from: League
+  to: Season
+  type: has_many
+  via: league/seasons.{format}
+- from: Team
+  to: Player
+  type: has_many
+  via: teams/{team_id}/profile.{format} roster
+- from: Game
+  to: Team
+  type: belongs_to
+  via: home_team / away_team GUIDs in schedule and game feeds
+- from: Game
+  to: Player
+  type: has_many
+  via: on_court home/away player GUIDs in play-by-play events
+- from: Season
+  to: Game
+  type: has_many
+  via: games/{season_year}/{season_type}/schedule.{format}
+- from: Series
+  to: Team
+  type: has_many
+  via: series/{series_id}/teams/{team_id}/statistics.{format}
+- from: Tournament
+  to: Game
+  type: has_many
+  via: tournaments/{tournament_id}/schedule.{format}
+- from: Player
+  to: Injury
+  type: has_many
+  via: league/injuries.{format}
+- from: Player
+  to: Transfer
+  type: has_many
+  via: league/{year}/{month}/{day}/transfers.{format}
+retrieval_pattern: >-
+  Documented pulling logic: League Hierarchy or Teams -> Team Profile (find
+  player IDs) -> Player Profile. The Daily Change Log feed returns IDs
+  modified on a date for efficient incremental pulls.

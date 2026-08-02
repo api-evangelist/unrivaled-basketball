@@ -1,0 +1,112 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: openapi/unrivaled-basketball-openapi.yml
+notes: No official hosted MCP server was found for Unrivaled Basketball or for Sportradar's Unrivaled
+  API (searched 2026-07-21). Candidate tool list derived from the 23 GET operations in the assembled OpenAPI;
+  tool names follow the Sportradar reference page slugs because the upstream operationIds are auto-generated.
+  Requires a Sportradar API key (x-api-key header).
+server:
+  name: unrivaled-basketball
+  transport: http
+  url: null
+tools:
+- name: get_daily_change_log
+  description: 'Daily Change Log: IDs and timestamps for teams, players, game statistics, schedules, and
+    standings modified on a given date.'
+  source_operation: openapi/unrivaled-basketball-openapi.yml#get_new-endpoint
+  docs: https://developer.sportradar.com/basketball/reference/unrivaled-daily-change-log
+- name: get_daily_injuries
+  description: 'Daily Injuries: Details for all injuries updated on a given date.'
+  source_operation: openapi/unrivaled-basketball-openapi.yml#get_{access_level}v8{language_code}league{year}{month}{day}changes.{format}-1
+  docs: https://developer.sportradar.com/basketball/reference/unrivaled-daily-injuries
+- name: get_daily_schedule
+  description: 'Daily Schedule: Date, time, location, and other event details for every game in the league-defined
+    day.'
+  source_operation: openapi/unrivaled-basketball-openapi.yml#get_access-level-v8-language-code-games-year-month-day-schedule-format
+  docs: https://developer.sportradar.com/basketball/reference/unrivaled-daily-schedule
+- name: get_daily_transfers
+  description: 'Daily Transfers: Information for all transfers created during the league-defined day.'
+  source_operation: openapi/unrivaled-basketball-openapi.yml#get_{access_level}v8{language}league{year}{month}{day}transfers.{format}
+  docs: https://developer.sportradar.com/basketball/reference/unrivaled-daily-transfers
+- name: get_game_boxscore
+  description: 'Game Boxscore: Top-level team scores by quarter with statistics for each team''s leaders.'
+  source_operation: openapi/unrivaled-basketball-openapi.yml#get_{access_level}v8{language_code}league{year}{month}{day}injuries.{format}-1-1
+  docs: https://developer.sportradar.com/basketball/reference/unrivaled-game-boxscore
+- name: get_game_play_by_play
+  description: 'Game Play-by-Play: Detailed real-time information on every team possession and game event.'
+  source_operation: openapi/unrivaled-basketball-openapi.yml#get_{access_level}v8{language_code}games{game_id}boxscore.{format}-1
+  docs: https://developer.sportradar.com/basketball/reference/unrivaled-game-play-by-play
+- name: get_game_summary
+  description: 'Game Summary: Top-level boxscore information plus detailed team and player game stats.'
+  source_operation: openapi/unrivaled-basketball-openapi.yml#get_{access_level}v8{language_code}games{game_id}pbp.{format}-1
+  docs: https://developer.sportradar.com/basketball/reference/unrivaled-game-summary
+- name: get_injuries
+  description: 'Injuries: All active player injuries for each Unrivaled team.'
+  source_operation: openapi/unrivaled-basketball-openapi.yml#get_{access_level}v8{language}leagueinjuries.{format}
+  docs: https://developer.sportradar.com/basketball/reference/unrivaled-injuries
+- name: get_league_hierarchy
+  description: 'League Hierarchy: League and team identification and association information.'
+  source_operation: openapi/unrivaled-basketball-openapi.yml#get_{access_level}v8{language_code}leagueinjuries.{format}-1
+  docs: https://developer.sportradar.com/basketball/reference/unrivaled-league-hierarchy
+- name: get_league_leaders
+  description: 'League Leaders: Leader information for offensive and defensive categories with full player
+    seasonal statistics.'
+  source_operation: openapi/unrivaled-basketball-openapi.yml#get_{access_level}v8{language_code}leaguehierarchy.{format}-1
+  docs: https://developer.sportradar.com/basketball/reference/unrivaled-league-leaders
+- name: get_player_profile
+  description: 'Player Profile: Player biographical information and seasonal statistics.'
+  source_operation: openapi/unrivaled-basketball-openapi.yml#get_{access_level}v8{language}players{player_id}profile.{format}
+  docs: https://developer.sportradar.com/basketball/reference/unrivaled-player-profile
+- name: get_rankings
+  description: 'Rankings: League ranking for each team.'
+  source_operation: openapi/unrivaled-basketball-openapi.yml#get_{access_level}v8{language_code}seasons{season_year}{season_type}leaders.{format}-1
+  docs: https://developer.sportradar.com/basketball/reference/unrivaled-rankings
+- name: get_schedule
+  description: 'Schedule: Date, time, location, and other event details for every match-up in the full
+    league season.'
+  source_operation: openapi/unrivaled-basketball-openapi.yml#get_{access_level}v8{language_code}seasons{season_year}{season_type}leaders.{format}-1-1
+  docs: https://developer.sportradar.com/basketball/reference/unrivaled-schedule
+- name: get_seasonal_statistics
+  description: 'Seasonal Statistics: Complete team and player seasonal statistics for a given season and
+    season type.'
+  source_operation: openapi/unrivaled-basketball-openapi.yml#get_{access_level}v8{language}seasons{season_year}{season_type}teams{team_id}statistics.{format}
+  docs: https://developer.sportradar.com/basketball/reference/unrivaled-seasonal-statistics
+- name: get_seasons
+  description: 'Seasons: A list of all available seasons.'
+  source_operation: openapi/unrivaled-basketball-openapi.yml#get_{access_level}v8{language}leagueseasons.{format}
+  docs: https://developer.sportradar.com/basketball/reference/unrivaled-seasons
+- name: get_series_schedule
+  description: 'Series Schedule: Schedule details for every match-up in a given series.'
+  source_operation: openapi/unrivaled-basketball-openapi.yml#get_{access_level}v8{language}series{season_year}{season_type}schedule.{format}
+  docs: https://developer.sportradar.com/basketball/reference/unrivaled-series-schedule
+- name: get_series_statistics
+  description: 'Series Statistics: Detailed team and player statistics for a given series.'
+  source_operation: openapi/unrivaled-basketball-openapi.yml#get_{access_level}v8{language}series{series_id}teams{team_id}statistics.{format}
+  docs: https://developer.sportradar.com/basketball/reference/unrivaled-series-statistics
+- name: get_standings
+  description: 'Standings: Detailed team records across an assortment of categories.'
+  source_operation: openapi/unrivaled-basketball-openapi.yml#get_{access_level}v8{language}seasons{season_year}{season_type}standings.{format}
+  docs: https://developer.sportradar.com/basketball/reference/unrivaled-standings
+- name: get_team_profile
+  description: 'Team Profile: Top-level team information and a full roster of active players.'
+  source_operation: openapi/unrivaled-basketball-openapi.yml#get_{access_level}v8{language}teams{team_id}profile.{format}
+  docs: https://developer.sportradar.com/basketball/reference/unrivaled-team-profile
+- name: get_teams
+  description: 'Teams: A complete list of active teams in the Unrivaled API database.'
+  source_operation: openapi/unrivaled-basketball-openapi.yml#get_{access_level}v8{language_code}seasons{season_year}{season_type}teams{team_id}statistics.{format}-1-1-1
+  docs: https://developer.sportradar.com/basketball/reference/unrivaled-teams
+- name: get_tournament_list
+  description: 'Tournament List: Summarized list of all tournaments scheduled for the given season.'
+  source_operation: openapi/unrivaled-basketball-openapi.yml#get_{access_level}v8{language_code}seasons{season_year}{season_type}teams{team_id}statistics.{format}-1-2
+  docs: https://developer.sportradar.com/basketball/reference/unrivaled-tournament-list
+- name: get_tournament_schedule
+  description: 'Tournament Schedule: Date, time, location, and other event details for every match-up
+    in a given tournament.'
+  source_operation: openapi/unrivaled-basketball-openapi.yml#get_{access_level}v8{language}tournaments{tournament_id}schedule.{format}
+  docs: https://developer.sportradar.com/basketball/reference/unrivaled-tournament-schedule
+- name: get_tournament_summary
+  description: 'Tournament Summary: Tournament information including location, status, dates, set up,
+    and participants.'
+  source_operation: openapi/unrivaled-basketball-openapi.yml#get_{access_level}v8{language_code}tournaments{tournament_id}teams{team_id}statistics.{format}-1
+  docs: https://developer.sportradar.com/basketball/reference/unrivaled-tournament-summary
