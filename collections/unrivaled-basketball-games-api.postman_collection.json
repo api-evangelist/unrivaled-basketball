@@ -1,0 +1,756 @@
+{
+  "item": [
+    {
+      "id": "c9a2150a-b130-4b66-af12-d2c60723e236",
+      "name": "Games",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "87512fa9-74fe-42bf-8d5b-3da3d4cabead",
+          "name": "Daily Schedule",
+          "request": {
+            "name": "Daily Schedule",
+            "description": {
+              "content": "**Unrivaled Daily Schedule** provides date, time, location, and other event details for every game taking place in the league-defined day.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":access_level",
+                "v8",
+                ":language_code",
+                "games",
+                ":year",
+                ":month",
+                ":day",
+                "schedule.{{format}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "trial",
+                  "key": "access_level",
+                  "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "en",
+                  "key": "language_code",
+                  "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "2026",
+                  "key": "year",
+                  "description": "(Required) Year in `YYYY` format"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "01",
+                  "key": "month",
+                  "description": "(Required) Month in `MM` format"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "01",
+                  "key": "day",
+                  "description": "(Required) Date in `DD` format"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4f0e4b64-ee1f-49ab-8794-4a1553f66a06",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":access_level",
+                    "v8",
+                    ":language_code",
+                    "games",
+                    ":year",
+                    ":month",
+                    ":day",
+                    "schedule.{{format}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "trial",
+                      "key": "access_level",
+                      "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "en",
+                      "key": "language_code",
+                      "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "2026",
+                      "key": "year",
+                      "description": "(Required) Year in `YYYY` format"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "01",
+                      "key": "month",
+                      "description": "(Required) Month in `MM` format"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "01",
+                      "key": "day",
+                      "description": "(Required) Date in `DD` format"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "02317443-5df1-4e76-a5fd-8d1faca96526",
+          "name": "Game Boxscore",
+          "request": {
+            "name": "Game Boxscore",
+            "description": {
+              "content": "**Unrivaled Game Boxscore** provides top-level team scores by quarter, along with full statistics for each teams’ leaders in points, rebounds, and assists.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":access_level",
+                "v8",
+                ":language_code",
+                "games",
+                ":game_id",
+                "boxscore.{{format}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "trial",
+                  "key": "access_level",
+                  "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "en",
+                  "key": "language_code",
+                  "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "838316ea-ab7b-4581-a1dd-74229d1970d5",
+                  "key": "game_id",
+                  "description": "(Required) Unique Id of a game, found in a Schedule endpoint.<br><br>**Example:** `838316ea-ab7b-4581-a1dd-74229d1970d5`"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "94aa5b65-8613-4bd0-9997-55cb4047e648",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":access_level",
+                    "v8",
+                    ":language_code",
+                    "games",
+                    ":game_id",
+                    "boxscore.{{format}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "trial",
+                      "key": "access_level",
+                      "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "en",
+                      "key": "language_code",
+                      "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "838316ea-ab7b-4581-a1dd-74229d1970d5",
+                      "key": "game_id",
+                      "description": "(Required) Unique Id of a game, found in a Schedule endpoint.<br><br>**Example:** `838316ea-ab7b-4581-a1dd-74229d1970d5`"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"838316ea-ab7b-4581-a1dd-74229d1970d5\",\n  \"status\": \"closed\",\n  \"coverage\": \"full\",\n  \"scheduled\": \"2025-01-18T00:00:00+00:00\",\n  \"lead_changes\": 7,\n  \"times_tied\": 6,\n  \"clock\": \"3:26\",\n  \"quarter\": 4,\n  \"possession_arrow\": \"0780b080-347b-407b-b8d6-fa109ec23908\",\n  \"track_on_court\": true,\n  \"entry_mode\": \"LDE\",\n  \"clock_decimal\": \"3:26\",\n  \"broadcasts\": [\n    {\n      \"type\": \"TV\",\n      \"locale\": \"National\",\n      \"network\": \"TNT\",\n      \"channel\": \"245\"\n    }\n  ],\n  \"time_zones\": {\n    \"venue\": \"US/Eastern\",\n    \"home\": \"US/Eastern\",\n    \"away\": \"US/Eastern\"\n  },\n  \"season\": {\n    \"id\": \"c86ab7c9-5408-44e6-af06-c22636262927\",\n    \"year\": 2025,\n    \"type\": \"REG\",\n    \"name\": \"Regular Season\"\n  },\n  \"home\": {\n    \"name\": \"Mist\",\n    \"alias\": \"MST\",\n    \"id\": \"0780b080-347b-407b-b8d6-fa109ec23908\",\n    \"points\": 80,\n    \"remaining_timeouts\": 0,\n    \"scoring\": [\n      {\n        \"type\": \"quarter\",\n        \"number\": 1,\n        \"sequence\": 1,\n        \"points\": 20\n      },\n      {\n        \"type\": \"quarter\",\n        \"number\": 2,\n        \"sequence\": 2,\n        \"points\": 26\n      },\n      {\n        \"type\": \"quarter\",\n        \"number\": 3,\n        \"sequence\": 3,\n        \"points\": 27\n      },\n      {\n        \"type\": \"elam\",\n        \"number\": 4,\n        \"sequence\": 4,\n        \"points\": 7\n      }\n    ],\n    \"leaders\": {\n      \"points\": [\n        {\n          \"full_name\": \"Jewell Loyd\",\n          \"jersey_number\": \"24\",\n          \"id\": \"2387d221-be55-495a-b2b7-cddbce9addcc\",\n          \"position\": \"G\",\n          \"primary_position\": \"NA\",\n          \"statistics\": {\n            \"minutes\": \"17:05\",\n            \"field_goals_made\": 10,\n            \"field_goals_att\": 21,\n            \"field_goals_pct\": 47.6,\n            \"three_points_made\": 4,\n            \"three_points_att\": 9,\n            \"three_points_pct\": 44.4,\n            \"two_points_made\": 6,\n            \"two_points_att\": 12,\n            \"two_points_pct\": 50,\n            \"blocked_att\": 0,\n            \"free_throws_made\": 3,\n            \"free_throws_att\": 4,\n            \"free_throws_pct\": 75,\n            \"offensive_rebounds\": 3,\n            \"defensive_rebounds\": 3,\n            \"rebounds\": 6,\n            \"assists\": 2,\n            \"turnovers\": 3,\n            \"steals\": 0,\n            \"blocks\": 0,\n            \"assists_turnover_ratio\": 0.67,\n            \"personal_fouls\": 2,\n            \"tech_fouls\": 0,\n            \"flagrant_fouls\": 0,\n            \"pls_min\": -5,\n            \"points\": 29,\n            \"tech_fouls_non_unsportsmanlike\": 0,\n            \"double_double\": false,\n            \"triple_double\": false,\n            \"effective_fg_pct\": 57.1,\n            \"efficiency\": 25,\n            \"efficiency_game_score\": 18.5,\n            \"fouls_drawn\": 5,\n            \"offensive_fouls\": 0,\n            \"points_in_paint\": 9,\n            \"points_in_paint_att\": 5,\n            \"points_in_paint_made\": 4,\n            \"points_in_paint_pct\": 80,\n            \"points_off_turnovers\": 7,\n            \"true_shooting_att\": 22.76,\n            \"true_shooting_pct\": 63.7,\n            \"coach_ejections\": 0,\n            \"coach_tech_fouls\": 0,\n            \"second_chance_pts\": 4,\n            \"second_chance_pct\": 0\n          }\n        }\n      ],\n      \"rebounds\": [\n        {\n          \"full_name\": \"Breanna Stewart\",\n          \"jersey_number\": \"30\",\n          \"id\": \"a00515fd-bdd9-44d1-83a5-597a99316c54\",\n          \"position\": \"F\",\n          \"primary_position\": \"NA\",\n          \"statistics\": {\n            \"minutes\": \"13:06\",\n            \"field_goals_made\": 2,\n            \"field_goals_att\": 10,\n            \"field_goals_pct\": 20,\n            \"three_points_made\": 0,\n            \"three_points_att\": 4,\n            \"three_points_pct\": 0,\n            \"two_points_made\": 2,\n            \"two_points_att\": 6,\n            \"two_points_pct\": 33.3,\n            \"blocked_att\": 0,\n            \"free_throws_made\": 1,\n            \"free_throws_att\": 2,\n            \"free_throws_pct\": 50,\n            \"offensive_rebounds\": 1,\n            \"defensive_rebounds\": 12,\n            \"rebounds\": 13,\n            \"assists\": 3,\n            \"turnovers\": 1,\n            \"steals\": 1,\n            \"blocks\": 0,\n            \"assists_turnover_ratio\": 3,\n            \"personal_fouls\": 3,\n            \"tech_fouls\": 0,\n            \"flagrant_fouls\": 0,\n            \"pls_min\": -11,\n            \"points\": 6,\n            \"tech_fouls_non_unsportsmanlike\": 0,\n            \"double_double\": false,\n            \"triple_double\": false,\n            \"effective_fg_pct\": 20,\n            \"efficiency\": 13,\n            \"efficiency_game_score\": 4.6,\n            \"fouls_drawn\": 3,\n            \"offensive_fouls\": 1,\n            \"points_in_paint\": 2,\n            \"points_in_paint_att\": 4,\n            \"points_in_paint_made\": 1,\n            \"points_in_paint_pct\": 25,\n            \"points_off_turnovers\": 0,\n            \"true_shooting_att\": 10.88,\n            \"true_shooting_pct\": 27.6,\n            \"coach_ejections\": 0,\n            \"coach_tech_fouls\": 0,\n            \"second_chance_pts\": 0,\n            \"second_chance_pct\": 0\n          }\n        }\n      ],\n      \"assists\": [\n        {\n          \"full_name\": \"DiJonai Carrington\",\n          \"jersey_number\": \"21\",\n          \"id\": \"47169cbe-5640-460b-a840-7f438a124330\",\n          \"position\": \"G-F\",\n          \"primary_position\": \"NA\",\n          \"statistics\": {\n            \"minutes\": \"9:34\",\n            \"field_goals_made\": 3,\n            \"field_goals_att\": 6,\n            \"field_goals_pct\": 50,\n            \"three_points_made\": 0,\n            \"three_points_att\": 2,\n            \"three_points_pct\": 0,\n            \"two_points_made\": 3,\n            \"two_points_att\": 4,\n            \"two_points_pct\": 75,\n            \"blocked_att\": 0,\n            \"free_throws_made\": 1,\n            \"free_throws_att\": 1,\n            \"free_throws_pct\": 100,\n            \"offensive_rebounds\": 0,\n            \"defensive_rebounds\": 6,\n            \"rebounds\": 6,\n            \"assists\": 3,\n            \"turnovers\": 3,\n            \"steals\": 2,\n            \"blocks\": 2,\n            \"assists_turnover_ratio\": 1,\n            \"personal_fouls\": 3,\n            \"tech_fouls\": 0,\n            \"flagrant_fouls\": 0,\n            \"pls_min\": -4,\n            \"points\": 8,\n            \"tech_fouls_non_unsportsmanlike\": 0,\n            \"double_double\": false,\n            \"triple_double\": false,\n            \"effective_fg_pct\": 50,\n            \"efficiency\": 13,\n            \"efficiency_game_score\": 8.1,\n            \"fouls_drawn\": 1,\n            \"offensive_fouls\": 0,\n            \"points_in_paint\": 4,\n            \"points_in_paint_att\": 2,\n            \"points_in_paint_made\": 2,\n            \"points_in_paint_pct\": 100,\n            \"points_off_turnovers\": 2,\n            \"true_shooting_att\": 6.44,\n            \"true_shooting_pct\": 62.1,\n            \"coach_ejections\": 0,\n            \"coach_tech_fouls\": 0,\n            \"second_chance_pts\": 0,\n            \"second_chance_pct\": 0\n          }\n        },\n        {\n          \"full_name\": \"Breanna Stewart\",\n          \"jersey_number\": \"30\",\n          \"id\": \"a00515fd-bdd9-44d1-83a5-597a99316c54\",\n          \"position\": \"F\",\n          \"primary_position\": \"NA\",\n          \"statistics\": {\n            \"minutes\": \"13:06\",\n            \"field_goals_made\": 2,\n            \"field_goals_att\": 10,\n            \"field_goals_pct\": 20,\n            \"three_points_made\": 0,\n            \"three_points_att\": 4,\n            \"three_points_pct\": 0,\n            \"two_points_made\": 2,\n            \"two_points_att\": 6,\n            \"two_points_pct\": 33.3,\n            \"blocked_att\": 0,\n            \"free_throws_made\": 1,\n            \"free_throws_att\": 2,\n            \"free_throws_pct\": 50,\n            \"offensive_rebounds\": 1,\n            \"defensive_rebounds\": 12,\n            \"rebounds\": 13,\n            \"assists\": 3,\n            \"turnovers\": 1,\n            \"steals\": 1,\n            \"blocks\": 0,\n            \"assists_turnover_ratio\": 3,\n            \"personal_fouls\": 3,\n            \"tech_fouls\": 0,\n            \"flagrant_fouls\": 0,\n            \"pls_min\": -11,\n            \"points\": 6,\n            \"tech_fouls_non_unsportsmanlike\": 0,\n            \"double_double\": false,\n            \"triple_double\": false,\n            \"effective_fg_pct\": 20,\n            \"efficiency\": 13,\n            \"efficiency_game_score\": 4.6,\n            \"fouls_drawn\": 3,\n            \"offensive_fouls\": 1,\n            \"points_in_paint\": 2,\n            \"points_in_paint_att\": 4,\n            \"points_in_paint_made\": 1,\n            \"points_in_paint_pct\": 25,\n            \"points_off_turnovers\": 0,\n            \"true_shooting_att\": 10.88,\n            \"true_shooting_pct\": 27.6,\n            \"coach_ejections\": 0,\n            \"coach_tech_fouls\": 0,\n            \"second_chance_pts\": 0,\n            \"second_chance_pct\": 0\n          }\n        }\n      ]\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fd9fd821-05e4-47cc-ac6c-2511c8d478b9",
+          "name": "Game Play-by-Play",
+          "request": {
+            "name": "Game Play-by-Play",
+            "description": {
+              "content": "**Unrivaled Game Play-by-Play** provides detailed, real-time information on every team possession and game event.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":access_level",
+                "v8",
+                ":language_code",
+                "games",
+                ":game_id",
+                "pbp.{{format}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "trial",
+                  "key": "access_level",
+                  "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "en",
+                  "key": "language_code",
+                  "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "838316ea-ab7b-4581-a1dd-74229d1970d5",
+                  "key": "game_id",
+                  "description": "(Required) Unique Id of a game, found in a Schedule endpoint.<br><br>**Example:** `838316ea-ab7b-4581-a1dd-74229d1970d5`"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "eaa76af0-360f-49eb-91d1-15ba9ff4574d",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":access_level",
+                    "v8",
+                    ":language_code",
+                    "games",
+                    ":game_id",
+                    "pbp.{{format}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "trial",
+                      "key": "access_level",
+                      "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "en",
+                      "key": "language_code",
+                      "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "838316ea-ab7b-4581-a1dd-74229d1970d5",
+                      "key": "game_id",
+                      "description": "(Required) Unique Id of a game, found in a Schedule endpoint.<br><br>**Example:** `838316ea-ab7b-4581-a1dd-74229d1970d5`"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"838316ea-ab7b-4581-a1dd-74229d1970d5\",\n  \"status\": \"closed\",\n  \"coverage\": \"full\",\n  \"scheduled\": \"2025-01-18T00:00:00+00:00\",\n  \"lead_changes\": 7,\n  \"times_tied\": 6,\n  \"clock\": \"3:26\",\n  \"quarter\": 4,\n  \"possession_arrow\": \"0780b080-347b-407b-b8d6-fa109ec23908\",\n  \"track_on_court\": true,\n  \"entry_mode\": \"LDE\",\n  \"clock_decimal\": \"3:26\",\n  \"broadcasts\": [\n    {\n      \"type\": \"TV\",\n      \"locale\": \"National\",\n      \"network\": \"TNT\",\n      \"channel\": \"245\"\n    }\n  ],\n  \"time_zones\": {\n    \"venue\": \"US/Eastern\",\n    \"home\": \"US/Eastern\",\n    \"away\": \"US/Eastern\"\n  },\n  \"season\": {\n    \"id\": \"c86ab7c9-5408-44e6-af06-c22636262927\",\n    \"year\": 2025,\n    \"type\": \"REG\",\n    \"name\": \"Regular Season\"\n  },\n  \"home\": {\n    \"name\": \"Mist\",\n    \"alias\": \"MST\",\n    \"id\": \"0780b080-347b-407b-b8d6-fa109ec23908\",\n    \"points\": 80,\n    \"remaining_timeouts\": 0\n  },\n  \"periods\": [\n    {\n      \"type\": \"quarter\",\n      \"id\": \"c2a3e4bd-1eb2-4730-9460-0ea601ed6d6e\",\n      \"number\": 1,\n      \"sequence\": 1,\n      \"scoring\": {\n        \"home\": {\n          \"name\": \"Mist\",\n          \"id\": \"0780b080-347b-407b-b8d6-fa109ec23908\",\n          \"points\": 20\n        },\n        \"away\": {\n          \"name\": \"Lunar Owls\",\n          \"id\": \"67c22115-2385-458f-8632-a67a025fef55\",\n          \"points\": 19\n        }\n      },\n      \"events\": [\n        {\n          \"id\": \"49c5da0f-df85-4c1a-bc0e-4544157210ca\",\n          \"clock\": \"6:48\",\n          \"updated\": \"2025-11-13T22:17:08+00:00\",\n          \"description\": \"Breanna Stewart makes two point jump shot\",\n          \"sequence\": 1763072228727,\n          \"home_points\": 2,\n          \"away_points\": 0,\n          \"clock_decimal\": \"6:48\",\n          \"created\": \"2025-11-13T22:17:08+00:00\",\n          \"clock_type\": \"standard\",\n          \"event_type\": \"twopointmade\",\n          \"attribution\": {\n            \"name\": \"Mist\",\n            \"id\": \"0780b080-347b-407b-b8d6-fa109ec23908\",\n            \"team_basket\": \"right\"\n          },\n          \"location\": {\n            \"coord_x\": 1042,\n            \"coord_y\": 140\n          },\n          \"possession\": {\n            \"name\": \"Lunar Owls\",\n            \"id\": \"67c22115-2385-458f-8632-a67a025fef55\"\n          },\n          \"on_court\": {\n            \"home\": {\n              \"name\": \"Mist\",\n              \"id\": \"0780b080-347b-407b-b8d6-fa109ec23908\",\n              \"players\": [\n                {\n                  \"full_name\": \"Jewell Loyd\",\n                  \"jersey_number\": \"24\",\n                  \"id\": \"2387d221-be55-495a-b2b7-cddbce9addcc\"\n                },\n                {\n                  \"full_name\": \"Breanna Stewart\",\n                  \"jersey_number\": \"30\",\n                  \"id\": \"a00515fd-bdd9-44d1-83a5-597a99316c54\"\n                },\n                {\n                  \"full_name\": \"Courtney Vandersloot\",\n                  \"jersey_number\": \"25\",\n                  \"id\": \"9234b3d7-b5b7-4bb3-99d5-0ae9737c55a1\"\n                }\n              ]\n            },\n            \"away\": {\n              \"name\": \"Lunar Owls\",\n              \"id\": \"67c22115-2385-458f-8632-a67a025fef55\",\n              \"players\": [\n                {\n                  \"full_name\": \"Napheesa Collier\",\n                  \"jersey_number\": \"24\",\n                  \"id\": \"fd8d4b11-3d70-450a-b65c-016bec29cc9d\"\n                },\n                {\n                  \"full_name\": \"Skylar Diggins\",\n                  \"jersey_number\": \"4\",\n                  \"id\": \"bee3dbc6-82f7-4dc0-b097-0cb42a1c00a2\"\n                },\n                {\n                  \"full_name\": \"Allisha Gray\",\n                  \"jersey_number\": \"15\",\n                  \"id\": \"f0fef47c-4e5f-4b81-8875-3f01f8a0ea1b\"\n                }\n              ]\n            }\n          },\n          \"statistics\": [\n            {\n              \"type\": \"fieldgoal\",\n              \"made\": true,\n              \"shot_type\": \"jump shot\",\n              \"points\": 2,\n              \"shot_distance\": 23.88,\n              \"winning_basket\": false,\n              \"team\": {\n                \"name\": \"Mist\",\n                \"id\": \"0780b080-347b-407b-b8d6-fa109ec23908\"\n              },\n              \"player\": {\n                \"full_name\": \"Breanna Stewart\",\n                \"jersey_number\": \"30\",\n                \"id\": \"a00515fd-bdd9-44d1-83a5-597a99316c54\"\n              }\n            }\n          ]\n        },\n        {\n          \"id\": \"ae82ca3f-ef42-4e75-a272-d594215e387d\",\n          \"clock\": \"00:02\",\n          \"updated\": \"2025-11-13T22:49:56+00:00\",\n          \"description\": \"Courtney Williams misses two point jump shot\",\n          \"sequence\": 1763074196754,\n          \"home_points\": 20,\n          \"away_points\": 19,\n          \"clock_decimal\": \"00:02\",\n          \"created\": \"2025-11-13T22:49:56+00:00\",\n          \"clock_type\": \"standard\",\n          \"event_type\": \"twopointmiss\",\n          \"attribution\": {\n            \"name\": \"Lunar Owls\",\n            \"id\": \"67c22115-2385-458f-8632-a67a025fef55\",\n            \"team_basket\": \"left\"\n          },\n          \"location\": {\n            \"coord_x\": 213,\n            \"coord_y\": 195,\n            \"action_area\": \"insideright\"\n          },\n          \"on_court\": {\n            \"home\": {\n              \"name\": \"Mist\",\n              \"id\": \"0780b080-347b-407b-b8d6-fa109ec23908\",\n              \"players\": [\n                {\n                  \"full_name\": \"Courtney Vandersloot\",\n                  \"jersey_number\": \"25\",\n                  \"id\": \"9234b3d7-b5b7-4bb3-99d5-0ae9737c55a1\"\n                },\n                {\n                  \"full_name\": \"Rickea Jackson\",\n                  \"jersey_number\": \"5\",\n                  \"id\": \"529366c1-1863-4b1e-b789-5a8c52124f30\"\n                },\n                {\n                  \"full_name\": \"DiJonai Carrington\",\n                  \"jersey_number\": \"21\",\n                  \"id\": \"47169cbe-5640-460b-a840-7f438a124330\"\n                }\n              ]\n            },\n            \"away\": {\n              \"name\": \"Lunar Owls\",\n              \"id\": \"67c22115-2385-458f-8632-a67a025fef55\",\n              \"players\": [\n                {\n                  \"full_name\": \"Shakira Austin\",\n                  \"jersey_number\": \"1\",\n                  \"id\": \"afd90940-4f4c-490a-8a22-1988ccc8e79d\"\n                },\n                {\n                  \"full_name\": \"Courtney Williams\",\n                  \"jersey_number\": \"10\",\n                  \"id\": \"95b03dc9-26cf-47ca-abf6-8380850d1e4e\"\n                },\n                {\n                  \"full_name\": \"Allisha Gray\",\n                  \"jersey_number\": \"15\",\n                  \"id\": \"f0fef47c-4e5f-4b81-8875-3f01f8a0ea1b\"\n                }\n              ]\n            }\n          },\n          \"statistics\": [\n            {\n              \"type\": \"fieldgoal\",\n              \"made\": false,\n              \"shot_type\": \"jump shot\",\n              \"shot_distance\": 15.02,\n              \"winning_basket\": false,\n              \"team\": {\n                \"name\": \"Lunar Owls\",\n                \"id\": \"67c22115-2385-458f-8632-a67a025fef55\"\n              },\n              \"player\": {\n                \"full_name\": \"Courtney Williams\",\n                \"jersey_number\": \"10\",\n                \"id\": \"95b03dc9-26cf-47ca-abf6-8380850d1e4e\"\n              }\n            }\n          ]\n        },\n        {\n          \"id\": \"95be610d-8ec1-40d5-a56a-fb85000b72fa\",\n          \"clock\": \"00:00\",\n          \"updated\": \"2025-11-13T22:49:56+00:00\",\n          \"description\": \"Mist defensive rebound\",\n          \"sequence\": 1763074196778,\n          \"home_points\": 20,\n          \"away_points\": 19,\n          \"clock_decimal\": \"00:00\",\n          \"created\": \"2025-11-13T22:49:56+00:00\",\n          \"clock_type\": \"standard\",\n          \"event_type\": \"rebound\",\n          \"attribution\": {\n            \"name\": \"Mist\",\n            \"id\": \"0780b080-347b-407b-b8d6-fa109ec23908\",\n            \"team_basket\": \"right\"\n          },\n          \"location\": {\n            \"coord_x\": 213,\n            \"coord_y\": 195,\n            \"action_area\": \"backcourt\"\n          },\n          \"possession\": {\n            \"name\": \"Mist\",\n            \"id\": \"0780b080-347b-407b-b8d6-fa109ec23908\"\n          },\n          \"on_court\": {\n            \"home\": {\n              \"name\": \"Mist\",\n              \"id\": \"0780b080-347b-407b-b8d6-fa109ec23908\",\n              \"players\": [\n                {\n                  \"full_name\": \"Courtney Vandersloot\",\n                  \"jersey_number\": \"25\",\n                  \"id\": \"9234b3d7-b5b7-4bb3-99d5-0ae9737c55a1\"\n                },\n                {\n                  \"full_name\": \"Rickea Jackson\",\n                  \"jersey_number\": \"5\",\n                  \"id\": \"529366c1-1863-4b1e-b789-5a8c52124f30\"\n                },\n                {\n                  \"full_name\": \"DiJonai Carrington\",\n                  \"jersey_number\": \"21\",\n                  \"id\": \"47169cbe-5640-460b-a840-7f438a124330\"\n                }\n              ]\n            },\n            \"away\": {\n              \"name\": \"Lunar Owls\",\n              \"id\": \"67c22115-2385-458f-8632-a67a025fef55\",\n              \"players\": [\n                {\n                  \"full_name\": \"Shakira Austin\",\n                  \"jersey_number\": \"1\",\n                  \"id\": \"afd90940-4f4c-490a-8a22-1988ccc8e79d\"\n                },\n                {\n                  \"full_name\": \"Courtney Williams\",\n                  \"jersey_number\": \"10\",\n                  \"id\": \"95b03dc9-26cf-47ca-abf6-8380850d1e4e\"\n                },\n                {\n                  \"full_name\": \"Allisha Gray\",\n                  \"jersey_number\": \"15\",\n                  \"id\": \"f0fef47c-4e5f-4b81-8875-3f01f8a0ea1b\"\n                }\n              ]\n            }\n          },\n          \"statistics\": [\n            {\n              \"type\": \"rebound\",\n              \"rebound_type\": \"defensive\",\n              \"team\": {\n                \"name\": \"Mist\",\n                \"id\": \"0780b080-347b-407b-b8d6-fa109ec23908\"\n              }\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"type\": \"elam\",\n      \"id\": \"1454a670-c189-4f90-a7ea-b73721ef01a4\",\n      \"number\": 4,\n      \"sequence\": 4,\n      \"scoring\": {\n        \"times_tied\": 1,\n        \"lead_changes\": 1,\n        \"home\": {\n          \"name\": \"Mist\",\n          \"id\": \"0780b080-347b-407b-b8d6-fa109ec23908\",\n          \"points\": 7\n        },\n        \"away\": {\n          \"name\": \"Lunar Owls\",\n          \"id\": \"67c22115-2385-458f-8632-a67a025fef55\",\n          \"points\": 17\n        }\n      },\n      \"events\": [\n        {\n          \"id\": \"d9e9b1c2-bc9b-4bb5-9c87-1ae61a720483\",\n          \"clock\": \"00:19\",\n          \"updated\": \"2025-11-13T23:53:47+00:00\",\n          \"description\": \"Jewell Loyd makes two point layup (Courtney Vandersloot assists)\",\n          \"sequence\": 1763078027323,\n          \"home_points\": 75,\n          \"away_points\": 67,\n          \"clock_decimal\": \"00:19\",\n          \"created\": \"2025-11-13T23:53:47+00:00\",\n          \"clock_type\": \"elam\",\n          \"clock_directional\": \"+00:19\",\n          \"event_type\": \"twopointmade\",\n          \"attribution\": {\n            \"name\": \"Mist\",\n            \"id\": \"0780b080-347b-407b-b8d6-fa109ec23908\",\n            \"team_basket\": \"left\"\n          },\n          \"location\": {\n            \"coord_x\": 98,\n            \"coord_y\": 319,\n            \"action_area\": \"inthepaint\"\n          },\n          \"possession\": {\n            \"name\": \"Lunar Owls\",\n            \"id\": \"67c22115-2385-458f-8632-a67a025fef55\"\n          },\n          \"on_court\": {\n            \"home\": {\n              \"name\": \"Mist\",\n              \"id\": \"0780b080-347b-407b-b8d6-fa109ec23908\",\n              \"players\": [\n                {\n                  \"full_name\": \"Jewell Loyd\",\n                  \"jersey_number\": \"24\",\n                  \"id\": \"2387d221-be55-495a-b2b7-cddbce9addcc\"\n                },\n                {\n                  \"full_name\": \"Courtney Vandersloot\",\n                  \"jersey_number\": \"25\",\n                  \"id\": \"9234b3d7-b5b7-4bb3-99d5-0ae9737c55a1\"\n                },\n                {\n                  \"full_name\": \"Breanna Stewart\",\n                  \"jersey_number\": \"30\",\n                  \"id\": \"a00515fd-bdd9-44d1-83a5-597a99316c54\"\n                }\n              ]\n            },\n            \"away\": {\n              \"name\": \"Lunar Owls\",\n              \"id\": \"67c22115-2385-458f-8632-a67a025fef55\",\n              \"players\": [\n                {\n                  \"full_name\": \"Napheesa Collier\",\n                  \"jersey_number\": \"24\",\n                  \"id\": \"fd8d4b11-3d70-450a-b65c-016bec29cc9d\"\n                },\n                {\n                  \"full_name\": \"Courtney Williams\",\n                  \"jersey_number\": \"10\",\n                  \"id\": \"95b03dc9-26cf-47ca-abf6-8380850d1e4e\"\n                },\n                {\n                  \"full_name\": \"Allisha Gray\",\n                  \"jersey_number\": \"15\",\n                  \"id\": \"f0fef47c-4e5f-4b81-8875-3f01f8a0ea1b\"\n                }\n              ]\n            }\n          },\n          \"statistics\": [\n            {\n              \"type\": \"fieldgoal\",\n              \"made\": true,\n              \"shot_type\": \"layup\",\n              \"points\": 2,\n              \"shot_distance\": 3.54,\n              \"winning_basket\": false,\n              \"team\": {\n                \"name\": \"Mist\",\n                \"id\": \"0780b080-347b-407b-b8d6-fa109ec23908\"\n              },\n              \"player\": {\n                \"full_name\": \"Jewell Loyd\",\n                \"jersey_number\": \"24\",\n                \"id\": \"2387d221-be55-495a-b2b7-cddbce9addcc\"\n              }\n            },\n            {\n              \"type\": \"assist\",\n              \"team\": {\n                \"name\": \"Mist\",\n                \"id\": \"0780b080-347b-407b-b8d6-fa109ec23908\"\n              },\n              \"player\": {\n                \"full_name\": \"Courtney Vandersloot\",\n                \"jersey_number\": \"25\",\n                \"id\": \"9234b3d7-b5b7-4bb3-99d5-0ae9737c55a1\"\n              }\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c2de9bfd-1a64-4f17-bfba-904fb3134c19",
+          "name": "Game Summary",
+          "request": {
+            "name": "Game Summary",
+            "description": {
+              "content": "**Unrivaled Game Summary** provides top-level boxscore information along with detailed game stats at the team and player levels.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":access_level",
+                "v8",
+                ":language_code",
+                "games",
+                ":game_id",
+                "summary.{{format}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "trial",
+                  "key": "access_level",
+                  "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "en",
+                  "key": "language_code",
+                  "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "838316ea-ab7b-4581-a1dd-74229d1970d5",
+                  "key": "game_id",
+                  "description": "(Required) Unique Id of a game, found in a Schedule endpoint.<br><br>**Example:** `838316ea-ab7b-4581-a1dd-74229d1970d5`"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2a364719-5e78-481d-9ff1-782e53b3c912",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":access_level",
+                    "v8",
+                    ":language_code",
+                    "games",
+                    ":game_id",
+                    "summary.{{format}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "trial",
+                      "key": "access_level",
+                      "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "en",
+                      "key": "language_code",
+                      "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "838316ea-ab7b-4581-a1dd-74229d1970d5",
+                      "key": "game_id",
+                      "description": "(Required) Unique Id of a game, found in a Schedule endpoint.<br><br>**Example:** `838316ea-ab7b-4581-a1dd-74229d1970d5`"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"838316ea-ab7b-4581-a1dd-74229d1970d5\",\n  \"status\": \"closed\",\n  \"coverage\": \"full\",\n  \"scheduled\": \"2025-01-18T00:00:00+00:00\",\n  \"lead_changes\": 7,\n  \"times_tied\": 6,\n  \"clock\": \"3:26\",\n  \"quarter\": 4,\n  \"possession_arrow\": \"0780b080-347b-407b-b8d6-fa109ec23908\",\n  \"track_on_court\": true,\n  \"entry_mode\": \"LDE\",\n  \"clock_decimal\": \"3:26\",\n  \"broadcasts\": [\n    {\n      \"type\": \"TV\",\n      \"locale\": \"National\",\n      \"network\": \"TNT\",\n      \"channel\": \"245\"\n    }\n  ],\n  \"time_zones\": {\n    \"venue\": \"US/Eastern\",\n    \"home\": \"US/Eastern\",\n    \"away\": \"US/Eastern\"\n  },\n  \"season\": {\n    \"id\": \"c86ab7c9-5408-44e6-af06-c22636262927\",\n    \"year\": 2025,\n    \"type\": \"REG\",\n    \"name\": \"Regular Season\"\n  },\n  \"venue\": {\n    \"id\": \"67e49419-cb04-4ce0-ab33-ae42af8d8634\",\n    \"name\": \"Unrivaled Arena\",\n    \"capacity\": 850,\n    \"address\": \"7321 NW 75th Street\",\n    \"city\": \"Medley\",\n    \"state\": \"FL\",\n    \"zip\": \"33166\",\n    \"country\": \"USA\",\n    \"location\": {\n      \"lat\": \"25.842035\",\n      \"lng\": \"-80.317192\"\n    }\n  },\n  \"home\": {\n    \"name\": \"Mist\",\n    \"alias\": \"MST\",\n    \"id\": \"0780b080-347b-407b-b8d6-fa109ec23908\",\n    \"points\": 80,\n    \"remaining_timeouts\": 0,\n    \"scoring\": [\n      {\n        \"type\": \"quarter\",\n        \"number\": 1,\n        \"sequence\": 1,\n        \"points\": 20\n      }\n    ],\n    \"statistics\": {\n      \"minutes\": \"1:13:18\",\n      \"field_goals_made\": 30,\n      \"field_goals_att\": 68,\n      \"field_goals_pct\": 44.1,\n      \"three_points_made\": 6,\n      \"three_points_att\": 21,\n      \"three_points_pct\": 28.6,\n      \"two_points_made\": 24,\n      \"two_points_att\": 47,\n      \"two_points_pct\": 51.1,\n      \"blocked_att\": 2,\n      \"free_throws_made\": 8,\n      \"free_throws_att\": 10,\n      \"free_throws_pct\": 80,\n      \"offensive_rebounds\": 8,\n      \"defensive_rebounds\": 30,\n      \"assists\": 13,\n      \"steals\": 5,\n      \"blocks\": 2,\n      \"assists_turnover_ratio\": 1.18,\n      \"personal_fouls\": 15,\n      \"ejections\": 0,\n      \"foulouts\": 0,\n      \"points\": 80,\n      \"fast_break_pts\": 0,\n      \"second_chance_pts\": 6,\n      \"team_turnovers\": 0,\n      \"points_off_turnovers\": 11,\n      \"team_rebounds\": 5,\n      \"flagrant_fouls\": 0,\n      \"player_tech_fouls\": 0,\n      \"team_tech_fouls\": 0,\n      \"coach_tech_fouls\": 0,\n      \"team_points\": 0,\n      \"total_points\": 80,\n      \"winning_basket\": false,\n      \"free_throw_points\": 14,\n      \"points_in_paint\": 19,\n      \"team_offensive_rebounds\": 2,\n      \"team_defensive_rebounds\": 3,\n      \"total_rebounds\": 43,\n      \"total_turnovers\": 11,\n      \"personal_rebounds\": 38,\n      \"player_turnovers\": 11,\n      \"field_goals_at_rim_made\": 1,\n      \"field_goals_at_rim_att\": 1,\n      \"field_goals_at_rim_pct\": 100,\n      \"field_goals_at_midrange_made\": 2,\n      \"field_goals_at_midrange_att\": 10,\n      \"field_goals_at_midrange_pct\": 20,\n      \"bench_points\": 34,\n      \"biggest_lead\": 10,\n      \"effective_fg_pct\": 48.5,\n      \"efficiency\": 81,\n      \"efficiency_game_score\": 56.7,\n      \"fouls_drawn\": 11,\n      \"offensive_fouls\": 1,\n      \"pls_min\": -4,\n      \"points_in_paint_att\": 16,\n      \"points_in_paint_made\": 9,\n      \"points_in_paint_pct\": 56.3,\n      \"total_fouls\": 15,\n      \"true_shooting_att\": 72.4,\n      \"true_shooting_pct\": 55.2,\n      \"most_unanswered\": {\n        \"points\": 9,\n        \"own_score\": 11,\n        \"opp_score\": 6\n      },\n      \"periods\": [\n        {\n          \"type\": \"REG\",\n          \"id\": \"c2a3e4bd-1eb2-4730-9460-0ea601ed6d6e\",\n          \"number\": 1,\n          \"sequence\": 1,\n          \"minutes\": \"21:00\",\n          \"field_goals_made\": 9,\n          \"field_goals_att\": 22,\n          \"field_goals_pct\": 40.9,\n          \"three_points_made\": 2,\n          \"three_points_att\": 6,\n          \"three_points_pct\": 33.3,\n          \"two_points_made\": 7,\n          \"two_points_att\": 16,\n          \"two_points_pct\": 43.8,\n          \"blocked_att\": 0,\n          \"free_throws_made\": 0,\n          \"free_throws_att\": 0,\n          \"free_throws_pct\": 0,\n          \"offensive_rebounds\": 3,\n          \"defensive_rebounds\": 7,\n          \"rebounds\": 10,\n          \"assists\": 5,\n          \"turnovers\": 3,\n          \"steals\": 4,\n          \"blocks\": 1,\n          \"assists_turnover_ratio\": 1.67,\n          \"personal_fouls\": 4,\n          \"offensive_fouls\": 0,\n          \"ejections\": 0,\n          \"points\": 20,\n          \"second_chance_pts\": 2,\n          \"team_turnovers\": 0,\n          \"points_off_turnovers\": 5,\n          \"team_rebounds\": 2,\n          \"flagrant_fouls\": 0,\n          \"player_tech_fouls\": 0,\n          \"team_tech_fouls\": 0,\n          \"coach_tech_fouls\": 0,\n          \"pls_min\": 1,\n          \"effective_fg_pct\": 45.5,\n          \"bench_points\": 10,\n          \"points_in_paint\": 0,\n          \"points_in_paint_att\": 0,\n          \"points_in_paint_made\": 0,\n          \"points_in_paint_pct\": 0,\n          \"true_shooting_att\": 22,\n          \"true_shooting_pct\": 45.5,\n          \"biggest_lead\": 8,\n          \"fouls_drawn\": 0,\n          \"total_turnovers\": 3,\n          \"efficiency\": 20,\n          \"efficiency_game_score\": 16,\n          \"winning_basket\": false,\n          \"free_throw_points\": 0\n        }\n      ]\n    },\n    \"coaches\": [\n      {\n        \"id\": \"8ded6ff7-ca32-4b9a-a5e9-d08ecf32ca5e\",\n        \"full_name\": \"Phil Handy\",\n        \"first_name\": \"Phil\",\n        \"last_name\": \"Handy\",\n        \"position\": \"Head Coach\"\n      }\n    ],\n    \"players\": [\n      {\n        \"full_name\": \"Breanna Stewart\",\n        \"jersey_number\": \"30\",\n        \"id\": \"a00515fd-bdd9-44d1-83a5-597a99316c54\",\n        \"first_name\": \"Breanna\",\n        \"last_name\": \"Stewart\",\n        \"position\": \"F\",\n        \"primary_position\": \"NA\",\n        \"played\": true,\n        \"active\": true,\n        \"starter\": true,\n        \"on_court\": true,\n        \"statistics\": {\n          \"minutes\": \"13:06\",\n          \"field_goals_made\": 2,\n          \"field_goals_att\": 10,\n          \"field_goals_pct\": 20,\n          \"three_points_made\": 0,\n          \"three_points_att\": 4,\n          \"three_points_pct\": 0,\n          \"two_points_made\": 2,\n          \"two_points_att\": 6,\n          \"two_points_pct\": 33.3,\n          \"blocked_att\": 0,\n          \"free_throws_made\": 1,\n          \"free_throws_att\": 2,\n          \"free_throws_pct\": 50,\n          \"offensive_rebounds\": 1,\n          \"defensive_rebounds\": 12,\n          \"rebounds\": 13,\n          \"assists\": 3,\n          \"turnovers\": 1,\n          \"steals\": 1,\n          \"blocks\": 0,\n          \"assists_turnover_ratio\": 3,\n          \"personal_fouls\": 3,\n          \"tech_fouls\": 0,\n          \"flagrant_fouls\": 0,\n          \"pls_min\": -11,\n          \"points\": 6,\n          \"free_throw_points\": 2,\n          \"tech_fouls_non_unsportsmanlike\": 0,\n          \"winning_basket\": false,\n          \"double_double\": false,\n          \"triple_double\": false,\n          \"effective_fg_pct\": 20,\n          \"efficiency\": 13,\n          \"efficiency_game_score\": 4.6,\n          \"fouls_drawn\": 3,\n          \"offensive_fouls\": 1,\n          \"points_in_paint\": 2,\n          \"points_in_paint_att\": 4,\n          \"points_in_paint_made\": 1,\n          \"points_in_paint_pct\": 25,\n          \"points_off_turnovers\": 0,\n          \"true_shooting_att\": 10.88,\n          \"true_shooting_pct\": 27.6,\n          \"coach_ejections\": 0,\n          \"coach_tech_fouls\": 0,\n          \"second_chance_pts\": 0,\n          \"second_chance_pct\": 0,\n          \"periods\": [\n            {\n              \"type\": \"ELAM\",\n              \"id\": \"1454a670-c189-4f90-a7ea-b73721ef01a4\",\n              \"number\": 4,\n              \"sequence\": 4,\n              \"minutes\": \"3:26\",\n              \"field_goals_made\": 0,\n              \"field_goals_att\": 3,\n              \"field_goals_pct\": 0,\n              \"three_points_made\": 0,\n              \"three_points_att\": 1,\n              \"three_points_pct\": 0,\n              \"two_points_made\": 0,\n              \"two_points_att\": 2,\n              \"two_points_pct\": 0,\n              \"blocked_att\": 0,\n              \"free_throws_made\": 0,\n              \"free_throws_att\": 0,\n              \"free_throws_pct\": 0,\n              \"offensive_rebounds\": 1,\n              \"defensive_rebounds\": 4,\n              \"rebounds\": 5,\n              \"assists\": 1,\n              \"turnovers\": 0,\n              \"steals\": 0,\n              \"blocks\": 0,\n              \"assists_turnover_ratio\": 0,\n              \"personal_fouls\": 0,\n              \"offensive_fouls\": 0,\n              \"tech_fouls\": 0,\n              \"flagrant_fouls\": 0,\n              \"pls_min\": -10,\n              \"points\": 0,\n              \"effective_fg_pct\": 0,\n              \"efficiency\": 4,\n              \"efficiency_game_score\": 0.5,\n              \"points_in_paint\": 0,\n              \"points_in_paint_att\": 2,\n              \"points_in_paint_made\": 0,\n              \"points_in_paint_pct\": 0,\n              \"true_shooting_att\": 3,\n              \"true_shooting_pct\": 0,\n              \"fouls_drawn\": 1,\n              \"points_off_turnovers\": 0,\n              \"second_chance_pts\": 0,\n              \"free_throw_points\": 0,\n              \"tech_fouls_non_unsportsmanlike\": 0,\n              \"winning_basket\": false\n            }\n          ]\n        }\n      }\n    ]\n  },\n  \"officials\": []\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "20dd0a69-5733-4970-acc2-852d8ccfd4d2",
+          "name": "Schedule",
+          "request": {
+            "name": "Schedule",
+            "description": {
+              "content": "**Unrivaled Schedule** provides date, time, location, and other event details for every match-up taking place in the full league season.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":access_level",
+                "v8",
+                ":language_code",
+                "games",
+                ":season_year",
+                ":season_type",
+                "schedule.{{format}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "trial",
+                  "key": "access_level",
+                  "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "en",
+                  "key": "language_code",
+                  "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "2026",
+                  "key": "season_year",
+                  "description": "(Required) Season year in `YYYY` format"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "REG",
+                  "key": "season_type",
+                  "description": "(Required) Type of season<br><br>`PRE` (Pre-season), `REG` (Regular Season), `OOT` (One-on-One Tournament), `PST` (Post-season)"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9e3c2192-5510-4429-a8ca-ab300a4a870c",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":access_level",
+                    "v8",
+                    ":language_code",
+                    "games",
+                    ":season_year",
+                    ":season_type",
+                    "schedule.{{format}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "trial",
+                      "key": "access_level",
+                      "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "en",
+                      "key": "language_code",
+                      "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "2026",
+                      "key": "season_year",
+                      "description": "(Required) Season year in `YYYY` format"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "REG",
+                      "key": "season_type",
+                      "description": "(Required) Type of season<br><br>`PRE` (Pre-season), `REG` (Regular Season), `OOT` (One-on-One Tournament), `PST` (Post-season)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"league\": {\n    \"id\": \"844ee10a-00c8-4dc1-9c17-52598de2ef47\",\n    \"name\": \"Unrivaled\",\n    \"alias\": \"UNRIVALED\"\n  },\n  \"season\": {\n    \"id\": \"c86ab7c9-5408-44e6-af06-c22636262927\",\n    \"year\": 2025,\n    \"type\": \"REG\"\n  },\n  \"games\": [\n    {\n      \"id\": \"838316ea-ab7b-4581-a1dd-74229d1970d5\",\n      \"status\": \"closed\",\n      \"coverage\": \"full\",\n      \"scheduled\": \"2025-01-18T00:00:00+00:00\",\n      \"home_points\": 80,\n      \"away_points\": 84,\n      \"track_on_court\": true,\n      \"time_zones\": {\n        \"venue\": \"US/Eastern\",\n        \"home\": \"US/Eastern\",\n        \"away\": \"US/Eastern\"\n      },\n      \"venue\": {\n        \"id\": \"67e49419-cb04-4ce0-ab33-ae42af8d8634\",\n        \"name\": \"Sephora Arena\",\n        \"capacity\": 850,\n        \"address\": \"7321 NW 75th Street\",\n        \"city\": \"Medley\",\n        \"state\": \"FL\",\n        \"zip\": \"33166\",\n        \"country\": \"USA\",\n        \"location\": {\n          \"lat\": \"25.842035\",\n          \"lng\": \"-80.317192\"\n        }\n      },\n      \"broadcasts\": [\n        {\n          \"network\": \"TNT\",\n          \"type\": \"TV\",\n          \"locale\": \"National\",\n          \"channel\": \"245\"\n        }\n      ],\n      \"home\": {\n        \"name\": \"Mist\",\n        \"alias\": \"MST\",\n        \"id\": \"0780b080-347b-407b-b8d6-fa109ec23908\"\n      },\n      \"away\": {\n        \"name\": \"Lunar Owls\",\n        \"alias\": \"LNR\",\n        \"id\": \"67c22115-2385-458f-8632-a67a025fef55\"\n      }\n    },\n    {\n      \"id\": \"3c58e5c2-6d7c-4797-9a43-9f3fffc536f7\",\n      \"status\": \"scheduled\",\n      \"coverage\": \"full\",\n      \"scheduled\": \"2025-01-18T01:15:00+00:00\",\n      \"track_on_court\": true,\n      \"time_zones\": {\n        \"venue\": \"US/Eastern\",\n        \"home\": \"US/Eastern\",\n        \"away\": \"US/Eastern\"\n      },\n      \"venue\": {\n        \"id\": \"67e49419-cb04-4ce0-ab33-ae42af8d8634\",\n        \"name\": \"Sephora Arena\",\n        \"capacity\": 850,\n        \"address\": \"7321 NW 75th Street\",\n        \"city\": \"Medley\",\n        \"state\": \"FL\",\n        \"zip\": \"33166\",\n        \"country\": \"USA\",\n        \"location\": {\n          \"lat\": \"25.842035\",\n          \"lng\": \"-80.317192\"\n        }\n      },\n      \"broadcasts\": [\n        {\n          \"network\": \"TNT\",\n          \"type\": \"TV\",\n          \"locale\": \"National\",\n          \"channel\": \"245\"\n        }\n      ],\n      \"home\": {\n        \"name\": \"Rose\",\n        \"alias\": \"ROS\",\n        \"id\": \"3b7f5d56-3586-4d58-98a7-562e267a965e\"\n      },\n      \"away\": {\n        \"name\": \"Vinyl\",\n        \"alias\": \"VNL\",\n        \"id\": \"4eeb0d49-106d-4a2d-8917-b703595219dc\"\n      }\n    },\n    {\n      \"id\": \"5a8f4590-601c-4ed0-88f6-df78201e0a22\",\n      \"status\": \"scheduled\",\n      \"coverage\": \"full\",\n      \"scheduled\": \"2025-01-18T19:00:00+00:00\",\n      \"track_on_court\": true,\n      \"time_zones\": {\n        \"venue\": \"US/Eastern\",\n        \"home\": \"US/Eastern\",\n        \"away\": \"US/Eastern\"\n      },\n      \"venue\": {\n        \"id\": \"67e49419-cb04-4ce0-ab33-ae42af8d8634\",\n        \"name\": \"Sephora Arena\",\n        \"capacity\": 850,\n        \"address\": \"7321 NW 75th Street\",\n        \"city\": \"Medley\",\n        \"state\": \"FL\",\n        \"zip\": \"33166\",\n        \"country\": \"USA\",\n        \"location\": {\n          \"lat\": \"25.842035\",\n          \"lng\": \"-80.317192\"\n        }\n      },\n      \"broadcasts\": [\n        {\n          \"network\": \"truTV\",\n          \"type\": \"TV\",\n          \"locale\": \"National\",\n          \"channel\": \"246\"\n        }\n      ],\n      \"home\": {\n        \"name\": \"Phantom\",\n        \"alias\": \"PHA\",\n        \"id\": \"e5be75a6-cd4a-41d3-b3c3-638506ced50a\"\n      },\n      \"away\": {\n        \"name\": \"Laces\",\n        \"alias\": \"LCS\",\n        \"id\": \"b1da8619-1db7-4c21-99bb-4c7307e25026\"\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.sportradar.com/unrivaled/",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) Format returned<br><br>`json`, `xml`",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "format"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "x-api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "ea56148a-141c-4036-ab36-bc24fde4a11d",
+    "name": "Unrivaled Games API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Official real-time data API for the Unrivaled professional women's 3x3 basketball league, operated by Sportradar as the league's Official Data Provider. Feeds cover schedules, standings, rosters, real-time scores, play-by-play, injuries, transfers, and season statistics, in JSON or XML. Assembled by API Evangelist on 2026-07-21 from the per-endpoint OpenAPI definitions embedded in the 23 Unrivaled reference pages at https://developer.sportradar.com/basketball/reference/unrivaled-overview; operation content is preserved verbatim from the source definitions.",
+      "type": "text/plain"
+    }
+  }
+}

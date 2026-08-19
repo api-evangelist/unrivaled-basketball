@@ -110,3 +110,9 @@ tools:
     and participants.'
   source_operation: openapi/unrivaled-basketball-openapi.yml#get_{access_level}v8{language_code}tournaments{tournament_id}teams{team_id}statistics.{format}-1
   docs: https://developer.sportradar.com/basketball/reference/unrivaled-tournament-summary
+deployment:
+  mode: none
+  verified: derived
+  tools: 23
+  checked: '2026-08-12'
+  source: catalog MCP census

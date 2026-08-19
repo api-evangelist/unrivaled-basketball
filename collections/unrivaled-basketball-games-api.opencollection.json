@@ -1,0 +1,229 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Unrivaled Games API",
+    "version": "v8"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-api-key",
+      "value": "{{x-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Games",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Daily Schedule",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sportradar.com/unrivaled/:access_level/v8/:language_code/games/:year/:month/:day/schedule.:format",
+            "params": [
+              {
+                "name": "access_level",
+                "value": "",
+                "type": "path",
+                "description": "The access level of your API key<br><br>`trial`, `production`"
+              },
+              {
+                "name": "language_code",
+                "value": "",
+                "type": "path",
+                "description": "2-letter code for supported languages<br><br>`en` (English)"
+              },
+              {
+                "name": "year",
+                "value": "",
+                "type": "path",
+                "description": "Year in `YYYY` format"
+              },
+              {
+                "name": "month",
+                "value": "",
+                "type": "path",
+                "description": "Month in `MM` format"
+              },
+              {
+                "name": "day",
+                "value": "",
+                "type": "path",
+                "description": "Date in `DD` format"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "path",
+                "description": "Format returned<br><br>`json`, `xml`"
+              }
+            ]
+          },
+          "docs": "**Unrivaled Daily Schedule** provides date, time, location, and other event details for every game taking place in the league-defined day."
+        },
+        {
+          "info": {
+            "name": "Game Boxscore",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sportradar.com/unrivaled/:access_level/v8/:language_code/games/:game_id/boxscore.:format",
+            "params": [
+              {
+                "name": "access_level",
+                "value": "",
+                "type": "path",
+                "description": "The access level of your API key<br><br>`trial`, `production`"
+              },
+              {
+                "name": "language_code",
+                "value": "",
+                "type": "path",
+                "description": "2-letter code for supported languages<br><br>`en` (English)"
+              },
+              {
+                "name": "game_id",
+                "value": "",
+                "type": "path",
+                "description": "Unique Id of a game, found in a Schedule endpoint.<br><br>**Example:** `838316ea-ab7b-4581-a1dd-74229d1970d5`"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "path",
+                "description": "Format returned<br><br>`json`, `xml`"
+              }
+            ]
+          },
+          "docs": "**Unrivaled Game Boxscore** provides top-level team scores by quarter, along with full statistics for each teams’ leaders in points, rebounds, and assists."
+        },
+        {
+          "info": {
+            "name": "Game Play-by-Play",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sportradar.com/unrivaled/:access_level/v8/:language_code/games/:game_id/pbp.:format",
+            "params": [
+              {
+                "name": "access_level",
+                "value": "",
+                "type": "path",
+                "description": "The access level of your API key<br><br>`trial`, `production`"
+              },
+              {
+                "name": "language_code",
+                "value": "",
+                "type": "path",
+                "description": "2-letter code for supported languages<br><br>`en` (English)"
+              },
+              {
+                "name": "game_id",
+                "value": "",
+                "type": "path",
+                "description": "Unique Id of a game, found in a Schedule endpoint.<br><br>**Example:** `838316ea-ab7b-4581-a1dd-74229d1970d5`"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "path",
+                "description": "Format returned<br><br>`json`, `xml`"
+              }
+            ]
+          },
+          "docs": "**Unrivaled Game Play-by-Play** provides detailed, real-time information on every team possession and game event."
+        },
+        {
+          "info": {
+            "name": "Game Summary",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sportradar.com/unrivaled/:access_level/v8/:language_code/games/:game_id/summary.:format",
+            "params": [
+              {
+                "name": "access_level",
+                "value": "",
+                "type": "path",
+                "description": "The access level of your API key<br><br>`trial`, `production`"
+              },
+              {
+                "name": "language_code",
+                "value": "",
+                "type": "path",
+                "description": "2-letter code for supported languages<br><br>`en` (English)"
+              },
+              {
+                "name": "game_id",
+                "value": "",
+                "type": "path",
+                "description": "Unique Id of a game, found in a Schedule endpoint.<br><br>**Example:** `838316ea-ab7b-4581-a1dd-74229d1970d5`"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "path",
+                "description": "Format returned<br><br>`json`, `xml`"
+              }
+            ]
+          },
+          "docs": "**Unrivaled Game Summary** provides top-level boxscore information along with detailed game stats at the team and player levels."
+        },
+        {
+          "info": {
+            "name": "Schedule",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sportradar.com/unrivaled/:access_level/v8/:language_code/games/:season_year/:season_type/schedule.:format",
+            "params": [
+              {
+                "name": "access_level",
+                "value": "",
+                "type": "path",
+                "description": "The access level of your API key<br><br>`trial`, `production`"
+              },
+              {
+                "name": "language_code",
+                "value": "",
+                "type": "path",
+                "description": "2-letter code for supported languages<br><br>`en` (English)"
+              },
+              {
+                "name": "season_year",
+                "value": "",
+                "type": "path",
+                "description": "Season year in `YYYY` format"
+              },
+              {
+                "name": "season_type",
+                "value": "",
+                "type": "path",
+                "description": "Type of season<br><br>`PRE` (Pre-season), `REG` (Regular Season), `OOT` (One-on-One Tournament), `PST` (Post-season)"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "path",
+                "description": "Format returned<br><br>`json`, `xml`"
+              }
+            ]
+          },
+          "docs": "**Unrivaled Schedule** provides date, time, location, and other event details for every match-up taking place in the full league season."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

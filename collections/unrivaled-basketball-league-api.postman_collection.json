@@ -1,0 +1,1012 @@
+{
+  "item": [
+    {
+      "id": "040fef69-5fbd-45b1-8ed6-782831e1a826",
+      "name": "League",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7fd96073-dc28-4dad-8d47-baf6d7d4e2ce",
+          "name": "Daily Change Log",
+          "request": {
+            "name": "Daily Change Log",
+            "description": {
+              "content": "**Unrivaled Daily Change Log** provides IDs and timestamps for teams, players, game statistics, schedules, and standings that have been modified on a given date. To receive the data updates, use these unique IDs to pull relevant API feeds.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":access_level",
+                "v8",
+                ":language_code",
+                "league",
+                ":year",
+                ":month",
+                ":day",
+                "changes.{{format}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "trial",
+                  "key": "access_level",
+                  "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "en",
+                  "key": "language_code",
+                  "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "2026",
+                  "key": "year",
+                  "description": "(Required) Year in `YYYY` format"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "01",
+                  "key": "month",
+                  "description": "(Required) Month in `MM` format"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "16",
+                  "key": "day",
+                  "description": "(Required) Date in `DD` format"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "67a3adcc-c3dc-4ebb-a913-ee17dd57eee0",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":access_level",
+                    "v8",
+                    ":language_code",
+                    "league",
+                    ":year",
+                    ":month",
+                    ":day",
+                    "changes.{{format}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "trial",
+                      "key": "access_level",
+                      "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "en",
+                      "key": "language_code",
+                      "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "2026",
+                      "key": "year",
+                      "description": "(Required) Year in `YYYY` format"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "01",
+                      "key": "month",
+                      "description": "(Required) Month in `MM` format"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "16",
+                      "key": "day",
+                      "description": "(Required) Date in `DD` format"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"league\": {\n    \"id\": \"844ee10a-00c8-4dc1-9c17-52598de2ef47\",\n    \"name\": \"Unrivaled\",\n    \"alias\": \"UNRIVALED\"\n  },\n  \"start_time\": \"2026-01-02T05:00:00Z\",\n  \"end_time\": \"2026-01-03T04:59:59Z\",\n  \"players\": [\n    {\n      \"id\": \"69d001d2-b7a5-4bd9-bcde-d5cbbfb005df\",\n      \"full_name\": \"Tiffany Hayes\",\n      \"last_modified\": \"2026-01-02T17:04:22+00:00\"\n    },\n    {\n      \"id\": \"c1841a50-2629-47bb-8c9b-ddd141372f71\",\n      \"full_name\": \"Georgia Amoore\",\n      \"last_modified\": \"2026-01-02T17:10:20+00:00\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d8e5e149-3145-49b1-855c-4991be624835",
+          "name": "Daily Injuries",
+          "request": {
+            "name": "Daily Injuries",
+            "description": {
+              "content": "**Unrivaled Daily Injuries** provides details for all injuries updated on a given date.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":access_level",
+                "v8",
+                ":language_code",
+                "league",
+                ":year",
+                ":month",
+                ":day",
+                "daily_injuries.{{format}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "trial",
+                  "key": "access_level",
+                  "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "en",
+                  "key": "language_code",
+                  "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "2026",
+                  "key": "year",
+                  "description": "(Required) Year in `YYYY` format"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "01",
+                  "key": "month",
+                  "description": "(Required) Month in `MM` format"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "16",
+                  "key": "day",
+                  "description": "(Required) Date in `DD` format"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "262a0ad3-b1b5-4316-b69d-8d6a3d139bb5",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":access_level",
+                    "v8",
+                    ":language_code",
+                    "league",
+                    ":year",
+                    ":month",
+                    ":day",
+                    "daily_injuries.{{format}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "trial",
+                      "key": "access_level",
+                      "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "en",
+                      "key": "language_code",
+                      "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "2026",
+                      "key": "year",
+                      "description": "(Required) Year in `YYYY` format"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "01",
+                      "key": "month",
+                      "description": "(Required) Month in `MM` format"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "16",
+                      "key": "day",
+                      "description": "(Required) Date in `DD` format"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"league\": {\n    \"id\": \"844ee10a-00c8-4dc1-9c17-52598de2ef47\",\n    \"name\": \"Unrivaled\",\n    \"alias\": \"UNRIVALED\"\n  },\n  \"date\": \"2026-01-02\",\n  \"teams\": [\n    {\n      \"id\": \"865d71fd-8173-4f06-ba93-fe886dd78330\",\n      \"name\": \"Breeze\",\n      \"franchise_id\": \"8e8152ab-ab83-4647-adb4-e1fb1d5d5831\",\n      \"players\": [\n        {\n          \"id\": \"285bb3a5-6359-4aa7-8f5d-b0692b92a675\",\n          \"full_name\": \"Aari McDonald\",\n          \"first_name\": \"Aari\",\n          \"last_name\": \"McDonald\",\n          \"position\": \"G\",\n          \"primary_position\": \"NA\",\n          \"jersey_number\": \"3\",\n          \"injuries\": [\n            {\n              \"id\": \"c4fee2ce-efa6-49a1-bf4a-0499abbd8aef\",\n              \"comment\": \"The Breeze have listed McDonald as OUT for Friday's game (Jan. 2) against the Lunar Owls.\",\n              \"desc\": \"R Lower Extremity\",\n              \"status\": \"Out\",\n              \"start_date\": \"2026-01-02\",\n              \"update_date\": \"2026-01-02\"\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"id\": \"67c22115-2385-458f-8632-a67a025fef55\",\n      \"name\": \"Lunar Owls\",\n      \"franchise_id\": \"0fe49837-e922-47d2-a063-3025ab8359db\",\n      \"players\": [\n        {\n          \"id\": \"fd8d4b11-3d70-450a-b65c-016bec29cc9d\",\n          \"full_name\": \"Napheesa Collier\",\n          \"first_name\": \"Napheesa\",\n          \"last_name\": \"Collier\",\n          \"position\": \"F\",\n          \"primary_position\": \"NA\",\n          \"jersey_number\": \"24\",\n          \"injuries\": [\n            {\n              \"id\": \"f7b1c392-afdc-4f4d-8417-851cfee9190f\",\n              \"comment\": \"The Lunar Owls announced that F Napheesa Collier will miss the season while recovering from surgeries on both ankles.\",\n              \"desc\": \"Ankles\",\n              \"status\": \"Out For Season\",\n              \"start_date\": \"2026-01-02\",\n              \"update_date\": \"2026-01-02\"\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "81df74db-7995-42ff-ade8-8befc297c79e",
+          "name": "Daily Transfers",
+          "request": {
+            "name": "Daily Transfers",
+            "description": {
+              "content": "**Unrivaled Daily Transfers** provides information for all transfers created during the league-defined day, regardless of the transaction's effective date.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":access_level",
+                "v8",
+                ":language",
+                "league",
+                ":year",
+                ":month",
+                ":day",
+                "transfers.{{format}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "trial",
+                  "key": "access_level",
+                  "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "en",
+                  "key": "language",
+                  "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "2026",
+                  "key": "year",
+                  "description": "(Required) Year in `YYYY` format"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "01",
+                  "key": "month",
+                  "description": "(Required) Month in `MM` format"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "06",
+                  "key": "day",
+                  "description": "(Required) Date in `DD` format"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "923404b6-a250-4858-ba54-177fd0c04bf1",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":access_level",
+                    "v8",
+                    ":language",
+                    "league",
+                    ":year",
+                    ":month",
+                    ":day",
+                    "transfers.{{format}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "trial",
+                      "key": "access_level",
+                      "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "en",
+                      "key": "language",
+                      "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "2026",
+                      "key": "year",
+                      "description": "(Required) Year in `YYYY` format"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "01",
+                      "key": "month",
+                      "description": "(Required) Month in `MM` format"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "06",
+                      "key": "day",
+                      "description": "(Required) Date in `DD` format"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"league\": {\n    \"id\": \"59c24590-0adb-4b3d-80a8-10450f83f4a1\",\n    \"name\": \"WNBA\",\n    \"alias\": \"WNBA\"\n  },\n  \"start_time\": \"2022-07-26T04:00:00Z\",\n  \"end_time\": \"2022-07-27T03:59:59Z\",\n  \"players\": [\n    {\n      \"id\": \"73a473b9-844b-4f21-8281-42a42217ae14\",\n      \"full_name\": \"Kianna Smith\",\n      \"first_name\": \"Kianna\",\n      \"last_name\": \"Smith\",\n      \"position\": \"G\",\n      \"primary_position\": \"NA\",\n      \"transfers\": [\n        {\n          \"id\": \"4c961a6d-ac95-4629-a589-5a99a12009d2\",\n          \"desc\": \"The Los Angeles Sparks re-signed G Kianna Smith.\",\n          \"effective_date\": \"2022-07-26\",\n          \"last_modified\": \"2022-07-26T17:07:46Z\",\n          \"transaction_type\": \"Re-Signed\",\n          \"transaction_code\": \"RSGN\",\n          \"to_team\": {\n            \"id\": \"0a5ad38d-2fe3-43ba-894b-1ba3d5042ea9\",\n            \"name\": \"Sparks\",\n            \"market\": \"Los Angeles\"\n          }\n        }\n      ]\n    },\n    {\n      \"id\": \"ceee01db-30cb-404f-860c-7acddd358a19\",\n      \"full_name\": \"Liz Cambage\",\n      \"first_name\": \"Liz\",\n      \"last_name\": \"Cambage\",\n      \"position\": \"C\",\n      \"primary_position\": \"NA\",\n      \"transfers\": [\n        {\n          \"id\": \"7cb28538-87e7-4e2e-9cec-2a3942c26e9e\",\n          \"desc\": \"C Liz Cmabage and the Los Angeles Sparks agreed to a contract buyout.\",\n          \"effective_date\": \"2022-07-26\",\n          \"last_modified\": \"2022-07-26T15:35:36Z\",\n          \"transaction_type\": \"Other Transaction\",\n          \"transaction_code\": \"TRAN\",\n          \"from_team\": {\n            \"id\": \"0a5ad38d-2fe3-43ba-894b-1ba3d5042ea9\",\n            \"name\": \"Sparks\",\n            \"market\": \"Los Angeles\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fec898c3-1031-4f76-8d15-420afdde8b6e",
+          "name": "Injuries",
+          "request": {
+            "name": "Injuries",
+            "description": {
+              "content": "**Unrivaled Injuries** Information concerning all active player injuries for each Unrivaled team.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":access_level",
+                "v8",
+                ":language",
+                "league",
+                "injuries.{{format}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "trial",
+                  "key": "access_level",
+                  "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "en",
+                  "key": "language",
+                  "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1c5bd08d-7fcf-4ffd-946e-51543ad3f9c8",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":access_level",
+                    "v8",
+                    ":language",
+                    "league",
+                    "injuries.{{format}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "trial",
+                      "key": "access_level",
+                      "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "en",
+                      "key": "language",
+                      "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"league\": {\n    \"id\": \"59c24590-0adb-4b3d-80a8-10450f83f4a1\",\n    \"name\": \"WNBA\",\n    \"alias\": \"WNBA\"\n  },\n  \"teams\": [\n    {\n      \"id\": \"5d70a9af-8c2b-4aec-9e68-9acc6ddb93e4\",\n      \"name\": \"Dream\",\n      \"market\": \"Atlanta\",\n      \"franchise_id\": \"ee925c0c-3e72-4e8c-a45b-8acf3b71e473\",\n      \"sr_id\": \"sr:team:35545\",\n      \"players\": [\n        {\n          \"id\": \"58c646ba-6e6f-409a-a1cf-83e253991797\",\n          \"full_name\": \"Nia Coffey\",\n          \"first_name\": \"Nia\",\n          \"last_name\": \"Coffey\",\n          \"position\": \"F\",\n          \"primary_position\": \"NA\",\n          \"jersey_number\": \"12\",\n          \"sr_id\": \"sr:player:1156814\",\n          \"injuries\": [\n            {\n              \"id\": \"f2eec019-5df6-4d71-b92f-9426190c72f8\",\n              \"comment\": \"The Dream announced that Coffey will miss the rest of the season.\",\n              \"desc\": \"Knee\",\n              \"status\": \"Out For Season\",\n              \"start_date\": \"2022-08-05\",\n              \"update_date\": \"2022-08-05\"\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5c0e7c45-5f98-416e-a726-ff80aed66bf5",
+          "name": "Copy of Copy of Copy of New Endpoint",
+          "request": {
+            "name": "Copy of Copy of Copy of New Endpoint",
+            "description": {
+              "content": "This is your first endpoint! Edit this page to start documenting your API.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":access_level",
+                "v8",
+                ":language_code",
+                "league",
+                "hierarchy.{{format}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "trial",
+                  "key": "access_level",
+                  "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "en",
+                  "key": "language_code",
+                  "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c882c7b2-3006-4b80-bbb3-c969fa42ee2f",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":access_level",
+                    "v8",
+                    ":language_code",
+                    "league",
+                    "hierarchy.{{format}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "trial",
+                      "key": "access_level",
+                      "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "en",
+                      "key": "language_code",
+                      "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"league\": {\n    \"id\": \"844ee10a-00c8-4dc1-9c17-52598de2ef47\",\n    \"name\": \"Unrivaled\",\n    \"alias\": \"UNRIVALED\"\n  },\n  \"conferences\": [\n    {\n      \"id\": \"56089804-dbb3-4621-96eb-ec520ab26988\",\n      \"name\": \"Unrivaled\",\n      \"alias\": \"UNRIVALED\",\n      \"teams\": [\n        {\n          \"id\": \"0780b080-347b-407b-b8d6-fa109ec23908\",\n          \"name\": \"Mist\",\n          \"alias\": \"MST\",\n          \"franchise_id\": \"a730984c-2f67-4d33-aabf-dcd9d45b2e2b\",\n          \"founded\": 2025,\n          \"team_colors\": [\n            {\n              \"type\": \"secondary\",\n              \"hex_color\": \"#a3d3e7\",\n              \"rgb_color\": {\n                \"red\": 163,\n                \"green\": 211,\n                \"blue\": 231\n              }\n            },\n            {\n              \"type\": \"primary\",\n              \"hex_color\": \"#083860\",\n              \"rgb_color\": {\n                \"red\": 8,\n                \"green\": 56,\n                \"blue\": 96\n              }\n            }\n          ],\n          \"venue\": {\n            \"id\": \"67e49419-cb04-4ce0-ab33-ae42af8d8634\",\n            \"name\": \"Unrivaled Arena\",\n            \"capacity\": 850,\n            \"address\": \"7321 NW 75th Street\",\n            \"city\": \"Medley\",\n            \"state\": \"FL\",\n            \"zip\": \"33166\",\n            \"country\": \"USA\",\n            \"location\": {\n              \"lat\": \"25.842035\",\n              \"lng\": \"-80.317192\"\n            }\n          }\n        },\n        {\n          \"id\": \"3b7f5d56-3586-4d58-98a7-562e267a965e\",\n          \"name\": \"Rose\",\n          \"alias\": \"ROS\",\n          \"franchise_id\": \"05f487c9-1fe6-4253-a49a-e7870662f445\",\n          \"founded\": 2025,\n          \"team_colors\": [\n            {\n              \"type\": \"secondary\",\n              \"hex_color\": \"#dda493\",\n              \"rgb_color\": {\n                \"red\": 221,\n                \"green\": 164,\n                \"blue\": 147\n              }\n            },\n            {\n              \"type\": \"primary\",\n              \"hex_color\": \"#1b5751\",\n              \"rgb_color\": {\n                \"red\": 27,\n                \"green\": 87,\n                \"blue\": 81\n              }\n            }\n          ],\n          \"venue\": {\n            \"id\": \"67e49419-cb04-4ce0-ab33-ae42af8d8634\",\n            \"name\": \"Unrivaled Arena\",\n            \"capacity\": 850,\n            \"address\": \"7321 NW 75th Street\",\n            \"city\": \"Medley\",\n            \"state\": \"FL\",\n            \"zip\": \"33166\",\n            \"country\": \"USA\",\n            \"location\": {\n              \"lat\": \"25.842035\",\n              \"lng\": \"-80.317192\"\n            }\n          }\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "18a1d78f-bc5e-4571-a62d-f6ec78b0521c",
+          "name": "get_{access level}v8{language}leagueseasons.{format}",
+          "request": {
+            "name": "get_{access level}v8{language}leagueseasons.{format}",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":access_level",
+                "v8",
+                ":language",
+                "league",
+                "seasons.{{format}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "trial",
+                  "key": "access_level",
+                  "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "en",
+                  "key": "language",
+                  "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b7bb4243-87c9-4a36-bada-39e05527ac06",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":access_level",
+                    "v8",
+                    ":language",
+                    "league",
+                    "seasons.{{format}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "trial",
+                      "key": "access_level",
+                      "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "en",
+                      "key": "language",
+                      "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"league\": {\n    \"id\": \"844ee10a-00c8-4dc1-9c17-52598de2ef47\",\n    \"name\": \"Unrivaled\",\n    \"alias\": \"UNRIVALED\"\n  },\n  \"seasons\": [\n    {\n      \"id\": \"c86ab7c9-5408-44e6-af06-c22636262927\",\n      \"year\": 2025,\n      \"start_date\": \"2025-01-17\",\n      \"end_date\": \"2025-03-10\",\n      \"status\": \"scheduled\",\n      \"type\": {\n        \"code\": \"REG\",\n        \"name\": \"Regular Season\"\n      }\n    },\n    {\n      \"id\": \"04cb26c7-b1d2-4e19-8fe4-c0a30814aa5c\",\n      \"year\": 2025,\n      \"start_date\": \"2025-02-10\",\n      \"end_date\": \"2025-02-14\",\n      \"status\": \"scheduled\",\n      \"type\": {\n        \"code\": \"OOT\",\n        \"name\": \"One-on-One Tournament\"\n      }\n    },\n    {\n      \"id\": \"19f6c79b-0124-41a7-b4d7-b8ee0754fb36\",\n      \"year\": 2025,\n      \"type\": {\n        \"code\": \"PRE\",\n        \"name\": \"Pre-season\"\n      }\n    },\n    {\n      \"id\": \"427b16f8-b851-4421-8a7c-c2732f60feff\",\n      \"year\": 2025,\n      \"start_date\": \"2025-03-16\",\n      \"end_date\": \"2025-03-17\",\n      \"status\": \"scheduled\",\n      \"type\": {\n        \"code\": \"PST\",\n        \"name\": \"Post-season\"\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "23eaf76a-63f1-49c4-9c80-8077d42b2b39",
+          "name": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of New Endpoint",
+          "request": {
+            "name": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of New Endpoint",
+            "description": {
+              "content": "This is your first endpoint! Edit this page to start documenting your API.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":access_level",
+                "v8",
+                ":language_code",
+                "league",
+                "teams.{{format}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "trial",
+                  "key": "access_level",
+                  "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "en",
+                  "key": "language_code",
+                  "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "869996ad-743f-4177-bc18-0c4f5983b972",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":access_level",
+                    "v8",
+                    ":language_code",
+                    "league",
+                    "teams.{{format}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "trial",
+                      "key": "access_level",
+                      "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "en",
+                      "key": "language_code",
+                      "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"league\": {\n    \"id\": \"844ee10a-00c8-4dc1-9c17-52598de2ef47\",\n    \"name\": \"Unrivaled\",\n    \"alias\": \"UNRIVALED\"\n  },\n  \"teams\": [\n    {\n      \"id\": \"7347fb5a-12db-4554-b1db-85d449395d72\",\n      \"name\": \"Aaliyah Edwards\",\n      \"alias\": \"AE\"\n    },\n    {\n      \"id\": \"dafb6f71-6e29-4b06-958a-4149c1bba417\",\n      \"name\": \"Aliyah Boston\",\n      \"alias\": \"AB\"\n    },\n    {\n      \"id\": \"7f58c9e5-e2e5-48bb-ab62-9c9819f07372\",\n      \"name\": \"Allisha Gray\",\n      \"alias\": \"AG\"\n    },\n    {\n      \"id\": \"72d4c667-924d-4f20-9ec0-24ea40aaa55a\",\n      \"name\": \"Alyssa Thomas\",\n      \"alias\": \"AT\"\n    },\n    {\n      \"id\": \"e6a6348f-8c9b-49fe-a332-157e1c483a25\",\n      \"name\": \"Arike Ogunbowale\",\n      \"alias\": \"AO\"\n    },\n    {\n      \"id\": \"828eb47b-7d5f-43a5-bd24-50a553ce86b0\",\n      \"name\": \"Azurá Stevens\",\n      \"alias\": \"AS\"\n    },\n    {\n      \"id\": \"243c3966-4298-4615-89a4-b06257d11219\",\n      \"name\": \"Breanna Stewart\",\n      \"alias\": \"BS\"\n    }\n  ],\n  \"_comment\": \"Generation started @ 2025-11-12 13:52:30 +0000 ended @ 2025-11-12 13:52:30 +0000\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.sportradar.com/unrivaled/",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) Format returned<br><br>`json`, `xml`",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "json",
+      "key": "format"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "x-api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "a9007e71-3f6c-40ac-a8d2-679c5237e270",
+    "name": "Unrivaled Games League API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Official real-time data API for the Unrivaled professional women's 3x3 basketball league, operated by Sportradar as the league's Official Data Provider. Feeds cover schedules, standings, rosters, real-time scores, play-by-play, injuries, transfers, and season statistics, in JSON or XML. Assembled by API Evangelist on 2026-07-21 from the per-endpoint OpenAPI definitions embedded in the 23 Unrivaled reference pages at https://developer.sportradar.com/basketball/reference/unrivaled-overview; operation content is preserved verbatim from the source definitions.",
+      "type": "text/plain"
+    }
+  }
+}

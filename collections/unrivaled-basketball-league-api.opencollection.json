@@ -1,0 +1,296 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Unrivaled Games League API",
+    "version": "v8"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-api-key",
+      "value": "{{x-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "League",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Daily Change Log",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sportradar.com/unrivaled/:access_level/v8/:language_code/league/:year/:month/:day/changes.:format",
+            "params": [
+              {
+                "name": "access_level",
+                "value": "",
+                "type": "path",
+                "description": "The access level of your API key<br><br>`trial`, `production`"
+              },
+              {
+                "name": "language_code",
+                "value": "",
+                "type": "path",
+                "description": "2-letter code for supported languages<br><br>`en` (English)"
+              },
+              {
+                "name": "year",
+                "value": "",
+                "type": "path",
+                "description": "Year in `YYYY` format"
+              },
+              {
+                "name": "month",
+                "value": "",
+                "type": "path",
+                "description": "Month in `MM` format"
+              },
+              {
+                "name": "day",
+                "value": "",
+                "type": "path",
+                "description": "Date in `DD` format"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "path",
+                "description": "Format returned<br><br>`json`, `xml`"
+              }
+            ]
+          },
+          "docs": "**Unrivaled Daily Change Log** provides IDs and timestamps for teams, players, game statistics, schedules, and standings that have been modified on a given date. To receive the data updates, use these unique IDs to pull relevant API feeds."
+        },
+        {
+          "info": {
+            "name": "Daily Injuries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sportradar.com/unrivaled/:access_level/v8/:language_code/league/:year/:month/:day/daily_injuries.:format",
+            "params": [
+              {
+                "name": "access_level",
+                "value": "",
+                "type": "path",
+                "description": "The access level of your API key<br><br>`trial`, `production`"
+              },
+              {
+                "name": "language_code",
+                "value": "",
+                "type": "path",
+                "description": "2-letter code for supported languages<br><br>`en` (English)"
+              },
+              {
+                "name": "year",
+                "value": "",
+                "type": "path",
+                "description": "Year in `YYYY` format"
+              },
+              {
+                "name": "month",
+                "value": "",
+                "type": "path",
+                "description": "Month in `MM` format"
+              },
+              {
+                "name": "day",
+                "value": "",
+                "type": "path",
+                "description": "Date in `DD` format"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "path",
+                "description": "Format returned<br><br>`json`, `xml`"
+              }
+            ]
+          },
+          "docs": "**Unrivaled Daily Injuries** provides details for all injuries updated on a given date."
+        },
+        {
+          "info": {
+            "name": "Daily Transfers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sportradar.com/unrivaled/:access_level/v8/:language/league/:year/:month/:day/transfers.:format",
+            "params": [
+              {
+                "name": "access_level",
+                "value": "",
+                "type": "path",
+                "description": "The access level of your API key<br><br>`trial`, `production`"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "path",
+                "description": "2-letter code for supported languages<br><br>`en` (English)"
+              },
+              {
+                "name": "year",
+                "value": "",
+                "type": "path",
+                "description": "Year in `YYYY` format"
+              },
+              {
+                "name": "month",
+                "value": "",
+                "type": "path",
+                "description": "Month in `MM` format"
+              },
+              {
+                "name": "day",
+                "value": "",
+                "type": "path",
+                "description": "Date in `DD` format"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "path",
+                "description": "Format returned<br><br>`json`, `xml`"
+              }
+            ]
+          },
+          "docs": "**Unrivaled Daily Transfers** provides information for all transfers created during the league-defined day, regardless of the transaction's effective date."
+        },
+        {
+          "info": {
+            "name": "Injuries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sportradar.com/unrivaled/:access_level/v8/:language/league/injuries.:format",
+            "params": [
+              {
+                "name": "access_level",
+                "value": "",
+                "type": "path",
+                "description": "The access level of your API key<br><br>`trial`, `production`"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "path",
+                "description": "2-letter code for supported languages<br><br>`en` (English)"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "path",
+                "description": "Format returned<br><br>`json`, `xml`"
+              }
+            ]
+          },
+          "docs": "**Unrivaled Injuries** Information concerning all active player injuries for each Unrivaled team."
+        },
+        {
+          "info": {
+            "name": "Copy of Copy of Copy of New Endpoint",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sportradar.com/unrivaled/:access_level/v8/:language_code/league/hierarchy.:format",
+            "params": [
+              {
+                "name": "access_level",
+                "value": "",
+                "type": "path",
+                "description": "The access level of your API key<br><br>`trial`, `production`"
+              },
+              {
+                "name": "language_code",
+                "value": "",
+                "type": "path",
+                "description": "2-letter code for supported languages<br><br>`en` (English)"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "path",
+                "description": "Format returned<br><br>`json`, `xml`"
+              }
+            ]
+          },
+          "docs": "This is your first endpoint! Edit this page to start documenting your API."
+        },
+        {
+          "info": {
+            "name": "get_{access_level}v8{language}leagueseasons.{format}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sportradar.com/unrivaled/:access_level/v8/:language/league/seasons.:format",
+            "params": [
+              {
+                "name": "access_level",
+                "value": "",
+                "type": "path",
+                "description": "The access level of your API key<br><br>`trial`, `production`"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "path",
+                "description": "2-letter code for supported languages<br><br>`en` (English)"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "path",
+                "description": "Format returned<br><br>`json`, `xml`"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of New Endpoint",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sportradar.com/unrivaled/:access_level/v8/:language_code/league/teams.:format",
+            "params": [
+              {
+                "name": "access_level",
+                "value": "",
+                "type": "path",
+                "description": "The access level of your API key<br><br>`trial`, `production`"
+              },
+              {
+                "name": "language_code",
+                "value": "",
+                "type": "path",
+                "description": "2-letter code for supported languages<br><br>`en` (English)"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "path",
+                "description": "Format returned<br><br>`json`, `xml`"
+              }
+            ]
+          },
+          "docs": "This is your first endpoint! Edit this page to start documenting your API."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

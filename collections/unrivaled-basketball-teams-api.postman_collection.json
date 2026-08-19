@@ -1,0 +1,190 @@
+{
+  "item": [
+    {
+      "id": "8c3371a4-49fa-4bee-a0d2-fe1e6d9e1483",
+      "name": "Teams",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "cbe0a12a-6823-4f78-a622-2a09bea9955c",
+          "name": "Team Profile",
+          "request": {
+            "name": "Team Profile",
+            "description": {
+              "content": "**Unrivaled Teams Profile** provides top-level team information and a full roster of active players.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":access_level",
+                "v8",
+                ":language",
+                "teams",
+                ":team_id",
+                "profile.{{format}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "trial",
+                  "key": "access_level",
+                  "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "en",
+                  "key": "language",
+                  "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "67c22115-2385-458f-8632-a67a025fef55",
+                  "key": "team_id",
+                  "description": "(Required) Unique Id of a team, found in the <span style=\"text-decoration:underline\">[Teams](https://developer.sportradar.com/basketball/reference/unrivaled-teams)</span> endpoint<br><br>**Example:** `67c22115-2385-458f-8632-a67a025fef55`<br><br>**Note:** This endpoint is designed for team_ids which exist in the current <span style=\"text-decoration:underline\">[League Hierarchy](https://developer.sportradar.com/basketball/reference/unrivaled-league-hierarchy)</span> endpoint"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b07667cc-2376-4c61-9401-49a6ba2b4819",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":access_level",
+                    "v8",
+                    ":language",
+                    "teams",
+                    ":team_id",
+                    "profile.{{format}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "trial",
+                      "key": "access_level",
+                      "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "en",
+                      "key": "language",
+                      "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "67c22115-2385-458f-8632-a67a025fef55",
+                      "key": "team_id",
+                      "description": "(Required) Unique Id of a team, found in the <span style=\"text-decoration:underline\">[Teams](https://developer.sportradar.com/basketball/reference/unrivaled-teams)</span> endpoint<br><br>**Example:** `67c22115-2385-458f-8632-a67a025fef55`<br><br>**Note:** This endpoint is designed for team_ids which exist in the current <span style=\"text-decoration:underline\">[League Hierarchy](https://developer.sportradar.com/basketball/reference/unrivaled-league-hierarchy)</span> endpoint"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"67c22115-2385-458f-8632-a67a025fef55\",\n  \"name\": \"Lunar Owls\",\n  \"alias\": \"LNR\",\n  \"founded\": 2025,\n  \"championships_won\": 1,\n  \"championship_seasons\": \"2025\",\n  \"venue\": {\n    \"id\": \"67e49419-cb04-4ce0-ab33-ae42af8d8634\",\n    \"name\": \"Unrivaled Arena\",\n    \"capacity\": 850,\n    \"address\": \"7321 NW 75th Street\",\n    \"city\": \"Medley\",\n    \"state\": \"FL\",\n    \"zip\": \"33166\",\n    \"country\": \"USA\",\n    \"location\": {\n      \"lat\": \"25.842035\",\n      \"lng\": \"-80.317192\"\n    }\n  },\n  \"league\": {\n    \"id\": \"844ee10a-00c8-4dc1-9c17-52598de2ef47\",\n    \"name\": \"Unrivaled\",\n    \"alias\": \"UNRIVALED\"\n  },\n  \"conference\": {\n    \"id\": \"56089804-dbb3-4621-96eb-ec520ab26988\",\n    \"name\": \"Unrivaled\",\n    \"alias\": \"UNRIVALED\"\n  },\n  \"coaches\": [\n    {\n      \"id\": \"ec258031-0e88-43dc-8abf-1c76c6ff9a4e\",\n      \"full_name\": \"DJ Sackmann\",\n      \"first_name\": \"DJ\",\n      \"last_name\": \"Sackmann\",\n      \"position\": \"Head Coach\"\n    }\n  ],\n  \"team_colors\": [\n    {\n      \"type\": \"secondary\",\n      \"hex_color\": \"#f4e087\",\n      \"rgb_color\": {\n        \"red\": 244,\n        \"green\": 224,\n        \"blue\": 135\n      }\n    },\n    {\n      \"type\": \"primary\",\n      \"hex_color\": \"#3f347d\",\n      \"rgb_color\": {\n        \"red\": 63,\n        \"green\": 52,\n        \"blue\": 125\n      }\n    }\n  ],\n  \"players\": [\n    {\n      \"id\": \"f0fef47c-4e5f-4b81-8875-3f01f8a0ea1b\",\n      \"status\": \"ACT\",\n      \"full_name\": \"Allisha Gray\",\n      \"first_name\": \"Allisha\",\n      \"last_name\": \"Gray\",\n      \"abbr_name\": \"A.Gray\",\n      \"height\": 72,\n      \"weight\": 167,\n      \"position\": \"G\",\n      \"primary_position\": \"NA\",\n      \"jersey_number\": \"15\",\n      \"college\": \"South Carolina\",\n      \"high_school\": \"Washington County (GA)\",\n      \"birth_place\": \"Greenwood, SC, USA\",\n      \"birthdate\": \"1995-01-12\",\n      \"updated\": \"2025-11-13T22:12:18+00:00\",\n      \"references\": [\n        {\n          \"source_id\": \"d3261e48-3a71-413a-bb8e-83d6e829e726\",\n          \"scope\": \"NCAAW\",\n          \"id_type\": \"league_profile\"\n        },\n        {\n          \"source_id\": \"293b5925-fd31-4640-8ada-bf6451a2c488\",\n          \"scope\": \"WNBA\",\n          \"id_type\": \"league_profile\"\n        },\n        {\n          \"source_id\": \"3dc8048f-a56c-4de3-9a75-17025ba32d2b\",\n          \"scope\": \"basketball\",\n          \"id_type\": \"sport_profile\"\n        }\n      ]\n    },\n    {\n      \"id\": \"fd8d4b11-3d70-450a-b65c-016bec29cc9d\",\n      \"status\": \"ACT\",\n      \"full_name\": \"Napheesa Collier\",\n      \"first_name\": \"Napheesa\",\n      \"last_name\": \"Collier\",\n      \"abbr_name\": \"N.Collier\",\n      \"height\": 73,\n      \"weight\": 180,\n      \"position\": \"F\",\n      \"primary_position\": \"NA\",\n      \"jersey_number\": \"24\",\n      \"college\": \"UConn\",\n      \"high_school\": \"Incarnate Word Academy (MO)\",\n      \"birth_place\": \"Jefferson City, MO, USA\",\n      \"birthdate\": \"1996-09-23\",\n      \"updated\": \"2025-11-13T22:12:21+00:00\",\n      \"references\": [\n        {\n          \"source_id\": \"8e281d64-a268-445f-9569-bc812d2730d5\",\n          \"scope\": \"basketball\",\n          \"id_type\": \"sport_profile\"\n        },\n        {\n          \"source_id\": \"21f994d2-1cc9-4d83-b278-abc3aaf4f63d\",\n          \"scope\": \"WNBA\",\n          \"id_type\": \"league_profile\"\n        },\n        {\n          \"source_id\": \"f95a0950-d7e8-44bd-bbae-b2e85844f1e4\",\n          \"scope\": \"NCAAW\",\n          \"id_type\": \"league_profile\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.sportradar.com/unrivaled/",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) Format returned<br><br>`json`, `xml`",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "json",
+      "key": "format"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "x-api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "f8fff939-ab1a-49af-9df8-e0b8829c1426",
+    "name": "Unrivaled Games Teams API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Official real-time data API for the Unrivaled professional women's 3x3 basketball league, operated by Sportradar as the league's Official Data Provider. Feeds cover schedules, standings, rosters, real-time scores, play-by-play, injuries, transfers, and season statistics, in JSON or XML. Assembled by API Evangelist on 2026-07-21 from the per-endpoint OpenAPI definitions embedded in the 23 Unrivaled reference pages at https://developer.sportradar.com/basketball/reference/unrivaled-overview; operation content is preserved verbatim from the source definitions.",
+      "type": "text/plain"
+    }
+  }
+}

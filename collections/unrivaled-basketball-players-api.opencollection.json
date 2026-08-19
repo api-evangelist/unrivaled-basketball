@@ -1,0 +1,63 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Unrivaled Games Players API",
+    "version": "v8"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-api-key",
+      "value": "{{x-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Players",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Player Profile",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sportradar.com/unrivaled/:access_level/v8/:language/players/:player_id/profile.:format",
+            "params": [
+              {
+                "name": "access_level",
+                "value": "",
+                "type": "path",
+                "description": "The access level of your API key<br><br>`trial`, `production`"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "path",
+                "description": "2-letter code for supported languages<br><br>`en` (English)"
+              },
+              {
+                "name": "player_id",
+                "value": "",
+                "type": "path",
+                "description": "Unique Id of a player<br><br>**Example:** `fd8d4b11-3d70-450a-b65c-016bec29cc9d`"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "path",
+                "description": "Format returned<br><br>`json`, `xml`"
+              }
+            ]
+          },
+          "docs": "**Unrivaled Player Profile** provides player biographical information and seasonal statistics."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

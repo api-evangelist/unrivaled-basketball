@@ -1,0 +1,667 @@
+{
+  "item": [
+    {
+      "id": "4dba3315-c157-42d8-b2d5-b32e61fbd98f",
+      "name": "Seasons",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b68a1301-ae7e-40a1-be89-478d4ccfe9a4",
+          "name": "Copy of Copy of Copy of Copy of New Endpoint",
+          "request": {
+            "name": "Copy of Copy of Copy of Copy of New Endpoint",
+            "description": {
+              "content": "This is your first endpoint! Edit this page to start documenting your API.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":access_level",
+                "v8",
+                ":language_code",
+                "seasons",
+                ":season_year",
+                ":season_type",
+                "leaders.{{format}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "trial",
+                  "key": "access_level",
+                  "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "en",
+                  "key": "language_code",
+                  "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "2026",
+                  "key": "season_year",
+                  "description": "(Required) Season year in `YYYY` format"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "REG",
+                  "key": "season_type",
+                  "description": "(Required) Type of season<br><br>`PRE` (Pre-season), `REG` (Regular Season), `OOT` (One-on-One Tournament), `PST` (Post-season)"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7a7faab6-2e4a-4789-bde8-4d78dfad16c0",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":access_level",
+                    "v8",
+                    ":language_code",
+                    "seasons",
+                    ":season_year",
+                    ":season_type",
+                    "leaders.{{format}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "trial",
+                      "key": "access_level",
+                      "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "en",
+                      "key": "language_code",
+                      "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "2026",
+                      "key": "season_year",
+                      "description": "(Required) Season year in `YYYY` format"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "REG",
+                      "key": "season_type",
+                      "description": "(Required) Type of season<br><br>`PRE` (Pre-season), `REG` (Regular Season), `OOT` (One-on-One Tournament), `PST` (Post-season)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"season\": {\n    \"id\": \"c86ab7c9-5408-44e6-af06-c22636262927\",\n    \"year\": 2025,\n    \"type\": \"REG\"\n  },\n  \"id\": \"844ee10a-00c8-4dc1-9c17-52598de2ef47\",\n  \"name\": \"Unrivaled\",\n  \"alias\": \"UNRIVALED\",\n  \"type\": \"league\",\n  \"categories\": [\n    {\n      \"name\": \"minutes\",\n      \"type\": \"total\",\n      \"ranks\": [\n        {\n          \"rank\": 1,\n          \"tied\": false,\n          \"score\": 23,\n          \"player\": {\n            \"id\": \"fd8d4b11-3d70-450a-b65c-016bec29cc9d\",\n            \"full_name\": \"Napheesa Collier\",\n            \"first_name\": \"Napheesa\",\n            \"last_name\": \"Collier\",\n            \"position\": \"F\",\n            \"primary_position\": \"NA\",\n            \"jersey_number\": \"24\"\n          },\n          \"teams\": [\n            {\n              \"id\": \"67c22115-2385-458f-8632-a67a025fef55\",\n              \"name\": \"Lunar Owls\"\n            }\n          ],\n          \"total\": {\n            \"games_played\": 1,\n            \"games_started\": 1,\n            \"minutes\": 23,\n            \"field_goals_made\": 11,\n            \"field_goals_att\": 20,\n            \"field_goals_pct\": 0.55,\n            \"two_points_made\": 8,\n            \"two_points_att\": 13,\n            \"two_points_pct\": 0.615,\n            \"three_points_made\": 3,\n            \"three_points_att\": 7,\n            \"three_points_pct\": 0.429,\n            \"blocked_att\": 0,\n            \"free_throws_made\": 1,\n            \"free_throws_att\": 3,\n            \"free_throws_pct\": 0.333,\n            \"offensive_rebounds\": 1,\n            \"defensive_rebounds\": 9,\n            \"rebounds\": 10,\n            \"assists\": 3,\n            \"turnovers\": 1,\n            \"assists_turnover_ratio\": 3,\n            \"steals\": 1,\n            \"blocks\": 0,\n            \"personal_fouls\": 1,\n            \"tech_fouls\": 0,\n            \"points\": 27,\n            \"flagrant_fouls\": 0,\n            \"ejections\": 0,\n            \"foulouts\": 0,\n            \"tech_fouls_non_unsportsmanlike\": 0,\n            \"true_shooting_att\": 21.32,\n            \"true_shooting_pct\": 0.633,\n            \"efficiency\": 29,\n            \"field_goals_at_rim_made\": 0,\n            \"field_goals_at_rim_att\": 0,\n            \"field_goals_at_midrange_made\": 1,\n            \"field_goals_at_midrange_att\": 4,\n            \"awarded_points\": 0,\n            \"coach_ejections\": 0,\n            \"coach_tech_fouls\": 0,\n            \"double_doubles\": 1,\n            \"effective_fg_pct\": 0.625,\n            \"fast_break_att\": 0,\n            \"fast_break_made\": 0,\n            \"fast_break_pct\": 0,\n            \"fast_break_pts\": 0,\n            \"fouls_drawn\": 3,\n            \"free_throw_points\": 2,\n            \"minus\": 0,\n            \"offensive_fouls\": 0,\n            \"plus\": 0,\n            \"points_in_paint\": 10,\n            \"points_in_paint_att\": 7,\n            \"points_in_paint_made\": 5,\n            \"points_in_paint_pct\": 0.714,\n            \"points_off_turnovers\": 0,\n            \"second_chance_att\": 0,\n            \"second_chance_made\": 0,\n            \"second_chance_pct\": 0,\n            \"second_chance_pts\": 2,\n            \"triple_doubles\": 0,\n            \"winning_baskets\": 0\n          },\n          \"average\": {\n            \"minutes\": 23,\n            \"points\": 27,\n            \"off_rebounds\": 1,\n            \"def_rebounds\": 9,\n            \"rebounds\": 10,\n            \"assists\": 3,\n            \"steals\": 1,\n            \"blocks\": 0,\n            \"turnovers\": 1,\n            \"personal_fouls\": 1,\n            \"flagrant_fouls\": 0,\n            \"blocked_att\": 0,\n            \"field_goals_made\": 11,\n            \"field_goals_att\": 20,\n            \"three_points_made\": 3,\n            \"three_points_att\": 7,\n            \"free_throws_made\": 1,\n            \"free_throws_att\": 3,\n            \"two_points_made\": 8,\n            \"two_points_att\": 13,\n            \"efficiency\": 29,\n            \"true_shooting_att\": 21.32,\n            \"fast_break_att\": 0,\n            \"fast_break_made\": 0,\n            \"fast_break_pts\": 0,\n            \"fouls_drawn\": 3,\n            \"offensive_fouls\": 0,\n            \"points_in_paint\": 10,\n            \"points_in_paint_att\": 7,\n            \"points_in_paint_made\": 5,\n            \"points_off_turnovers\": 0,\n            \"second_chance_att\": 0,\n            \"second_chance_made\": 0,\n            \"second_chance_pts\": 2\n          }\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f1626427-526c-44af-8e01-cb9e2395cc52",
+          "name": "Copy of Copy of Copy of Copy of Copy of New Endpoint",
+          "request": {
+            "name": "Copy of Copy of Copy of Copy of Copy of New Endpoint",
+            "description": {
+              "content": "This is your first endpoint! Edit this page to start documenting your API.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":access_level",
+                "v8",
+                ":language_code",
+                "seasons",
+                ":season_year",
+                ":season_type",
+                "rankings.{{format}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "trial",
+                  "key": "access_level",
+                  "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "en",
+                  "key": "language_code",
+                  "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "2026",
+                  "key": "season_year",
+                  "description": "(Required) Season year in `YYYY` format"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "REG",
+                  "key": "season_type",
+                  "description": "(Required) Type of season<br><br>`REG` (Regular Season)"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f6bc609a-1ced-486a-b16b-e23741991c87",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":access_level",
+                    "v8",
+                    ":language_code",
+                    "seasons",
+                    ":season_year",
+                    ":season_type",
+                    "rankings.{{format}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "trial",
+                      "key": "access_level",
+                      "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "en",
+                      "key": "language_code",
+                      "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "2026",
+                      "key": "season_year",
+                      "description": "(Required) Season year in `YYYY` format"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "REG",
+                      "key": "season_type",
+                      "description": "(Required) Type of season<br><br>`REG` (Regular Season)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"league\": {\n    \"id\": \"59c24590-0adb-4b3d-80a8-10450f83f4a1\",\n    \"name\": \"WNBA\",\n    \"alias\": \"WNBA\"\n  },\n  \"season\": {\n    \"id\": \"73f9bbde-1a9a-4ae3-95d7-125df431bdda\",\n    \"year\": 2022,\n    \"type\": \"REG\"\n  },\n  \"conferences\": [\n    {\n      \"id\": \"092510cf-3285-48bb-b831-40ac3608ca36\",\n      \"name\": \"EASTERN CONFERENCE\",\n      \"alias\": \"EASTERN-W\",\n      \"teams\": [\n        {\n          \"id\": \"3c409388-ab73-4c7f-953d-3a71062240f6\",\n          \"name\": \"Sky\",\n          \"market\": \"Chicago\",\n          \"sr_id\": \"sr:team:35546\",\n          \"rank\": {\n            \"conference\": 1,\n            \"clinched\": \"playoff_berth\"\n          }\n        }\n      ]\n    },\n    {\n      \"id\": \"d95b23c8-dee5-4142-ac4a-2b4ab05beebc\",\n      \"name\": \"WESTERN CONFERENCE\",\n      \"alias\": \"WESTERN-W\",\n      \"teams\": [\n        {\n          \"id\": \"0a5ad38d-2fe3-43ba-894b-1ba3d5042ea9\",\n          \"name\": \"Sparks\",\n          \"market\": \"Los Angeles\",\n          \"sr_id\": \"sr:team:3447\",\n          \"rank\": {\n            \"conference\": 6,\n            \"clinched\": \"eliminated\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ad7b0fce-2c44-416a-812e-160a5f97c837",
+          "name": "get_{access level}v8{language}seasons{season year}{season type}teams{team id}statistics.{format}",
+          "request": {
+            "name": "get_{access level}v8{language}seasons{season year}{season type}teams{team id}statistics.{format}",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":access_level",
+                "v8",
+                ":language",
+                "seasons",
+                ":season_year",
+                ":season_type",
+                "teams",
+                ":team_id",
+                "statistics.{{format}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "trial",
+                  "key": "access_level",
+                  "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "en",
+                  "key": "language",
+                  "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "2026",
+                  "key": "season_year",
+                  "description": "(Required) Season year in `YYYY` format"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "REG",
+                  "key": "season_type",
+                  "description": "(Required) Type of season<br><br>`PRE` (Pre-season), `REG` (Regular Season), `OOT` (One-on-One Tournament), `PST` (Post-season)"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "67c22115-2385-458f-8632-a67a025fef55",
+                  "key": "team_id",
+                  "description": "(Required) Unique Id of a team, found in the <span style=\"text-decoration:underline\">[Teams](https://developer.sportradar.com/basketball/reference/unrivaled-teams)</span> endpoint<br><br>**Example:** `67c22115-2385-458f-8632-a67a025fef55`<br><br>**Note:** This endpoint is designed for team_ids which exist in the current <span style=\"text-decoration:underline\">[League Hierarchy](https://developer.sportradar.com/basketball/reference/unrivaled-league-hierarchy)</span> endpoint"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "dedbe46f-767b-4a26-9322-5cadc273d2b7",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":access_level",
+                    "v8",
+                    ":language",
+                    "seasons",
+                    ":season_year",
+                    ":season_type",
+                    "teams",
+                    ":team_id",
+                    "statistics.{{format}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "trial",
+                      "key": "access_level",
+                      "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "en",
+                      "key": "language",
+                      "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "2026",
+                      "key": "season_year",
+                      "description": "(Required) Season year in `YYYY` format"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "REG",
+                      "key": "season_type",
+                      "description": "(Required) Type of season<br><br>`PRE` (Pre-season), `REG` (Regular Season), `OOT` (One-on-One Tournament), `PST` (Post-season)"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "67c22115-2385-458f-8632-a67a025fef55",
+                      "key": "team_id",
+                      "description": "(Required) Unique Id of a team, found in the <span style=\"text-decoration:underline\">[Teams](https://developer.sportradar.com/basketball/reference/unrivaled-teams)</span> endpoint<br><br>**Example:** `67c22115-2385-458f-8632-a67a025fef55`<br><br>**Note:** This endpoint is designed for team_ids which exist in the current <span style=\"text-decoration:underline\">[League Hierarchy](https://developer.sportradar.com/basketball/reference/unrivaled-league-hierarchy)</span> endpoint"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"67c22115-2385-458f-8632-a67a025fef55\",\n  \"name\": \"Lunar Owls\",\n  \"season\": {\n    \"id\": \"c86ab7c9-5408-44e6-af06-c22636262927\",\n    \"year\": 2025,\n    \"type\": \"REG\"\n  },\n  \"own_record\": {\n    \"total\": {\n      \"games_played\": 1,\n      \"minutes\": 73,\n      \"field_goals_made\": 32,\n      \"field_goals_att\": 63,\n      \"field_goals_pct\": 0.508,\n      \"two_points_made\": 25,\n      \"two_points_att\": 43,\n      \"two_points_pct\": 0.581,\n      \"three_points_made\": 7,\n      \"three_points_att\": 20,\n      \"three_points_pct\": 0.35,\n      \"blocked_att\": 2,\n      \"free_throws_made\": 7,\n      \"free_throws_att\": 12,\n      \"free_throws_pct\": 0.583,\n      \"offensive_rebounds\": 3,\n      \"defensive_rebounds\": 28,\n      \"rebounds\": 31,\n      \"assists\": 9,\n      \"turnovers\": 8,\n      \"assists_turnover_ratio\": 1.13,\n      \"steals\": 6,\n      \"blocks\": 2,\n      \"personal_fouls\": 14,\n      \"tech_fouls\": 0,\n      \"points\": 84,\n      \"fast_break_pts\": 0,\n      \"flagrant_fouls\": 0,\n      \"points_off_turnovers\": 0,\n      \"second_chance_pts\": 0,\n      \"ejections\": 0,\n      \"foulouts\": 0,\n      \"efficiency\": 88,\n      \"points_in_paint\": 16,\n      \"team_offensive_rebounds\": 0,\n      \"team_defensive_rebounds\": 2,\n      \"team_rebounds\": 2,\n      \"team_turnovers\": 0,\n      \"total_rebounds\": 33,\n      \"total_turnovers\": 8,\n      \"true_shooting_att\": 68.28,\n      \"true_shooting_pct\": 0.615,\n      \"field_goals_at_rim_made\": 0,\n      \"field_goals_at_rim_att\": 1,\n      \"field_goals_at_rim_pct\": 0,\n      \"field_goals_at_midrange_made\": 11,\n      \"field_goals_at_midrange_att\": 20,\n      \"field_goals_at_midrange_pct\": 0.55,\n      \"awarded_points\": 0,\n      \"bench_points\": 18,\n      \"coach_ejections\": 0,\n      \"coach_tech_fouls\": 0,\n      \"defensive_assists\": 0,\n      \"defensive_rating\": 0,\n      \"effective_fg_pct\": 0.563,\n      \"fast_break_att\": 0,\n      \"fast_break_made\": 0,\n      \"fast_break_pct\": 0,\n      \"fouls_drawn\": 12,\n      \"free_throw_points\": 13,\n      \"net_rating\": 0,\n      \"offensive_fouls\": 1,\n      \"offensive_rating\": 0,\n      \"opponent_possessions\": 0,\n      \"points_against\": 0,\n      \"points_in_paint_att\": 15,\n      \"points_in_paint_made\": 8,\n      \"points_in_paint_pct\": 0.533,\n      \"possessions\": 0,\n      \"second_chance_att\": 0,\n      \"second_chance_made\": 0,\n      \"second_chance_pct\": 0,\n      \"team_fouls\": 0,\n      \"team_tech_fouls\": 0,\n      \"technical_other\": 0,\n      \"total_fouls\": 14,\n      \"winning_baskets\": 1\n    },\n    \"average\": {\n      \"fast_break_pts\": 0,\n      \"points_off_turnovers\": 0,\n      \"second_chance_pts\": 0,\n      \"minutes\": 73,\n      \"points\": 84,\n      \"off_rebounds\": 3,\n      \"def_rebounds\": 28,\n      \"rebounds\": 31,\n      \"assists\": 9,\n      \"steals\": 6,\n      \"blocks\": 2,\n      \"turnovers\": 8,\n      \"personal_fouls\": 14,\n      \"flagrant_fouls\": 0,\n      \"blocked_att\": 2,\n      \"field_goals_made\": 32,\n      \"field_goals_att\": 63,\n      \"three_points_made\": 7,\n      \"three_points_att\": 20,\n      \"free_throws_made\": 7,\n      \"free_throws_att\": 12,\n      \"two_points_made\": 25,\n      \"two_points_att\": 43,\n      \"points_in_paint\": 16,\n      \"efficiency\": 88,\n      \"true_shooting_att\": 68.28,\n      \"points_in_paint_att\": 15,\n      \"points_in_paint_made\": 8,\n      \"bench_points\": 18,\n      \"fouls_drawn\": 12,\n      \"offensive_fouls\": 1,\n      \"fast_break_att\": 0,\n      \"fast_break_made\": 0,\n      \"second_chance_att\": 0,\n      \"second_chance_made\": 0\n    }\n  },\n  \"opponents\": {\n    \"total\": {\n      \"games_played\": 1,\n      \"minutes\": 73,\n      \"field_goals_made\": 30,\n      \"field_goals_att\": 68,\n      \"field_goals_pct\": 0.441,\n      \"two_points_made\": 24,\n      \"two_points_att\": 47,\n      \"two_points_pct\": 0.511,\n      \"three_points_made\": 6,\n      \"three_points_att\": 21,\n      \"three_points_pct\": 0.286,\n      \"blocked_att\": 2,\n      \"free_throws_made\": 8,\n      \"free_throws_att\": 10,\n      \"free_throws_pct\": 0.8,\n      \"offensive_rebounds\": 8,\n      \"defensive_rebounds\": 30,\n      \"rebounds\": 38,\n      \"assists\": 13,\n      \"turnovers\": 11,\n      \"assists_turnover_ratio\": 1.18,\n      \"steals\": 5,\n      \"blocks\": 2,\n      \"personal_fouls\": 15,\n      \"tech_fouls\": 0,\n      \"points\": 80,\n      \"fast_break_pts\": 0,\n      \"flagrant_fouls\": 0,\n      \"points_off_turnovers\": 11,\n      \"second_chance_pts\": 6,\n      \"ejections\": 0,\n      \"foulouts\": 0,\n      \"efficiency\": 87,\n      \"points_in_paint\": 19,\n      \"team_offensive_rebounds\": 2,\n      \"team_defensive_rebounds\": 3,\n      \"team_rebounds\": 5,\n      \"team_turnovers\": 0,\n      \"total_rebounds\": 43,\n      \"total_turnovers\": 11,\n      \"true_shooting_att\": 72.4,\n      \"true_shooting_pct\": 0.552,\n      \"field_goals_at_rim_made\": 1,\n      \"field_goals_at_rim_att\": 1,\n      \"field_goals_at_rim_pct\": 1,\n      \"field_goals_at_midrange_made\": 2,\n      \"field_goals_at_midrange_att\": 10,\n      \"field_goals_at_midrange_pct\": 0.2,\n      \"awarded_points\": 0,\n      \"bench_points\": 34,\n      \"coach_ejections\": 0,\n      \"coach_tech_fouls\": 0,\n      \"defensive_assists\": 0,\n      \"defensive_rating\": 0,\n      \"effective_fg_pct\": 0.485,\n      \"fast_break_att\": 0,\n      \"fast_break_made\": 0,\n      \"fast_break_pct\": 0,\n      \"fouls_drawn\": 11,\n      \"free_throw_points\": 14,\n      \"net_rating\": 0,\n      \"offensive_fouls\": 1,\n      \"offensive_rating\": 0,\n      \"opponent_possessions\": 0,\n      \"points_against\": 0,\n      \"points_in_paint_att\": 16,\n      \"points_in_paint_made\": 9,\n      \"points_in_paint_pct\": 0.563,\n      \"possessions\": 0,\n      \"second_chance_att\": 0,\n      \"second_chance_made\": 0,\n      \"second_chance_pct\": 0,\n      \"team_fouls\": 0,\n      \"team_tech_fouls\": 0,\n      \"technical_other\": 0,\n      \"total_fouls\": 15,\n      \"winning_baskets\": 0\n    },\n    \"average\": {\n      \"fast_break_pts\": 0,\n      \"points_off_turnovers\": 11,\n      \"second_chance_pts\": 6,\n      \"minutes\": 73,\n      \"points\": 80,\n      \"off_rebounds\": 8,\n      \"def_rebounds\": 30,\n      \"rebounds\": 38,\n      \"assists\": 13,\n      \"steals\": 5,\n      \"blocks\": 2,\n      \"turnovers\": 11,\n      \"personal_fouls\": 15,\n      \"flagrant_fouls\": 0,\n      \"blocked_att\": 2,\n      \"field_goals_made\": 30,\n      \"field_goals_att\": 68,\n      \"three_points_made\": 6,\n      \"three_points_att\": 21,\n      \"free_throws_made\": 8,\n      \"free_throws_att\": 10,\n      \"two_points_made\": 24,\n      \"two_points_att\": 47,\n      \"points_in_paint\": 19,\n      \"efficiency\": 87,\n      \"true_shooting_att\": 72.4,\n      \"points_in_paint_att\": 16,\n      \"points_in_paint_made\": 9,\n      \"bench_points\": 34,\n      \"fouls_drawn\": 11,\n      \"offensive_fouls\": 1,\n      \"fast_break_att\": 0,\n      \"fast_break_made\": 0,\n      \"second_chance_att\": 0,\n      \"second_chance_made\": 0\n    }\n  },\n  \"players\": [\n    {\n      \"id\": \"022be94a-377e-4c32-93ec-926beff44f46\",\n      \"full_name\": \"Cameron Brink\",\n      \"first_name\": \"Cameron\",\n      \"last_name\": \"Brink\",\n      \"position\": \"F\",\n      \"primary_position\": \"NA\",\n      \"jersey_number\": \"22\",\n      \"total\": {\n        \"games_played\": 0,\n        \"games_started\": 0,\n        \"minutes\": 0,\n        \"field_goals_made\": 0,\n        \"field_goals_att\": 0,\n        \"field_goals_pct\": 0,\n        \"two_points_made\": 0,\n        \"two_points_att\": 0,\n        \"two_points_pct\": 0,\n        \"three_points_made\": 0,\n        \"three_points_att\": 0,\n        \"three_points_pct\": 0,\n        \"blocked_att\": 0,\n        \"free_throws_made\": 0,\n        \"free_throws_att\": 0,\n        \"free_throws_pct\": 0,\n        \"offensive_rebounds\": 0,\n        \"defensive_rebounds\": 0,\n        \"rebounds\": 0,\n        \"assists\": 0,\n        \"turnovers\": 0,\n        \"assists_turnover_ratio\": 0,\n        \"steals\": 0,\n        \"blocks\": 0,\n        \"personal_fouls\": 0,\n        \"tech_fouls\": 0,\n        \"points\": 0,\n        \"flagrant_fouls\": 0,\n        \"ejections\": 0,\n        \"foulouts\": 0,\n        \"tech_fouls_non_unsportsmanlike\": 0,\n        \"true_shooting_att\": 0,\n        \"true_shooting_pct\": 0,\n        \"efficiency\": 0,\n        \"field_goals_at_rim_made\": 0,\n        \"field_goals_at_rim_att\": 0,\n        \"field_goals_at_rim_pct\": 0,\n        \"field_goals_at_midrange_made\": 0,\n        \"field_goals_at_midrange_att\": 0,\n        \"field_goals_at_midrange_pct\": 0,\n        \"usage_pct\": 0,\n        \"awarded_points\": 0,\n        \"coach_ejections\": 0,\n        \"coach_tech_fouls\": 0,\n        \"double_doubles\": 0,\n        \"effective_fg_pct\": 0,\n        \"fast_break_att\": 0,\n        \"fast_break_made\": 0,\n        \"fast_break_pct\": 0,\n        \"fast_break_pts\": 0,\n        \"fouls_drawn\": 0,\n        \"free_throw_points\": 0,\n        \"minus\": 0,\n        \"offensive_fouls\": 0,\n        \"plus\": 0,\n        \"points_in_paint\": 0,\n        \"points_in_paint_att\": 0,\n        \"points_in_paint_made\": 0,\n        \"points_in_paint_pct\": 0,\n        \"points_off_turnovers\": 0,\n        \"second_chance_att\": 0,\n        \"second_chance_made\": 0,\n        \"second_chance_pct\": 0,\n        \"second_chance_pts\": 0,\n        \"triple_doubles\": 0,\n        \"winning_baskets\": 0\n      },\n      \"average\": {\n        \"minutes\": 0,\n        \"points\": 0,\n        \"off_rebounds\": 0,\n        \"def_rebounds\": 0,\n        \"rebounds\": 0,\n        \"assists\": 0,\n        \"steals\": 0,\n        \"blocks\": 0,\n        \"turnovers\": 0,\n        \"personal_fouls\": 0,\n        \"flagrant_fouls\": 0,\n        \"blocked_att\": 0,\n        \"field_goals_made\": 0,\n        \"field_goals_att\": 0,\n        \"three_points_made\": 0,\n        \"three_points_att\": 0,\n        \"free_throws_made\": 0,\n        \"free_throws_att\": 0,\n        \"two_points_made\": 0,\n        \"two_points_att\": 0,\n        \"efficiency\": 0,\n        \"true_shooting_att\": 0,\n        \"fast_break_att\": 0,\n        \"fast_break_made\": 0,\n        \"fast_break_pts\": 0,\n        \"fouls_drawn\": 0,\n        \"offensive_fouls\": 0,\n        \"points_in_paint\": 0,\n        \"points_in_paint_att\": 0,\n        \"points_in_paint_made\": 0,\n        \"points_off_turnovers\": 0,\n        \"second_chance_att\": 0,\n        \"second_chance_made\": 0,\n        \"second_chance_pts\": 0\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "965edf2a-a739-4e00-aa59-cbe6589172f3",
+          "name": "get_{access level}v8{language}seasons{season year}{season type}standings.{format}",
+          "request": {
+            "name": "get_{access level}v8{language}seasons{season year}{season type}standings.{format}",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":access_level",
+                "v8",
+                ":language",
+                "seasons",
+                ":season_year",
+                ":season_type",
+                "standings.{{format}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "trial",
+                  "key": "access_level",
+                  "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "en",
+                  "key": "language",
+                  "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "2025",
+                  "key": "season_year",
+                  "description": "(Required) Season year in `YYYY` format"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "REG",
+                  "key": "season_type",
+                  "description": "(Required) Type of season<br><br>`PRE` (Pre-season), `REG` (Regular Season), `OOT` (One-on-One Tournament), `PST` (Post-season)"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "30333529-efbf-497b-8acc-bb017495d6c9",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":access_level",
+                    "v8",
+                    ":language",
+                    "seasons",
+                    ":season_year",
+                    ":season_type",
+                    "standings.{{format}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "trial",
+                      "key": "access_level",
+                      "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "en",
+                      "key": "language",
+                      "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "2025",
+                      "key": "season_year",
+                      "description": "(Required) Season year in `YYYY` format"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "REG",
+                      "key": "season_type",
+                      "description": "(Required) Type of season<br><br>`PRE` (Pre-season), `REG` (Regular Season), `OOT` (One-on-One Tournament), `PST` (Post-season)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"league\": {\n    \"id\": \"844ee10a-00c8-4dc1-9c17-52598de2ef47\",\n    \"name\": \"Unrivaled\",\n    \"alias\": \"UNRIVALED\"\n  },\n  \"season\": {\n    \"id\": \"c86ab7c9-5408-44e6-af06-c22636262927\",\n    \"year\": 2025,\n    \"type\": \"REG\"\n  },\n  \"conferences\": [\n    {\n      \"id\": \"56089804-dbb3-4621-96eb-ec520ab26988\",\n      \"name\": \"Unrivaled\",\n      \"alias\": \"UNRIVALED\",\n      \"teams\": [\n        {\n          \"id\": \"67c22115-2385-458f-8632-a67a025fef55\",\n          \"name\": \"Lunar Owls\",\n          \"wins\": 1,\n          \"losses\": 0,\n          \"win_pct\": 1,\n          \"points_for\": 84,\n          \"points_against\": 80,\n          \"point_diff\": 4,\n          \"games_behind\": {\n            \"league\": 0,\n            \"conference\": 0\n          },\n          \"streak\": {\n            \"kind\": \"win\",\n            \"length\": 1\n          },\n          \"calc_rank\": {\n            \"league_rank\": 1,\n            \"conf_rank\": 1\n          },\n          \"records\": [\n            {\n              \"record_type\": \"below_500\",\n              \"wins\": 0,\n              \"losses\": 0,\n              \"win_pct\": 0\n            },\n            {\n              \"record_type\": \"conference\",\n              \"wins\": 1,\n              \"losses\": 0,\n              \"win_pct\": 1\n            },\n            {\n              \"record_type\": \"equal_rebounds\",\n              \"wins\": 0,\n              \"losses\": 0,\n              \"win_pct\": 0\n            },\n            {\n              \"record_type\": \"equal_turnovers\",\n              \"wins\": 0,\n              \"losses\": 0,\n              \"win_pct\": 0\n            },\n            {\n              \"record_type\": \"fewer_turnovers\",\n              \"wins\": 1,\n              \"losses\": 0,\n              \"win_pct\": 1\n            },\n            {\n              \"record_type\": \"home\",\n              \"wins\": 0,\n              \"losses\": 0,\n              \"win_pct\": 0\n            },\n            {\n              \"record_type\": \"last_10\",\n              \"wins\": 1,\n              \"losses\": 0,\n              \"win_pct\": 1\n            },\n            {\n              \"record_type\": \"last_10_home\",\n              \"wins\": 0,\n              \"losses\": 0,\n              \"win_pct\": 0\n            },\n            {\n              \"record_type\": \"last_10_road\",\n              \"wins\": 1,\n              \"losses\": 0,\n              \"win_pct\": 1\n            },\n            {\n              \"record_type\": \"leads_field_goal_pct\",\n              \"wins\": 1,\n              \"losses\": 0,\n              \"win_pct\": 1\n            },\n            {\n              \"record_type\": \"leads_rebounds\",\n              \"wins\": 0,\n              \"losses\": 0,\n              \"win_pct\": 0\n            },\n            {\n              \"record_type\": \"neutral\",\n              \"wins\": 0,\n              \"losses\": 0,\n              \"win_pct\": 0\n            },\n            {\n              \"record_type\": \"opponent_fewer_turnovers\",\n              \"wins\": 0,\n              \"losses\": 0,\n              \"win_pct\": 0\n            },\n            {\n              \"record_type\": \"opponent_leads_field_goal_pct\",\n              \"wins\": 0,\n              \"losses\": 0,\n              \"win_pct\": 0\n            },\n            {\n              \"record_type\": \"opponent_leads_rebounds\",\n              \"wins\": 1,\n              \"losses\": 0,\n              \"win_pct\": 1\n            },\n            {\n              \"record_type\": \"opponent_scores_100_or_more\",\n              \"wins\": 0,\n              \"losses\": 0,\n              \"win_pct\": 0\n            },\n            {\n              \"record_type\": \"overtime\",\n              \"wins\": 0,\n              \"losses\": 0,\n              \"win_pct\": 0\n            },\n            {\n              \"record_type\": \"over_500\",\n              \"wins\": 1,\n              \"losses\": 0,\n              \"win_pct\": 1\n            },\n            {\n              \"record_type\": \"road\",\n              \"wins\": 1,\n              \"losses\": 0,\n              \"win_pct\": 1\n            },\n            {\n              \"record_type\": \"scores_100_or_more\",\n              \"wins\": 0,\n              \"losses\": 0,\n              \"win_pct\": 0\n            },\n            {\n              \"record_type\": \"ten_points\",\n              \"wins\": 0,\n              \"losses\": 0,\n              \"win_pct\": 0\n            },\n            {\n              \"record_type\": \"three_points\",\n              \"wins\": 0,\n              \"losses\": 0,\n              \"win_pct\": 0\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.sportradar.com/unrivaled/",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) Format returned<br><br>`json`, `xml`",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "json",
+      "key": "format"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "x-api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "a689d475-e0a8-40fb-bcd4-0e96e96f9ed2",
+    "name": "Unrivaled Games Seasons API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Official real-time data API for the Unrivaled professional women's 3x3 basketball league, operated by Sportradar as the league's Official Data Provider. Feeds cover schedules, standings, rosters, real-time scores, play-by-play, injuries, transfers, and season statistics, in JSON or XML. Assembled by API Evangelist on 2026-07-21 from the per-endpoint OpenAPI definitions embedded in the 23 Unrivaled reference pages at https://developer.sportradar.com/basketball/reference/unrivaled-overview; operation content is preserved verbatim from the source definitions.",
+      "type": "text/plain"
+    }
+  }
+}

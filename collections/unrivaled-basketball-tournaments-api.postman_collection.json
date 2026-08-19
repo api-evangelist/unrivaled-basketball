@@ -1,0 +1,470 @@
+{
+  "item": [
+    {
+      "id": "44871391-09bf-4a98-83c2-57a8ab3ec5ad",
+      "name": "Tournaments",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "20e6c96b-2819-4474-b000-e2d01fb4844a",
+          "name": "Tournament List",
+          "request": {
+            "name": "Tournament List",
+            "description": {
+              "content": "**Unrivaled Tournament List** provides a summarized list of all tournaments scheduled for the given season including tournament name, location, start date, and end date.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":access_level",
+                "v8",
+                ":language_code",
+                "tournaments",
+                ":season_year",
+                ":season_type",
+                "schedule.{{format}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "trial",
+                  "key": "access_level",
+                  "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "en",
+                  "key": "language_code",
+                  "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "2025",
+                  "key": "season_year",
+                  "description": "(Required) Season year in `YYYY` format"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "OOT",
+                  "key": "season_type",
+                  "description": "(Required) Type of season<br><br>`REG` (Regular Season), `OOT` (One-on-One Tournament), `PST` (Postseason)"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "eae992d9-8f58-44f9-8bbc-6adf9bfa8fce",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":access_level",
+                    "v8",
+                    ":language_code",
+                    "tournaments",
+                    ":season_year",
+                    ":season_type",
+                    "schedule.{{format}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "trial",
+                      "key": "access_level",
+                      "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "en",
+                      "key": "language_code",
+                      "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "2025",
+                      "key": "season_year",
+                      "description": "(Required) Season year in `YYYY` format"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "OOT",
+                      "key": "season_type",
+                      "description": "(Required) Type of season<br><br>`REG` (Regular Season), `OOT` (One-on-One Tournament), `PST` (Postseason)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"league\": {\n    \"id\": \"844ee10a-00c8-4dc1-9c17-52598de2ef47\",\n    \"name\": \"Unrivaled\",\n    \"alias\": \"UNRIVALED\"\n  },\n  \"season\": {\n    \"id\": \"04cb26c7-b1d2-4e19-8fe4-c0a30814aa5c\",\n    \"year\": 2025,\n    \"type\": \"OOT\"\n  },\n  \"tournaments\": [\n    {\n      \"id\": \"28d4af13-bfa1-4c95-9f1b-30af6fd5b7ee\",\n      \"name\": \"2025 Unrivaled 1 on 1 Tournament\",\n      \"location\": \"Miami, FL, USA\",\n      \"status\": \"scheduled\",\n      \"start_date\": \"2025-02-10\",\n      \"end_date\": \"2025-02-14\",\n      \"parent_id\": \"39dbbe86-83b9-4f7a-80e1-becc451cc7f2\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "29ca8960-a8e1-4c1c-99d8-160b36edff4c",
+          "name": "Tournament Schedule",
+          "request": {
+            "name": "Tournament Schedule",
+            "description": {
+              "content": "**Unrivaled Tournament Schedule** provides date, time, location, and other event details for every match-up taking place for a given tournament.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":access_level",
+                "v8",
+                ":language",
+                "tournaments",
+                ":tournament_id",
+                "schedule.{{format}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "trial",
+                  "key": "access_level",
+                  "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "en",
+                  "key": "language",
+                  "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "28d4af13-bfa1-4c95-9f1b-30af6fd5b7ee",
+                  "key": "tournament_id",
+                  "description": "(Required) Unique Id of a tournament, found in the <span style=\"text-decoration:underline\">[Tournament List](https://developer.sportradar.com/basketball/reference/unrivaled-tournament-list)</span> endpoint<br><br>**Example:** `28d4af13-bfa1-4c95-9f1b-30af6fd5b7ee`"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "aaca3b8f-0837-4ea3-82e4-b988c1258360",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":access_level",
+                    "v8",
+                    ":language",
+                    "tournaments",
+                    ":tournament_id",
+                    "schedule.{{format}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "trial",
+                      "key": "access_level",
+                      "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "en",
+                      "key": "language",
+                      "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "28d4af13-bfa1-4c95-9f1b-30af6fd5b7ee",
+                      "key": "tournament_id",
+                      "description": "(Required) Unique Id of a tournament, found in the <span style=\"text-decoration:underline\">[Tournament List](https://developer.sportradar.com/basketball/reference/unrivaled-tournament-list)</span> endpoint<br><br>**Example:** `28d4af13-bfa1-4c95-9f1b-30af6fd5b7ee`"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"28d4af13-bfa1-4c95-9f1b-30af6fd5b7ee\",\n  \"name\": \"2025 Unrivaled 1 on 1 Tournament\",\n  \"location\": \"Miami, FL, USA\",\n  \"status\": \"inprogress\",\n  \"parent_id\": \"39dbbe86-83b9-4f7a-80e1-becc451cc7f2\",\n  \"league\": {\n    \"id\": \"844ee10a-00c8-4dc1-9c17-52598de2ef47\",\n    \"name\": \"Unrivaled\",\n    \"alias\": \"UNRIVALED\"\n  },\n  \"season\": {\n    \"id\": \"04cb26c7-b1d2-4e19-8fe4-c0a30814aa5c\",\n    \"year\": 2025,\n    \"type\": \"OOT\"\n  },\n  \"rounds\": [\n    {\n      \"id\": \"20cab6ab-3819-4809-b6a2-998a9c1081a4\",\n      \"sequence\": 1,\n      \"name\": \"Round 1\",\n      \"games\": [],\n      \"bracketed\": [\n        {\n          \"bracket\": {\n            \"id\": \"7730fd52-6f91-4f45-ab92-96a26729591a\",\n            \"name\": \"Pod C\",\n            \"location\": \"Miami, FL, USA\",\n            \"rank\": 3\n          },\n          \"games\": [\n            {\n              \"id\": \"506e7bd0-ec4e-49aa-b55c-bddd8ed41003\",\n              \"status\": \"cancelled\",\n              \"title\": \"First Round - Pod C - Game 2\",\n              \"coverage\": \"full\",\n              \"scheduled\": \"2025-02-10T23:00:00+00:00\",\n              \"neutral_site\": false,\n              \"track_on_court\": true,\n              \"time_zones\": {\n                \"venue\": \"US/Eastern\"\n              },\n              \"venue\": {\n                \"id\": \"67e49419-cb04-4ce0-ab33-ae42af8d8634\",\n                \"name\": \"Sephora Arena\",\n                \"capacity\": 850,\n                \"address\": \"7321 NW 75th Street\",\n                \"city\": \"Medley\",\n                \"state\": \"FL\",\n                \"zip\": \"33166\",\n                \"country\": \"USA\",\n                \"location\": {\n                  \"lat\": \"25.842035\",\n                  \"lng\": \"-80.317192\"\n                }\n              },\n              \"home\": {\n                \"name\": \"Marina Mabrey\",\n                \"alias\": \"MM\",\n                \"id\": \"2ab4e44e-f543-4507-b68b-4f8a48bbf702\",\n                \"seed\": 4\n              },\n              \"away\": {\n                \"name\": \"Kate Martin\",\n                \"alias\": \"KM\",\n                \"id\": \"5f70d32b-f1cd-4169-ad07-d8292bd89cbf\",\n                \"seed\": 5\n              }\n            }\n          ]\n        },\n        {\n          \"bracket\": {\n            \"id\": \"495083cf-0bdf-484a-8257-72ae8be1c7a2\",\n            \"name\": \"Pod B\",\n            \"location\": \"Miami, FL, USA\",\n            \"rank\": 4\n          },\n          \"games\": [\n            {\n              \"id\": \"06dbbc3b-b5e2-444c-b70b-06465e267135\",\n              \"status\": \"closed\",\n              \"title\": \"First Round - Pod B - Game 1\",\n              \"coverage\": \"full\",\n              \"scheduled\": \"2025-02-11T00:00:00+00:00\",\n              \"home_points\": 12,\n              \"away_points\": 6,\n              \"neutral_site\": false,\n              \"track_on_court\": true,\n              \"time_zones\": {\n                \"venue\": \"US/Eastern\"\n              },\n              \"venue\": {\n                \"id\": \"67e49419-cb04-4ce0-ab33-ae42af8d8634\",\n                \"name\": \"Sephora Arena\",\n                \"capacity\": 850,\n                \"address\": \"7321 NW 75th Street\",\n                \"city\": \"Medley\",\n                \"state\": \"FL\",\n                \"zip\": \"33166\",\n                \"country\": \"USA\",\n                \"location\": {\n                  \"lat\": \"25.842035\",\n                  \"lng\": \"-80.317192\"\n                }\n              },\n              \"broadcasts\": [\n                {\n                  \"network\": \"truTV\",\n                  \"type\": \"TV\",\n                  \"locale\": \"National\",\n                  \"channel\": \"246\"\n                }\n              ],\n              \"home\": {\n                \"name\": \"Napheesa Collier\",\n                \"alias\": \"NC\",\n                \"id\": \"88255955-f6e1-4d8b-bce2-99be5240775e\",\n                \"seed\": 1\n              },\n              \"away\": {\n                \"name\": \"Katie Lou Samuelson\",\n                \"alias\": \"KLS\",\n                \"id\": \"f705bafc-f431-44ff-923a-512e7d8380f3\",\n                \"seed\": 8\n              }\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7c49d7a3-ad3a-461e-9881-0bb8ed437c7a",
+          "name": "Tournament Summary",
+          "request": {
+            "name": "Tournament Summary",
+            "description": {
+              "content": "**Unrivaled Tournament Summary** provides tournament information including location, status, start date, end date, set up, and participants.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":access_level",
+                "v8",
+                ":language_code",
+                "tournaments",
+                ":tournament_id",
+                "summary.{{format}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "trial",
+                  "key": "access_level",
+                  "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "en",
+                  "key": "language_code",
+                  "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "28d4af13-bfa1-4c95-9f1b-30af6fd5b7ee",
+                  "key": "tournament_id",
+                  "description": "(Required) Unique Id of a tournament, found in the <span style=\"text-decoration:underline\">[Tournament List](https://developer.sportradar.com/basketball/reference/unrivaled-tournament-list)</span> endpoint<br><br>**Example:** `28d4af13-bfa1-4c95-9f1b-30af6fd5b7ee`"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "82b86ccd-e93a-4cd0-a402-d54cebe2daf0",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":access_level",
+                    "v8",
+                    ":language_code",
+                    "tournaments",
+                    ":tournament_id",
+                    "summary.{{format}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "trial",
+                      "key": "access_level",
+                      "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "en",
+                      "key": "language_code",
+                      "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "28d4af13-bfa1-4c95-9f1b-30af6fd5b7ee",
+                      "key": "tournament_id",
+                      "description": "(Required) Unique Id of a tournament, found in the <span style=\"text-decoration:underline\">[Tournament List](https://developer.sportradar.com/basketball/reference/unrivaled-tournament-list)</span> endpoint<br><br>**Example:** `28d4af13-bfa1-4c95-9f1b-30af6fd5b7ee`"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"28d4af13-bfa1-4c95-9f1b-30af6fd5b7ee\",\n  \"name\": \"2025 Unrivaled 1 on 1 Tournament\",\n  \"location\": \"Miami, FL, USA\",\n  \"status\": \"scheduled\",\n  \"start_date\": \"2025-02-10\",\n  \"end_date\": \"2025-02-14\",\n  \"parent_id\": \"39dbbe86-83b9-4f7a-80e1-becc451cc7f2\",\n  \"league\": {\n    \"id\": \"844ee10a-00c8-4dc1-9c17-52598de2ef47\",\n    \"name\": \"Unrivaled\",\n    \"alias\": \"UNRIVALED\"\n  },\n  \"season\": {\n    \"id\": \"04cb26c7-b1d2-4e19-8fe4-c0a30814aa5c\",\n    \"year\": 2025,\n    \"type\": \"OOT\"\n  },\n  \"brackets\": [\n    {\n      \"id\": \"36bc262f-6529-46d0-891f-83ec841b98c3\",\n      \"name\": \"Pod A\",\n      \"location\": \"Miami, FL, USA\",\n      \"rank\": 1,\n      \"participants\": [\n        {\n          \"id\": \"187b3c8d-6dac-4599-a82e-cbb26361b3d4\",\n          \"name\": \"Jewell Loyd\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 1\n        },\n        {\n          \"id\": \"828eb47b-7d5f-43a5-bd24-50a553ce86b0\",\n          \"name\": \"Azurá Stevens\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 6\n        },\n        {\n          \"id\": \"c749ce30-8dc9-4b09-af14-e90904b64b1e\",\n          \"name\": \"Natasha Cloud\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 5\n        },\n        {\n          \"id\": \"04936db0-c019-47b1-ae9a-300268212711\",\n          \"name\": \"Rae Burrell\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 4\n        },\n        {\n          \"id\": \"c1ecd7cd-13eb-467f-9979-053b65001286\",\n          \"name\": \"Shakira Austin\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 7\n        },\n        {\n          \"id\": \"2da44197-ab13-4b75-9470-c1595c1c08b3\",\n          \"name\": \"Chelsea Gray\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 2\n        },\n        {\n          \"id\": \"72d4c667-924d-4f20-9ec0-24ea40aaa55a\",\n          \"name\": \"Alyssa Thomas\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 3\n        }\n      ]\n    },\n    {\n      \"id\": \"495083cf-0bdf-484a-8257-72ae8be1c7a2\",\n      \"name\": \"Pod B\",\n      \"location\": \"Miami, FL, USA\",\n      \"rank\": 4,\n      \"participants\": [\n        {\n          \"id\": \"88255955-f6e1-4d8b-bce2-99be5240775e\",\n          \"name\": \"Napheesa Collier\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 1\n        },\n        {\n          \"id\": \"75b77616-19c9-463a-9a5c-44b50d3582ce\",\n          \"name\": \"Tiffany Hayes\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 3\n        },\n        {\n          \"id\": \"ecf4435c-8414-49c5-b68e-8a4f58dfb8d8\",\n          \"name\": \"Rickea Jackson\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 5\n        },\n        {\n          \"id\": \"4df28e77-b0ee-4440-aa9f-9f934e61738d\",\n          \"name\": \"Lexie Hull\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 7\n        },\n        {\n          \"id\": \"1dedf709-41cc-4fed-8eee-01367647993d\",\n          \"name\": \"Courtney Williams\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 6\n        },\n        {\n          \"id\": \"9733425c-1132-48b5-b371-e325cf45f569\",\n          \"name\": \"Jackie Young\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 4\n        },\n        {\n          \"id\": \"f742d6ca-b724-40d0-bcd8-ad6c1deff885\",\n          \"name\": \"Rhyne Howard\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 2\n        },\n        {\n          \"id\": \"f705bafc-f431-44ff-923a-512e7d8380f3\",\n          \"name\": \"Katie Lou Samuelson\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 8\n        }\n      ]\n    },\n    {\n      \"id\": \"7730fd52-6f91-4f45-ab92-96a26729591a\",\n      \"name\": \"Pod C\",\n      \"location\": \"Miami, FL, USA\",\n      \"rank\": 3,\n      \"participants\": [\n        {\n          \"id\": \"243c3966-4298-4615-89a4-b06257d11219\",\n          \"name\": \"Breanna Stewart\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 1\n        },\n        {\n          \"id\": \"2ab4e44e-f543-4507-b68b-4f8a48bbf702\",\n          \"name\": \"Marina Mabrey\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 4\n        },\n        {\n          \"id\": \"405beda6-4682-4506-83c0-7f0909f08931\",\n          \"name\": \"Jordin Canada\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 6\n        },\n        {\n          \"id\": \"7f58c9e5-e2e5-48bb-ab62-9c9819f07372\",\n          \"name\": \"Allisha Gray\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 3\n        },\n        {\n          \"id\": \"0c7150a3-577b-40f3-b5e7-bd74c107993c\",\n          \"name\": \"Kahleah Copper\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 2\n        },\n        {\n          \"id\": \"5f70d32b-f1cd-4169-ad07-d8292bd89cbf\",\n          \"name\": \"Kate Martin\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 5\n        },\n        {\n          \"id\": \"7347fb5a-12db-4554-b1db-85d449395d72\",\n          \"name\": \"Aaliyah Edwards\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 8\n        },\n        {\n          \"id\": \"dafb6f71-6e29-4b06-958a-4149c1bba417\",\n          \"name\": \"Aliyah Boston\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 7\n        }\n      ]\n    },\n    {\n      \"id\": \"bb94fa00-0ebb-45ff-ad3f-7ffc0596100c\",\n      \"name\": \"Pod D\",\n      \"location\": \"Miami, FL, USA\",\n      \"rank\": 3,\n      \"participants\": [\n        {\n          \"id\": \"70def231-bbfc-446d-b394-650f1959000e\",\n          \"name\": \"Dearica Hamby\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 5\n        },\n        {\n          \"id\": \"e6a6348f-8c9b-49fe-a332-157e1c483a25\",\n          \"name\": \"Arike Ogunbowale\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 1\n        },\n        {\n          \"id\": \"531f9c45-b1fb-4713-8880-dc208f58ec12\",\n          \"name\": \"Skylar Diggins-Smith\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 4\n        },\n        {\n          \"id\": \"52a5087b-2d1a-4b8f-9f49-190ccb3c8aac\",\n          \"name\": \"Kayla McBride\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 2\n        },\n        {\n          \"id\": \"1b7ee316-17b2-4067-b190-c0fe629c546a\",\n          \"name\": \"Brittney Sykes\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 6\n        },\n        {\n          \"id\": \"82c763e7-e402-44c8-933f-47ba5136a8a1\",\n          \"name\": \"Satou Sabally\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 3\n        },\n        {\n          \"id\": \"3665628c-4b5b-490e-a869-a911e454c4ce\",\n          \"name\": \"DiJonai Carrington\",\n          \"type\": \"exhibition_team\",\n          \"seed\": 7\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.sportradar.com/unrivaled/",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) Format returned<br><br>`json`, `xml`",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "json",
+      "key": "format"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "x-api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "9dd56204-0226-44d3-b0a8-62cbb63fee18",
+    "name": "Unrivaled Games Tournaments API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Official real-time data API for the Unrivaled professional women's 3x3 basketball league, operated by Sportradar as the league's Official Data Provider. Feeds cover schedules, standings, rosters, real-time scores, play-by-play, injuries, transfers, and season statistics, in JSON or XML. Assembled by API Evangelist on 2026-07-21 from the per-endpoint OpenAPI definitions embedded in the 23 Unrivaled reference pages at https://developer.sportradar.com/basketball/reference/unrivaled-overview; operation content is preserved verbatim from the source definitions.",
+      "type": "text/plain"
+    }
+  }
+}

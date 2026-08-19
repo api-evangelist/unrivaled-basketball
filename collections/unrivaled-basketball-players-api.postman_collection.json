@@ -1,0 +1,190 @@
+{
+  "item": [
+    {
+      "id": "96904171-306f-404c-83bc-9e9ccdc9e46e",
+      "name": "Players",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "dad2dc47-ccd3-48fa-9250-bca58bbaf4cb",
+          "name": "Player Profile",
+          "request": {
+            "name": "Player Profile",
+            "description": {
+              "content": "**Unrivaled Player Profile** provides player biographical information and seasonal statistics.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":access_level",
+                "v8",
+                ":language",
+                "players",
+                ":player_id",
+                "profile.{{format}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "trial",
+                  "key": "access_level",
+                  "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "en",
+                  "key": "language",
+                  "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "fd8d4b11-3d70-450a-b65c-016bec29cc9d",
+                  "key": "player_id",
+                  "description": "(Required) Unique Id of a player<br><br>**Example:** `fd8d4b11-3d70-450a-b65c-016bec29cc9d`"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7183e7a6-7d56-42dc-869a-d5d942278b1e",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":access_level",
+                    "v8",
+                    ":language",
+                    "players",
+                    ":player_id",
+                    "profile.{{format}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "trial",
+                      "key": "access_level",
+                      "description": "(Required) The access level of your API key<br><br>`trial`, `production`"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "en",
+                      "key": "language",
+                      "description": "(Required) 2-letter code for supported languages<br><br>`en` (English)"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "fd8d4b11-3d70-450a-b65c-016bec29cc9d",
+                      "key": "player_id",
+                      "description": "(Required) Unique Id of a player<br><br>**Example:** `fd8d4b11-3d70-450a-b65c-016bec29cc9d`"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"fd8d4b11-3d70-450a-b65c-016bec29cc9d\",\n  \"status\": \"ACT\",\n  \"full_name\": \"Napheesa Collier\",\n  \"first_name\": \"Napheesa\",\n  \"last_name\": \"Collier\",\n  \"abbr_name\": \"N.Collier\",\n  \"height\": 73,\n  \"weight\": 180,\n  \"position\": \"F\",\n  \"primary_position\": \"NA\",\n  \"jersey_number\": \"24\",\n  \"college\": \"UConn\",\n  \"high_school\": \"Incarnate Word Academy (MO)\",\n  \"birth_place\": \"Jefferson City, MO, USA\",\n  \"birthdate\": \"1996-09-23\",\n  \"updated\": \"2025-11-13T22:12:21+00:00\",\n  \"league\": {\n    \"id\": \"844ee10a-00c8-4dc1-9c17-52598de2ef47\",\n    \"name\": \"Unrivaled\",\n    \"alias\": \"UNRIVALED\"\n  },\n  \"team\": {\n    \"id\": \"67c22115-2385-458f-8632-a67a025fef55\",\n    \"name\": \"Lunar Owls\",\n    \"alias\": \"LNR\"\n  },\n  \"references\": [\n    {\n      \"source_id\": \"8e281d64-a268-445f-9569-bc812d2730d5\",\n      \"scope\": \"basketball\",\n      \"id_type\": \"sport_profile\"\n    },\n    {\n      \"source_id\": \"21f994d2-1cc9-4d83-b278-abc3aaf4f63d\",\n      \"scope\": \"WNBA\",\n      \"id_type\": \"league_profile\"\n    },\n    {\n      \"source_id\": \"f95a0950-d7e8-44bd-bbae-b2e85844f1e4\",\n      \"scope\": \"NCAAW\",\n      \"id_type\": \"league_profile\"\n    }\n  ],\n  \"seasons\": [\n    {\n      \"id\": \"c86ab7c9-5408-44e6-af06-c22636262927\",\n      \"year\": 2025,\n      \"type\": \"REG\",\n      \"teams\": [\n        {\n          \"id\": \"67c22115-2385-458f-8632-a67a025fef55\",\n          \"name\": \"Lunar Owls\",\n          \"alias\": \"LNR\",\n          \"total\": {\n            \"games_played\": 1,\n            \"games_started\": 1,\n            \"minutes\": 23,\n            \"field_goals_made\": 11,\n            \"field_goals_att\": 20,\n            \"field_goals_pct\": 0.55,\n            \"two_points_made\": 8,\n            \"two_points_att\": 13,\n            \"two_points_pct\": 0.615,\n            \"three_points_made\": 3,\n            \"three_points_att\": 7,\n            \"three_points_pct\": 0.429,\n            \"blocked_att\": 0,\n            \"free_throws_made\": 1,\n            \"free_throws_att\": 3,\n            \"free_throws_pct\": 0.333,\n            \"offensive_rebounds\": 1,\n            \"defensive_rebounds\": 9,\n            \"rebounds\": 10,\n            \"assists\": 3,\n            \"turnovers\": 1,\n            \"assists_turnover_ratio\": 3,\n            \"steals\": 1,\n            \"blocks\": 0,\n            \"personal_fouls\": 1,\n            \"tech_fouls\": 0,\n            \"points\": 27,\n            \"flagrant_fouls\": 0,\n            \"ejections\": 0,\n            \"foulouts\": 0,\n            \"tech_fouls_non_unsportsmanlike\": 0,\n            \"true_shooting_att\": 21.32,\n            \"true_shooting_pct\": 0.633,\n            \"efficiency\": 29,\n            \"field_goals_at_rim_made\": 0,\n            \"field_goals_at_rim_att\": 0,\n            \"field_goals_at_rim_pct\": 0,\n            \"field_goals_at_midrange_made\": 1,\n            \"field_goals_at_midrange_att\": 4,\n            \"field_goals_at_midrange_pct\": 0.25,\n            \"usage_pct\": 18.57,\n            \"awarded_points\": 0,\n            \"coach_ejections\": 0,\n            \"coach_tech_fouls\": 0,\n            \"double_doubles\": 1,\n            \"effective_fg_pct\": 0.625,\n            \"fast_break_att\": 0,\n            \"fast_break_made\": 0,\n            \"fast_break_pct\": 0,\n            \"fast_break_pts\": 0,\n            \"fouls_drawn\": 3,\n            \"free_throw_points\": 2,\n            \"minus\": 0,\n            \"offensive_fouls\": 0,\n            \"plus\": 0,\n            \"points_in_paint\": 10,\n            \"points_in_paint_att\": 7,\n            \"points_in_paint_made\": 5,\n            \"points_in_paint_pct\": 0.714,\n            \"points_off_turnovers\": 0,\n            \"second_chance_att\": 0,\n            \"second_chance_made\": 0,\n            \"second_chance_pct\": 0,\n            \"second_chance_pts\": 2,\n            \"triple_doubles\": 0,\n            \"winning_baskets\": 0\n          },\n          \"average\": {\n            \"minutes\": 23,\n            \"points\": 27,\n            \"off_rebounds\": 1,\n            \"def_rebounds\": 9,\n            \"rebounds\": 10,\n            \"assists\": 3,\n            \"steals\": 1,\n            \"blocks\": 0,\n            \"turnovers\": 1,\n            \"personal_fouls\": 1,\n            \"flagrant_fouls\": 0,\n            \"blocked_att\": 0,\n            \"field_goals_made\": 11,\n            \"field_goals_att\": 20,\n            \"three_points_made\": 3,\n            \"three_points_att\": 7,\n            \"free_throws_made\": 1,\n            \"free_throws_att\": 3,\n            \"two_points_made\": 8,\n            \"two_points_att\": 13,\n            \"efficiency\": 29,\n            \"true_shooting_att\": 21.32,\n            \"fast_break_att\": 0,\n            \"fast_break_made\": 0,\n            \"fast_break_pts\": 0,\n            \"fouls_drawn\": 3,\n            \"offensive_fouls\": 0,\n            \"points_in_paint\": 10,\n            \"points_in_paint_att\": 7,\n            \"points_in_paint_made\": 5,\n            \"points_off_turnovers\": 0,\n            \"second_chance_att\": 0,\n            \"second_chance_made\": 0,\n            \"second_chance_pts\": 2\n          }\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.sportradar.com/unrivaled/",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) Format returned<br><br>`json`, `xml`",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "json",
+      "key": "format"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "x-api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "27d8bff1-601f-4ee2-8406-b854ad83cb72",
+    "name": "Unrivaled Games Players API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Official real-time data API for the Unrivaled professional women's 3x3 basketball league, operated by Sportradar as the league's Official Data Provider. Feeds cover schedules, standings, rosters, real-time scores, play-by-play, injuries, transfers, and season statistics, in JSON or XML. Assembled by API Evangelist on 2026-07-21 from the per-endpoint OpenAPI definitions embedded in the 23 Unrivaled reference pages at https://developer.sportradar.com/basketball/reference/unrivaled-overview; operation content is preserved verbatim from the source definitions.",
+      "type": "text/plain"
+    }
+  }
+}

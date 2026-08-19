@@ -1,0 +1,111 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Unrivaled Games Series API",
+    "version": "v8"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-api-key",
+      "value": "{{x-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Series",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Series Schedule",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sportradar.com/unrivaled/:access_level/v8/:language/series/:season_year/:season_type/schedule.:format",
+            "params": [
+              {
+                "name": "access_level",
+                "value": "",
+                "type": "path",
+                "description": "The access level of your API key<br><br>`trial`, `production`"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "path",
+                "description": "2-letter code for supported languages<br><br>`en` (English)"
+              },
+              {
+                "name": "season_year",
+                "value": "",
+                "type": "path",
+                "description": "Season year in `YYYY` format"
+              },
+              {
+                "name": "season_type",
+                "value": "",
+                "type": "path",
+                "description": "Type of season<br><br>`PRE` (Pre-season), `REG` (Regular Season), `OOT` (One-on-One Tournament), `PST` (Post-season)"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "path",
+                "description": "Format returned<br><br>`json`, `xml`"
+              }
+            ]
+          },
+          "docs": "**Unrivaled Series Schedule** provides schedule details for every match-up in a given series."
+        },
+        {
+          "info": {
+            "name": "get_{access_level}v8{language}series{series_id}teams{team_id}statistics.{format}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sportradar.com/unrivaled/:access_level/v8/:language/series/:series_id/teams/:team_id/statistics.:format",
+            "params": [
+              {
+                "name": "access_level",
+                "value": "",
+                "type": "path",
+                "description": "The access level of your API key<br><br>`trial`, `production`"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "path",
+                "description": "2-letter code for supported languages<br><br>`en` (English)"
+              },
+              {
+                "name": "series_id",
+                "value": "",
+                "type": "path",
+                "description": "Unique Id of a series, found in the <span style=\"text-decoration:underline\">[Series Schedule](https://developer.sportradar.com/basketball/reference/unrivaled-series-schedule)</span> endpoint<br><br>**Example:** `57a01ec9-0b67-4cb6-ac49-b4aa774d6c80`"
+              },
+              {
+                "name": "team_id",
+                "value": "",
+                "type": "path",
+                "description": "Unique Id of a team, found in the <span style=\"text-decoration:underline\">[Teams](https://developer.sportradar.com/basketball/reference/unrivaled-teams)</span> endpoint<br><br>**Example:** `b1da8619-1db7-4c21-99bb-4c7307e25026`<br><br>**Note:** This endpoint is designed for team_ids which exist in the current <span style=\"text-decoration:underline\">[League Hierarchy](https://developer.sportradar.com/basketball/reference/unrivaled-league-hierarchy)</span> endpoint"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "path",
+                "description": "Format returned<br><br>`json`, `xml`"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
