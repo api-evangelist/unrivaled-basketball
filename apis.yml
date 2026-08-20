@@ -132,6 +132,8 @@ apis:
   humanURL: https://developer.sportradar.com/basketball/reference/unrivaled-overview
   baseURL: https://api.sportradar.com/unrivaled
   tags:
+  - Team
+  tags_raw:
   - Teams
   properties:
   - type: OpenAPI
