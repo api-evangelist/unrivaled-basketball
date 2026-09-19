@@ -98,6 +98,8 @@ apis:
   humanURL: https://developer.sportradar.com/basketball/reference/unrivaled-overview
   baseURL: https://api.sportradar.com/unrivaled
   tags:
+  - Player
+  tags_raw:
   - Players
   properties:
   - type: OpenAPI
