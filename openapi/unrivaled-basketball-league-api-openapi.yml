@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  title: Unrivaled Games League API
+  title: Unrivaled League API
   version: v8
-  description: Official real-time data API for the Unrivaled professional women's 3x3 basketball league, operated by Sportradar as the league's Official Data Provider. Feeds cover schedules, standings, rosters, real-time scores, play-by-play, injuries, transfers, and season statistics, in JSON or XML. Assembled by API Evangelist on 2026-07-21 from the per-endpoint OpenAPI definitions embedded in the 23 Unrivaled reference pages at https://developer.sportradar.com/basketball/reference/unrivaled-overview; operation content is preserved verbatim from the source definitions.
+  description: Official real-time data API for the Unrivaled professional women's 3x3 basketball league, operated by Sportradar as the league's Official Data Provider.
   contact:
     url: https://developer.sportradar.com/basketball/reference/unrivaled-overview
   x-provenance:
@@ -1160,9 +1160,11 @@ paths:
         description: Format returned<br><br>`json`, `xml`
       tags:
       - League
+      summary: Get {access level}v8{language}leagueseasons {format}
+      x-summary-source: derived
   /{access_level}/v8/{language_code}/league/teams.{format}:
     get:
-      summary: Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of New Endpoint
+      summary: Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of…
       description: This is your first endpoint! Edit this page to start documenting your API.
       operationId: get_{access_level}v8{language_code}seasons{season_year}{season_type}teams{team_id}statistics.{format}-1-1-1
       responses:
