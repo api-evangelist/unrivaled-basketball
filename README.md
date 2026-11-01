@@ -64,16 +64,123 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Unrivaled is a U.S. professional women's 3x3 basketball league co-founded by Napheesa Collier and Breanna Stewart, playing a condensed winter season with six clubs and a midseason 1-on-1 tournament. Backed by bessemer-venture-partners — https://www.unrivaled.basketball/
+Unrivaled is a U.S. professional women's 3x3 basketball league co-founded by Napheesa Collier and Breanna Stewart, playing a condensed winter season with six clubs and a midseason 1-on-1 tournament. The league's official real-time data API — the Unrivaled API v8 — is operated by Sportradar as the league's Official Data Provider, delivering schedules, standings, rosters, live scores, play-by-play (including the Elam Ending and weighted free throws), injuries, transfers, and season statistics in JSON or XML.
 
-The league's official real-time data API — the **Unrivaled API v8** — is operated by Sportradar as the league's Official Data Provider: 23 GET feeds covering the league hierarchy, teams, players, games (boxscore, play-by-play, summary), seasons, series, tournaments, injuries, transfers, standings, rankings, and leaders, with x-api-key authentication and JSON/XML responses. Docs: https://developer.sportradar.com/basketball/reference/unrivaled-overview
+**Areas:** Company · Consumer · Basketball · Sports · Womens Sports · Sports Data · Media · League
 
-## Artifacts
+## Unrivaled Basketball on APIs.io
 
-- `apis.yml` — APIs.json profile for the company and the Unrivaled API
-- `openapi/` — Unrivaled API v8 OpenAPI, assembled from the per-endpoint definitions on Sportradar's reference pages
-- `overlays/` — API Evangelist overlay repairing auto-generated summaries and adding tags
-- `authentication/`, `conventions/`, `conformance/`, `lifecycle/`, `changelog/`, `sandbox/`, `data-model/` — captured API semantics
-- `mcp/` — candidate MCP tool surface derived from the OpenAPI (no official server exists)
-- `skills/` — generated Agent Skills for live-game tracking, roster lookup, and season statistics
-- `llms/`, `well-known/`, `security/` — discovery and security surface
+Everything profiled for Unrivaled Basketball is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/unrivaled-basketball/](https://apis.io/providers/unrivaled-basketball/)** — or go straight to one of the APIs or properties below.
+
+### APIs (7)
+
+- [Unrivaled Basketball Games API](https://apis.io/apis/unrivaled-basketball/unrivaled-basketball-games-api/) — The Games API from Unrivaled Basketball — 5 operation(s) for games.
+- [Unrivaled Basketball League API](https://apis.io/apis/unrivaled-basketball/unrivaled-basketball-league-api/) — The League API from Unrivaled Basketball — 7 operation(s) for league.
+- [Unrivaled Basketball Players API](https://apis.io/apis/unrivaled-basketball/unrivaled-basketball-players-api/) — The Players API from Unrivaled Basketball — 1 operation(s) for players.
+- [Unrivaled Basketball Seasons API](https://apis.io/apis/unrivaled-basketball/unrivaled-basketball-seasons-api/) — The Seasons API from Unrivaled Basketball — 4 operation(s) for seasons.
+- [Unrivaled Basketball Series API](https://apis.io/apis/unrivaled-basketball/unrivaled-basketball-series-api/) — The Series API from Unrivaled Basketball — 2 operation(s) for series.
+- [Unrivaled Basketball Teams API](https://apis.io/apis/unrivaled-basketball/unrivaled-basketball-teams-api/) — The Teams API from Unrivaled Basketball — 1 operation(s) for teams.
+- [Unrivaled Basketball Tournaments API](https://apis.io/apis/unrivaled-basketball/unrivaled-basketball-tournaments-api/) — The Tournaments API from Unrivaled Basketball — 3 operation(s) for tournaments.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [unrivaled-basketball](https://apis.io/servers/unrivaled-basketball/unrivaled-basketball/)
+
+#### Collections (7)
+
+Postman and Open Collection request collections.
+
+- [Unrivaled Games API](https://apis.io/collections/unrivaled-basketball/open-unrivaled-basketball-games-api/)
+- [Unrivaled Games League API](https://apis.io/collections/unrivaled-basketball/open-unrivaled-basketball-league-api/)
+- [Unrivaled Games Players API](https://apis.io/collections/unrivaled-basketball/open-unrivaled-basketball-players-api/)
+- [Unrivaled Games Seasons API](https://apis.io/collections/unrivaled-basketball/open-unrivaled-basketball-seasons-api/)
+- [Unrivaled Games Series API](https://apis.io/collections/unrivaled-basketball/open-unrivaled-basketball-series-api/)
+- [Unrivaled Games Teams API](https://apis.io/collections/unrivaled-basketball/open-unrivaled-basketball-teams-api/)
+- [Unrivaled Games Tournaments API](https://apis.io/collections/unrivaled-basketball/open-unrivaled-basketball-tournaments-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Unrivaled Basketball Unrivaled Overlay](https://apis.io/overlays/unrivaled-basketball/unrivaled-basketball-unrivaled-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Unrivaled Basketball Authentication](https://apis.io/security/unrivaled-basketball/unrivaled-basketball-authentication/)
+- [Unrivaled Basketball Domain Security](https://apis.io/security/unrivaled-basketball/unrivaled-basketball-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.unrivaled.basketball/)
+- [Documentation](https://developer.sportradar.com/basketball/reference/unrivaled-overview)
+- [Getting started](https://developer.sportradar.com/basketball/docs/unrivaled-ig-api-basics)
+- [API reference](https://developer.sportradar.com/basketball/reference/unrivaled-overview)
+- [Support](https://www.unrivaled.basketball/contact-us)
+- [Blog](https://www.unrivaled.basketball/news)
+- [Terms of service](https://www.unrivaled.basketball/legal/terms-of-use)
+- [Privacy policy](https://www.unrivaled.basketball/legal/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 39.4** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 49.1 |
+| Contract governance | 4.5 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 61.3 |
+| Access clarity | 21.1 |
+
+**Agent readiness 26.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/unrivaled-basketball/](https://apis.io/providers/unrivaled-basketball/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Unrivaled Basketball: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/unrivaled-basketball/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
